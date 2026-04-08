@@ -1,0 +1,48 @@
+<h2>技术方案选择</h2>
+<p class="subtitle">三种架构方向，各有侧重——选一个作为基础</p>
+
+<div class="options">
+
+  <div class="option" data-choice="python-canvas" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>推荐 ⭐ Python 后端 + Canvas Web UI</h3>
+      <p><strong>技术栈：</strong>Python（librosa 音频分析 + moviepy 视频导出）+ FastAPI + 前端 Canvas/WebGL</p>
+      <p style="margin-top:8px"><strong>优势：</strong>librosa 是音频分析黄金标准，BPM/频谱/能量提取最准确；Canvas 实时预览流畅；moviepy 导出 MP4 成熟稳定；插件式架构天然支持新增风格。</p>
+      <p style="margin-top:8px"><strong>劣势：</strong>需要 Python 环境，依赖安装略复杂（ffmpeg）</p>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>适合</h4><ul><li>音频分析精度要求高</li><li>批量 CLI 处理</li><li>需要可靠的 MP4 导出</li></ul></div>
+        <div class="cons"><h4>注意</h4><ul><li>首次环境配置约 5 分钟</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="nodejs-fullstack" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>纯 Node.js 全栈</h3>
+      <p><strong>技术栈：</strong>Node.js（web-audio-api 分析）+ Express + Canvas API + ffmpeg-static</p>
+      <p style="margin-top:8px"><strong>优势：</strong>单一语言，前后端统一；Web Audio API 与浏览器实时渲染无缝衔接；部署简单。</p>
+      <p style="margin-top:8px"><strong>劣势：</strong>Node.js 端音频分析库不如 librosa 成熟；BPM 检测精度较低；大文件 CLI 批处理内存压力大。</p>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>适合</h4><ul><li>只有 Node.js 环境</li><li>以 Web 预览为主</li></ul></div>
+        <div class="cons"><h4>注意</h4><ul><li>音频分析精度一般</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="python-preprocess" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Python 预处理 + 纯前端渲染</h3>
+      <p><strong>技术栈：</strong>Python（librosa 离线分析生成 JSON 特征文件）+ 纯静态前端 HTML/JS</p>
+      <p style="margin-top:8px"><strong>优势：</strong>最大解耦；前端只消费 JSON 数据，渲染逻辑极简；可静态部署；CLI 和 Web 共用同一份特征数据。</p>
+      <p style="margin-top:8px"><strong>劣势：</strong>需要先跑 Python 提取特征再打开浏览器，流程有两步；实时性略差。</p>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>适合</h4><ul><li>喜欢纯前端渲染</li><li>不需要后端服务长期运行</li></ul></div>
+        <div class="cons"><h4>注意</h4><ul><li>两步操作流程</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+</div>

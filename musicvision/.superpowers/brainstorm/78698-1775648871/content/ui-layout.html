@@ -1,0 +1,100 @@
+<h2>Web UI 界面设计</h2>
+<p class="subtitle">两种布局方向，选择你更喜欢的风格</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">方案 A — 全屏沉浸式</div>
+    <div class="mockup-body" style="background:#080818;padding:0;overflow:hidden;border-radius:6px" data-choice="immersive" onclick="toggleSelect(this)" id="layout-a">
+      <!-- Top bar -->
+      <div style="background:#0d0d2a;padding:10px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #1a1a3a">
+        <span style="color:#7b2fff;font-weight:bold;font-size:14px">🎵 MusicVision</span>
+        <span style="flex:1"></span>
+        <span style="background:#1a1a3a;color:#aaa;font-size:11px;padding:3px 8px;border-radius:4px">spectrum ▾</span>
+        <span style="background:#7b2fff;color:#fff;font-size:11px;padding:3px 10px;border-radius:4px">导出 MP4</span>
+      </div>
+      <!-- Canvas area - full width -->
+      <div style="background:linear-gradient(180deg,#0a0a1a 0%,#050510 100%);height:180px;display:flex;align-items:center;justify-content:center;position:relative">
+        <div style="display:flex;align-items:flex-end;gap:3px;height:120px">
+          <div style="width:7px;height:40%;background:linear-gradient(to top,#00f5ff,#0080ff);border-radius:2px;opacity:0.9"></div>
+          <div style="width:7px;height:65%;background:linear-gradient(to top,#00f5ff,#7b2fff);border-radius:2px"></div>
+          <div style="width:7px;height:90%;background:linear-gradient(to top,#00f5ff,#ff00aa);border-radius:2px"></div>
+          <div style="width:7px;height:55%;background:linear-gradient(to top,#00f5ff,#7b2fff);border-radius:2px"></div>
+          <div style="width:7px;height:100%;background:linear-gradient(to top,#00f5ff,#ff00aa);border-radius:2px;box-shadow:0 0 8px #ff00aa"></div>
+          <div style="width:7px;height:75%;background:linear-gradient(to top,#00f5ff,#7b2fff);border-radius:2px"></div>
+          <div style="width:7px;height:50%;background:linear-gradient(to top,#00f5ff,#0080ff);border-radius:2px"></div>
+          <div style="width:7px;height:80%;background:linear-gradient(to top,#00f5ff,#ff00aa);border-radius:2px"></div>
+          <div style="width:7px;height:45%;background:linear-gradient(to top,#00f5ff,#0080ff);border-radius:2px;opacity:0.8"></div>
+          <div style="width:7px;height:70%;background:linear-gradient(to top,#00f5ff,#7b2fff);border-radius:2px"></div>
+        </div>
+        <!-- overlay song info -->
+        <div style="position:absolute;bottom:8px;left:12px;color:#aaa;font-size:11px">▶ song.mp3 &nbsp; 2:34 / 3:47</div>
+        <div style="position:absolute;bottom:8px;right:12px;color:#00f5ff;font-size:11px">BPM 128 · Key Am</div>
+      </div>
+      <!-- Progress bar -->
+      <div style="background:#0d0d2a;height:3px;position:relative">
+        <div style="background:linear-gradient(to right,#7b2fff,#ff00aa);width:67%;height:100%"></div>
+      </div>
+      <!-- Bottom controls -->
+      <div style="background:#0d0d2a;padding:8px 16px;display:flex;align-items:center;gap:10px">
+        <span style="color:#aaa;font-size:18px">⏮</span>
+        <span style="color:#fff;font-size:22px">⏸</span>
+        <span style="color:#aaa;font-size:18px">⏭</span>
+        <div style="flex:1;height:2px;background:#1a1a3a;border-radius:1px;margin:0 8px">
+          <div style="background:#7b2fff;width:67%;height:100%;border-radius:1px"></div>
+        </div>
+      </div>
+      <!-- Drop zone when no file -->
+      <div style="background:#050510;padding:8px;text-align:center;color:#333;font-size:11px">
+        拖拽音乐文件到此处 或 <span style="color:#7b2fff">点击选择文件</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">方案 B — 侧边控制面板</div>
+    <div class="mockup-body" style="background:#080818;padding:0;overflow:hidden;border-radius:6px">
+      <div style="display:flex;height:320px">
+        <!-- Left: canvas -->
+        <div style="flex:1;background:linear-gradient(180deg,#0a0a1a,#050510);display:flex;align-items:center;justify-content:center;position:relative">
+          <div style="display:flex;align-items:flex-end;gap:2px;height:100px">
+            <div style="width:5px;height:40%;background:linear-gradient(to top,#00f5ff,#0080ff);border-radius:1px"></div>
+            <div style="width:5px;height:70%;background:linear-gradient(to top,#00f5ff,#7b2fff);border-radius:1px"></div>
+            <div style="width:5px;height:95%;background:linear-gradient(to top,#00f5ff,#ff00aa);border-radius:1px;box-shadow:0 0 6px #ff00aa"></div>
+            <div style="width:5px;height:60%;background:linear-gradient(to top,#00f5ff,#7b2fff);border-radius:1px"></div>
+            <div style="width:5px;height:80%;background:linear-gradient(to top,#00f5ff,#ff00aa);border-radius:1px"></div>
+            <div style="width:5px;height:45%;background:linear-gradient(to top,#00f5ff,#0080ff);border-radius:1px"></div>
+            <div style="width:5px;height:65%;background:linear-gradient(to top,#00f5ff,#7b2fff);border-radius:1px"></div>
+            <div style="width:5px;height:50%;background:linear-gradient(to top,#00f5ff,#0080ff);border-radius:1px"></div>
+          </div>
+          <div style="position:absolute;bottom:6px;left:8px;color:#555;font-size:10px">▶ 2:34 / 3:47</div>
+        </div>
+        <!-- Right: sidebar -->
+        <div style="width:110px;background:#0d0d2a;border-left:1px solid #1a1a3a;padding:10px;font-size:11px">
+          <div style="color:#7b2fff;font-weight:bold;margin-bottom:10px">MusicVision</div>
+          <div style="color:#aaa;margin-bottom:4px">风格</div>
+          <div style="background:#1a1a3a;color:#fff;padding:4px 6px;border-radius:3px;margin-bottom:6px;font-size:10px">■ Spectrum ▾</div>
+          <div style="color:#aaa;margin-bottom:4px">文件</div>
+          <div style="background:#7b2fff22;border:1px dashed #7b2fff;color:#7b2fff;padding:5px;border-radius:3px;text-align:center;font-size:10px;margin-bottom:6px">+ 选择文件</div>
+          <div style="color:#aaa;margin-bottom:4px">音乐信息</div>
+          <div style="color:#00f5ff;font-size:10px">BPM: 128</div>
+          <div style="color:#00f5ff;font-size:10px">Key: Am</div>
+          <div style="color:#00f5ff;font-size:10px">Energy: ████░</div>
+          <div style="margin-top:10px;background:#1a3a1a;color:#00ff88;padding:5px;border-radius:3px;text-align:center;font-size:10px">⬇ 导出 MP4</div>
+          <div style="margin-top:4px;background:#1a1a3a;color:#aaa;padding:5px;border-radius:3px;text-align:center;font-size:10px">⬇ 导出 GIF</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:16px">你更倾向于哪种布局？</p>
+<div class="options">
+  <div class="option" data-choice="immersive" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content"><h3>全屏沉浸式</h3><p>可视化区域最大化，沉浸感强</p></div>
+  </div>
+  <div class="option" data-choice="sidebar" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content"><h3>侧边控制面板</h3><p>信息更集中，操作更高效</p></div>
+  </div>
+</div>
