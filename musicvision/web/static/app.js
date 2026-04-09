@@ -183,30 +183,66 @@ audio.addEventListener('ended', () => {
   cancelAnimationFrame(animationId);
 });
 
-// 导出
+// 导出：后台任务 + 轮询进度
 async function doExport(format) {
   if (!jobId) return;
-  setStatus(`导出 ${format.toUpperCase()} 中，请稍候...`);
+  setStatus(`正在启动导出...`);
   document.getElementById('btn-export-mp4').disabled = true;
   document.getElementById('btn-export-gif').disabled = true;
 
   try {
+    // 1. 启动后台导出任务
     const res = await fetch(`/export/${jobId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ format, style: currentStyle, fps: 30, width: 1920, height: 1080 }),
     });
     const data = await res.json();
-    if (data.download_url) {
-      const a = document.createElement('a');
-      a.href = data.download_url;
-      a.download = `musicvision.${format}`;
-      a.click();
-      setStatus('导出完成！');
+    if (data.status !== 'processing') {
+      setStatus(`导出启动失败`);
+      return;
     }
+
+    // 2. 轮询状态，每 2 秒检查一次，最多等 10 分钟
+    let dots = 0;
+    const pollTimer = setInterval(async () => {
+      dots = (dots + 1) % 4;
+      setStatus(`导出 ${format.toUpperCase()} 中${''.padEnd(dots + 1, '.')}（大文件需要几分钟）`);
+      try {
+        const statusRes = await fetch(`/export/${jobId}/status`);
+        const statusData = await statusRes.json();
+        if (statusData.status === 'done') {
+          clearInterval(pollTimer);
+          setStatus('导出完成！正在下载...');
+          // 3. 触发浏览器下载
+          const a = document.createElement('a');
+          a.href = statusData.download_url;
+          a.download = `musicvision.${format}`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          setStatus('✅ 下载已开始');
+          document.getElementById('btn-export-mp4').disabled = false;
+          document.getElementById('btn-export-gif').disabled = false;
+        } else if (statusData.status && statusData.status.startsWith('error')) {
+          clearInterval(pollTimer);
+          setStatus(`导出失败: ${statusData.status}`);
+          document.getElementById('btn-export-mp4').disabled = false;
+          document.getElementById('btn-export-gif').disabled = false;
+        }
+      } catch (e) { /* 网络抖动，继续轮询 */ }
+    }, 2000);
+
+    // 超时保护：10 分钟后自动停止轮询
+    setTimeout(() => {
+      clearInterval(pollTimer);
+      document.getElementById('btn-export-mp4').disabled = false;
+      document.getElementById('btn-export-gif').disabled = false;
+      setStatus('导出超时，请重试');
+    }, 600000);
+
   } catch (e) {
     setStatus(`导出失败: ${e.message}`);
-  } finally {
     document.getElementById('btn-export-mp4').disabled = false;
     document.getElementById('btn-export-gif').disabled = false;
   }

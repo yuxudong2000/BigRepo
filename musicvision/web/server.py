@@ -11,10 +11,11 @@ from typing import AsyncGenerator
 # 将 musicvision/ 根目录加入 sys.path，使 core/visualizers 包可被找到
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+from starlette.responses import Response
 
 from core.analyzer import AudioAnalyzer, AudioFeatures
 from core.engine import VisualizerEngine
@@ -126,7 +127,7 @@ class ExportRequest(BaseModel):
 
 
 @app.post("/export/{job_id}")
-async def export(job_id: str, req: ExportRequest):
+async def export(job_id: str, req: ExportRequest, background_tasks: BackgroundTasks):
     job = _jobs.get(job_id)
     if not job:
         raise HTTPException(status_code=404, detail="Job not found")
@@ -135,22 +136,47 @@ async def export(job_id: str, req: ExportRequest):
     features: AudioFeatures = job["features"]
     audio_path: str = job["audio_path"]
 
-    loop = asyncio.get_event_loop()
-    renderer = CLIRenderer(engine)
-    await loop.run_in_executor(
-        None, renderer.render, features, audio_path, output_path,
-        req.style, req.fps, req.width, req.height
-    )
+    # 标记为进行中
+    job["export_status"] = "processing"
     job["export_path"] = output_path
-    return {"status": "done", "download_url": f"/export/{job_id}/download"}
+
+    def do_render():
+        try:
+            renderer = CLIRenderer(engine)
+            renderer.render(features, audio_path, output_path,
+                            req.style, req.fps, req.width, req.height)
+            job["export_status"] = "done"
+        except Exception as e:
+            job["export_status"] = f"error: {e}"
+
+    background_tasks.add_task(do_render)
+    return {"status": "processing", "poll_url": f"/export/{job_id}/status"}
+
+
+@app.get("/export/{job_id}/status")
+async def export_status(job_id: str):
+    job = _jobs.get(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    status = job.get("export_status", "not_started")
+    result = {"status": status}
+    if status == "done":
+        result["download_url"] = f"/export/{job_id}/download"
+    return result
 
 
 @app.get("/export/{job_id}/download")
 async def download(job_id: str):
     job = _jobs.get(job_id)
-    if not job or "export_path" not in job:
+    if not job or job.get("export_status") != "done":
         raise HTTPException(status_code=404, detail="Export not ready")
     path = job["export_path"]
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="File not found")
     filename = Path(path).name
-    return FileResponse(path, filename=filename,
-                        media_type="application/octet-stream")
+    # 用 Content-Disposition 头触发浏览器下载
+    return FileResponse(
+        path,
+        media_type="application/octet-stream",
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
