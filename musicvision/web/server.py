@@ -2,9 +2,11 @@ from __future__ import annotations
 import asyncio
 import json
 import os
+import re
 import sys
 import tempfile
 import uuid
+from datetime import datetime
 from pathlib import Path
 from typing import AsyncGenerator
 
@@ -55,7 +57,9 @@ async def analyze(file: UploadFile = File(...)):
 
     features = analyzer.analyze(audio_path)
     job_id = str(uuid.uuid4())
-    _jobs[job_id] = {"features": features, "audio_path": audio_path}
+    # 保存原始文件名（去掉扩展名），用于导出命名
+    music_name = Path(file.filename).stem
+    _jobs[job_id] = {"features": features, "audio_path": audio_path, "music_name": music_name}
 
     return {
         "job_id": job_id,
@@ -132,7 +136,13 @@ async def export(job_id: str, req: ExportRequest, background_tasks: BackgroundTa
     if not job:
         raise HTTPException(status_code=404, detail="Job not found")
 
-    output_path = str(UPLOAD_DIR / f"{job_id}_viz.{req.format}")
+    music_name = job.get("music_name", "musicvision")
+    # 清理文件名中的特殊字符，保留中文、字母、数字、空格、连字符
+    safe_name = re.sub(r'[^\w\u4e00-\u9fff\- ]', '', music_name).strip() or "musicvision"
+    timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+    export_filename = f"{safe_name}-{timestamp}.{req.format}"
+    output_path = str(UPLOAD_DIR / export_filename)
+    job["export_filename"] = export_filename
     features: AudioFeatures = job["features"]
     audio_path: str = job["audio_path"]
 
