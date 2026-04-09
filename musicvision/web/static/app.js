@@ -2,9 +2,14 @@
 
 const canvas = document.getElementById('viz-canvas');
 const ctx = canvas.getContext('2d');
-let jobId = null, currentStyle = 'spectrum', isPlaying = false;
-let frames = [], maxEnergy = 0.1, currentFrame = 0, animationId = null;
+let jobId = null, currentStyle = 'spectrum';
+let frames = [], maxEnergy = 0.1;
 let audioInfo = {};
+let animationId = null;
+
+// HTML5 Audio 元素，用于播放原始音频
+const audio = new Audio();
+audio.controls = false;
 
 // 自适应 canvas 尺寸
 function resizeCanvas() {
@@ -39,12 +44,15 @@ dropZone.addEventListener('drop', e => {
 fileInput.addEventListener('change', () => { if (fileInput.files[0]) uploadFile(fileInput.files[0]); });
 
 async function uploadFile(file) {
-  // 停止当前播放
-  isPlaying = false;
-  clearTimeout(animationId);
+  // 停止旧播放
+  audio.pause();
+  audio.src = '';
+  cancelAnimationFrame(animationId);
   frames = [];
   maxEnergy = 0.1;
-  currentFrame = 0;
+
+  // 将文件绑定到 Audio 元素（本地 ObjectURL，无需服务端，直接播放）
+  audio.src = URL.createObjectURL(file);
 
   setStatus('正在分析音频...');
   const form = new FormData();
@@ -94,19 +102,30 @@ async function loadFrames(jId) {
 }
 
 function startPlayback() {
-  isPlaying = true;
   document.getElementById('btn-play').textContent = '⏸';
-  playLoop();
+  audio.currentTime = 0;
+  audio.play().catch(() => {});  // 部分浏览器需要用户手势，play() 失败时静默
+  renderLoop();
 }
 
-function playLoop() {
-  if (!isPlaying || frames.length === 0) return;
+// 以音频时间轴驱动动画（音画同步）
+function renderLoop() {
+  if (frames.length === 0) return;
 
   resizeCanvas();
+
+  // 根据音频当前时间计算对应帧索引
+  const t = audio.currentTime || 0;
+  const duration = audioInfo.duration || 1;
+  const frameIdx = Math.min(
+    Math.floor((t / duration) * frames.length),
+    frames.length - 1
+  );
+
   const frameData = {
-    ...frames[currentFrame],
+    ...frames[frameIdx],
     maxEnergy,
-    duration: audioInfo.duration || 1,
+    duration,
   };
 
   if (Renderers[currentStyle]) {
@@ -117,37 +136,51 @@ function playLoop() {
   const eNorm = Math.min(frameData.energy / maxEnergy, 1);
   document.getElementById('energy-fill').style.width = (eNorm * 100) + '%';
 
-  // 更新进度条和时间
-  const progress = currentFrame / Math.max(1, frames.length - 1);
-  document.getElementById('progress-fill').style.width = (progress * 100) + '%';
-  const currentTime = progress * (audioInfo.duration || 0);
+  // 更新进度条和时间显示
+  const progress = duration > 0 ? t / duration : 0;
+  document.getElementById('progress-fill').style.width = (Math.min(progress, 1) * 100) + '%';
   document.getElementById('time-display').textContent =
-    `${formatTime(currentTime)} / ${formatTime(audioInfo.duration || 0)}`;
+    `${formatTime(t)} / ${formatTime(duration)}`;
 
-  currentFrame = (currentFrame + 1) % frames.length;
-  animationId = setTimeout(playLoop, 1000 / 30);  // ~30fps
+  animationId = requestAnimationFrame(renderLoop);
 }
 
-// 播放控制
+// 播放 / 暂停
 document.getElementById('btn-play').addEventListener('click', () => {
-  isPlaying = !isPlaying;
-  document.getElementById('btn-play').textContent = isPlaying ? '⏸' : '▶';
-  if (isPlaying) playLoop();
-  else clearTimeout(animationId);
+  if (frames.length === 0) return;
+  if (audio.paused) {
+    audio.play().catch(() => {});
+    document.getElementById('btn-play').textContent = '⏸';
+    renderLoop();
+  } else {
+    audio.pause();
+    cancelAnimationFrame(animationId);
+    document.getElementById('btn-play').textContent = '▶';
+  }
 });
+
+// 跳到开头
 document.getElementById('btn-prev').addEventListener('click', () => {
-  currentFrame = 0;
+  audio.currentTime = 0;
 });
+
+// 跳到结尾
 document.getElementById('btn-next').addEventListener('click', () => {
-  if (frames.length > 0) currentFrame = frames.length - 1;
+  if (audioInfo.duration) audio.currentTime = audioInfo.duration;
 });
 
 // 点击进度条跳转
 document.getElementById('progress-bar').addEventListener('click', (e) => {
-  if (frames.length === 0) return;
+  if (!audioInfo.duration) return;
   const rect = e.currentTarget.getBoundingClientRect();
   const t = (e.clientX - rect.left) / rect.width;
-  currentFrame = Math.floor(t * frames.length);
+  audio.currentTime = t * audioInfo.duration;
+});
+
+// 音频播放结束时重置按钮
+audio.addEventListener('ended', () => {
+  document.getElementById('btn-play').textContent = '▶';
+  cancelAnimationFrame(animationId);
 });
 
 // 导出
