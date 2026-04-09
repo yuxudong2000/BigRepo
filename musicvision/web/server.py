@@ -2,10 +2,14 @@ from __future__ import annotations
 import asyncio
 import json
 import os
+import sys
 import tempfile
 import uuid
 from pathlib import Path
 from typing import AsyncGenerator
+
+# 将 musicvision/ 根目录加入 sys.path，使 core/visualizers 包可被找到
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse, StreamingResponse
