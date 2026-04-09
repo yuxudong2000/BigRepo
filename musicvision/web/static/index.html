@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicVision</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #050510; color: #e0e0e0; font-family: system-ui, sans-serif; height: 100vh; display: flex; flex-direction: column; }
+    header { background: #0d0d2a; padding: 10px 16px; border-bottom: 1px solid #1a1a3a; display: flex; align-items: center; }
+    header h1 { font-size: 16px; color: #7b2fff; }
+    .main { display: flex; flex: 1; overflow: hidden; }
+
+    /* 左侧面板 */
+    #sidebar { width: 180px; background: #0d0d2a; border-right: 1px solid #1a1a3a; padding: 14px; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; flex-shrink: 0; }
+    .sidebar-section h3 { font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .style-btn { width: 100%; padding: 7px 10px; background: #1a1a3a; border: none; border-radius: 4px; color: #aaa; font-size: 12px; cursor: pointer; text-align: left; margin-bottom: 4px; }
+    .style-btn.active { background: #7b2fff; color: #fff; }
+    .style-btn:hover:not(.active) { background: #252545; }
+    #drop-zone { border: 1px dashed #7b2fff; border-radius: 6px; padding: 16px 8px; text-align: center; color: #7b2fff; font-size: 12px; cursor: pointer; line-height: 1.6; }
+    #drop-zone:hover, #drop-zone.dragover { background: #7b2fff22; }
+    #file-input { display: none; }
+    .info-row { font-size: 11px; color: #aaa; display: flex; justify-content: space-between; margin-bottom: 3px; }
+    .info-row span:last-child { color: #00f5ff; }
+    .energy-bar { height: 4px; background: #1a1a3a; border-radius: 2px; margin-top: 4px; }
+    .energy-fill { height: 100%; background: linear-gradient(to right, #7b2fff, #ff00aa); border-radius: 2px; transition: width 0.1s; width: 0%; }
+    .export-btn { width: 100%; padding: 8px; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; margin-bottom: 4px; }
+    .export-btn.mp4 { background: #1a3a1a; color: #00ff88; }
+    .export-btn.gif { background: #1a1a3a; color: #aaa; }
+    .export-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    #status { font-size: 11px; color: #555; text-align: center; margin-top: auto; }
+
+    /* 右侧 canvas 区 */
+    #canvas-area { flex: 1; display: flex; flex-direction: column; background: #050510; min-width: 0; }
+    #viz-canvas { flex: 1; width: 100%; display: block; }
+
+    /* 播放控制条 */
+    #transport { background: #0d0d2a; border-top: 1px solid #1a1a3a; padding: 8px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .transport-btn { background: none; border: none; color: #aaa; font-size: 20px; cursor: pointer; line-height: 1; }
+    .transport-btn:hover { color: #fff; }
+    #progress-bar { flex: 1; height: 3px; background: #1a1a3a; border-radius: 2px; cursor: pointer; }
+    #progress-fill { height: 100%; background: linear-gradient(to right, #7b2fff, #ff00aa); border-radius: 2px; width: 0%; transition: width 0.05s; }
+    #time-display { font-size: 11px; color: #555; min-width: 80px; text-align: right; }
+  </style>
+</head>
+<body>
+  <header><h1>🎵 MusicVision</h1></header>
+  <div class="main">
+    <div id="sidebar">
+      <div class="sidebar-section">
+        <h3>可视化风格</h3>
+        <button class="style-btn active" data-style="spectrum">■ 频谱条形</button>
+        <button class="style-btn" data-style="waveform">≋ 波形流动</button>
+        <button class="style-btn" data-style="particle">✦ 粒子爆炸</button>
+        <button class="style-btn" data-style="circular">◎ 环形放射</button>
+      </div>
+      <div class="sidebar-section">
+        <h3>音乐文件</h3>
+        <div id="drop-zone">
+          + 拖拽 / 点击<br>选择音乐文件
+          <input type="file" id="file-input" accept=".mp3,.wav,.flac,.ogg">
+        </div>
+      </div>
+      <div class="sidebar-section" id="info-section" style="display:none">
+        <h3>音乐信息</h3>
+        <div class="info-row"><span>BPM</span><span id="info-bpm">—</span></div>
+        <div class="info-row"><span>调</span><span id="info-key">—</span></div>
+        <div class="info-row"><span>时长</span><span id="info-dur">—</span></div>
+        <div class="info-row"><span>能量</span></div>
+        <div class="energy-bar"><div class="energy-fill" id="energy-fill"></div></div>
+      </div>
+      <div class="sidebar-section">
+        <h3>导出</h3>
+        <button class="export-btn mp4" id="btn-export-mp4" disabled>⬇ 导出 MP4</button>
+        <button class="export-btn gif" id="btn-export-gif" disabled>⬇ 导出 GIF</button>
+      </div>
+      <div id="status">等待上传文件...</div>
+    </div>
+    <div id="canvas-area">
+      <canvas id="viz-canvas"></canvas>
+      <div id="transport">
+        <button class="transport-btn" id="btn-prev">⏮</button>
+        <button class="transport-btn" id="btn-play">▶</button>
+        <button class="transport-btn" id="btn-next">⏭</button>
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+        <span id="time-display">0:00 / 0:00</span>
+      </div>
+    </div>
+  </div>
+  <script src="/static/canvas-renderer.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
