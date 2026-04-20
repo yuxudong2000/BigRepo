@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>呆伯特风格漫画 - 关于会议的会议</title>
+  <style>
+    body { 
+      background: #f4f4f5; 
+      display: flex; 
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      margin: 0; 
+      font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; 
+    }
+    canvas { 
+      background: white; 
+      border: 3px solid #111; 
+      box-shadow: 8px 8px 0px rgba(0,0,0,0.1); 
+      border-radius: 4px;
+    }
+    h2 { color: #333; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h2>《关于会议的会议》</h2>
+  <canvas id="comic" width="1000" height="380"></canvas>
+  <script>
+    const canvas = document.getElementById('comic');
+    const ctx = canvas.getContext('2d');
+    
+    // 背景
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // 全局样式
+    ctx.strokeStyle = '#111';
+    ctx.lineWidth = 2.5;
+    ctx.fillStyle = '#111';
+    
+    // 画画框 (3格)
+    const panelW = 310;
+    const panelH = 340;
+    const pad = 15;
+    
+    ctx.strokeRect(pad, pad, panelW, panelH);
+    ctx.strokeRect(pad * 2 + panelW, pad, panelW, panelH);
+    ctx.strokeRect(pad * 3 + panelW * 2, pad, panelW, panelH);
+
+    // --- 绘图辅助函数 ---
+    
+    // 气泡框
+    function drawBubble(x, y, w, h, text, tailX, tailY, isThought = false) {
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.roundRect(x, y, w, h, 12);
+        ctx.fill();
+        ctx.stroke();
+
+        // 气泡尾巴
+        if (isThought) {
+            ctx.beginPath(); ctx.arc(tailX, tailY - 15, 6, 0, Math.PI*2); ctx.stroke();
+            ctx.beginPath(); ctx.arc((x+w/2+tailX)/2, tailY - 35, 10, 0, Math.PI*2); ctx.stroke();
+        } else {
+            ctx.beginPath();
+            ctx.moveTo(x + w/2 - 15, y + h);
+            ctx.lineTo(tailX, tailY);
+            ctx.lineTo(x + w/2 + 15, y + h);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            ctx.stroke();
+            // 擦除重叠的线
+            ctx.beginPath();
+            ctx.moveTo(x + w/2 - 14, y + h);
+            ctx.lineTo(x + w/2 + 14, y + h);
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 4;
+            ctx.stroke();
+            ctx.strokeStyle = '#111';
+            ctx.lineWidth = 2.5;
+        }
+
+        // 文字
+        ctx.fillStyle = '#111';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.font = 'bold 16px "PingFang SC"';
+        const lines = text.split('
+');
+        lines.forEach((line, i) => {
+            ctx.fillText(line, x + w/2, y + h/2 + (i - lines.length/2 + 0.5) * 22);
+        });
+    }
+
+    // 画老板 (尖头，方身)
+    function drawBoss(x, y, handPos) {
+        // 头
+        ctx.strokeRect(x, y, 40, 45);
+        // 尖头发
+        ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x-15, y-25); ctx.lineTo(x+15, y); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x+40, y); ctx.lineTo(x+55, y-25); ctx.lineTo(x+25, y); ctx.stroke();
+        // 眼睛
+        ctx.fillRect(x+10, y+15, 4, 4); ctx.fillRect(x+26, y+15, 4, 4);
+        // 身体
+        ctx.strokeRect(x-10, y+45, 60, 80);
+        // 领带
+        ctx.beginPath(); ctx.moveTo(x+15, y+45); ctx.lineTo(x+25, y+45); ctx.lineTo(x+20, y+90); ctx.closePath(); ctx.fill();
+        // 手臂
+        if (handPos === 'hips') {
+            ctx.beginPath(); ctx.moveTo(x-10, y+60); ctx.lineTo(x-30, y+80); ctx.lineTo(x-10, y+100); ctx.stroke(); // 左叉腰
+            ctx.beginPath(); ctx.moveTo(x+50, y+60); ctx.lineTo(x+70, y+80); ctx.lineTo(x+50, y+100); ctx.stroke(); // 右叉腰
+        } else if (handPos === 'point') {
+            ctx.beginPath(); ctx.moveTo(x-10, y+60); ctx.lineTo(x-40, y+50); ctx.stroke(); // 指着左边
+        }
+    }
+
+    // 画员工 (圆头，大眼镜，弯领带)
+    function drawEmp(x, y, pose) {
+        // 头
+        ctx.beginPath(); ctx.arc(x+20, y+25, 25, 0, Math.PI*2); ctx.fillStyle='white'; ctx.fill(); ctx.stroke();
+        // 眼镜
+        ctx.beginPath(); ctx.arc(x+8, y+20, 10, 0, Math.PI*2); ctx.stroke();
+        ctx.beginPath(); ctx.arc(x+32, y+20, 10, 0, Math.PI*2); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x+18, y+20); ctx.lineTo(x+22, y+20); ctx.stroke();
+        // 眼睛
+        ctx.fillStyle = '#111';
+        ctx.fillRect(x+7, y+19, 3, 3); ctx.fillRect(x+31, y+19, 3, 3);
+        // 嘴巴 (面无表情)
+        if (pose === 'exhausted') {
+            ctx.beginPath(); ctx.moveTo(x+10, y+42); ctx.quadraticCurveTo(x+20, y+35, x+30, y+42); ctx.stroke(); // 撇嘴
+        } else {
+            ctx.beginPath(); ctx.moveTo(x+12, y+40); ctx.lineTo(x+28, y+40); ctx.stroke(); // 平嘴
+        }
+        // 身体
+        ctx.strokeRect(x-5, y+50, 50, 80);
+        
+        if (pose === 'sit') {
+            // 桌子
+            ctx.strokeRect(x-20, y+110, 90, 10);
+            ctx.strokeRect(x+50, y+120, 10, 100);
+            // 弯曲的领带放在桌上
+            ctx.beginPath(); ctx.moveTo(x+20, y+50); ctx.quadraticCurveTo(x+40, y+90, x+60, y+105); ctx.stroke();
+        } else {
+            // 翘起的领带 (呆伯特经典)
+            ctx.beginPath(); ctx.moveTo(x+20, y+50); ctx.quadraticCurveTo(x+40, y+70, x+45, y+40); ctx.stroke();
+        }
+    }
+
+    // --- 第一格 ---
+    let ox = pad;
+    drawBoss(ox + 70, 180, 'hips');
+    drawEmp(ox + 200, 180, 'sit');
+    drawBubble(ox + 30, 40, 240, 70, "我们要提高
+团队的工作效率！", ox + 80, 180);
+
+    // --- 第二格 ---
+    ox = pad * 2 + panelW;
+    // 白板
+    ctx.strokeRect(ox + 20, 100, 120, 90);
+    ctx.beginPath(); ctx.moveTo(ox+30, 120); ctx.lineTo(ox+120, 170); ctx.moveTo(ox+120, 120); ctx.lineTo(ox+30, 170); ctx.stroke(); // 复杂图表
+    drawBoss(ox + 180, 180, 'point');
+    drawEmp(ox + 240, 200, 'sit'); // 矮一点，表示累趴了
+    
+    // 旁白框
+    ctx.fillStyle = 'white';
+    ctx.fillRect(ox, pad, 120, 30);
+    ctx.strokeRect(ox, pad, 120, 30);
+    ctx.fillStyle = '#111';
+    ctx.font = '14px "PingFang SC"';
+    ctx.fillText("两个小时后...", ox + 60, pad + 15);
+    
+    drawBubble(ox + 40, 45, 250, 70, "所以这个减少不必要
+会议的第14步流程...", ox + 180, 180);
+
+    // --- 第三格 ---
+    ox = pad * 3 + panelW * 2;
+    drawBoss(ox + 60, 180, '');
+    // 老板拿着本子
+    ctx.fillStyle = 'white'; ctx.strokeRect(ox + 30, 210, 20, 30); ctx.fillStyle = '#111';
+    
+    drawEmp(ox + 220, 180, 'exhausted');
+    drawBubble(ox + 20, 30, 200, 70, "下周同一时间再开
+一次跟进会！", ox + 80, 180);
+    drawBubble(ox + 160, 110, 130, 45, "我想申请工伤。", ox + 220, 180, true);
+
+  </script>
+</body>
+</html>

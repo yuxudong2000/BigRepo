@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026年清北及华东五校强基计划深度汇总</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f0f2f5;
+      --card: #ffffff;
+      --primary: #1a56db;
+      --primary-light: #e8f0fe;
+      --accent: #0e9f6e;
+      --accent-light: #def7ec;
+      --text: #111827;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 1px 4px rgba(0,0,0,.06), 0 4px 20px rgba(0,0,0,.06);
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #0f2460 0%, #1a56db 55%, #0891b2 100%);
+      color: #fff;
+      padding: 52px 24px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero h1 { font-size: clamp(1.5rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -.5px; position: relative; }
+    .hero p { margin-top: 10px; opacity: .88; font-size: .95rem; position: relative; }
+    .hero .meta {
+      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+      margin-top: 16px; position: relative;
+    }
+    .hero .badge {
+      background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25);
+      border-radius: 20px; padding: 5px 14px; font-size: .8rem;
+    }
+
+    /* ── Sticky Tabs ── */
+    .tabs-wrap {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff; border-bottom: 1px solid var(--border);
+      overflow-x: auto; white-space: nowrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+    }
+    .tabs { display: inline-flex; padding: 0 20px; min-width: 100%; }
+    .tab-btn {
+      cursor: pointer; border: none; background: none;
+      padding: 15px 16px; font-size: .88rem; font-weight: 600;
+      color: var(--text-muted); border-bottom: 3px solid transparent;
+      transition: all .2s; white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--primary); }
+    .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+    /* ── Layout ── */
+    .container { max-width: 1120px; margin: 0 auto; padding: 32px 20px 64px; }
+    .school-section { display: none; }
+    .school-section.active { display: block; }
+
+    /* ── School Header ── */
+    .school-header {
+      display: flex; align-items: center; gap: 18px;
+      margin-bottom: 24px; padding: 22px 24px;
+      background: var(--card); border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .school-logo {
+      width: 56px; height: 56px; border-radius: 12px;
+      background: var(--primary-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; flex-shrink: 0;
+    }
+    .school-name { font-size: 1.3rem; font-weight: 700; }
+    .school-desc { font-size: .84rem; color: var(--text-muted); margin-top: 3px; }
+    .source-link {
+      margin-left: auto; font-size: .8rem; color: var(--primary);
+      text-decoration: none; background: var(--primary-light);
+      padding: 7px 14px; border-radius: 8px; white-space: nowrap; flex-shrink: 0;
+    }
+    .source-link:hover { opacity: .8; }
+
+    /* ── Section heading ── */
+    .section-title {
+      font-size: .95rem; font-weight: 700; color: var(--text);
+      margin: 28px 0 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title::before {
+      content: '';
+      display: block; width: 4px; height: 18px;
+      background: var(--primary); border-radius: 2px;
+    }
+
+    /* ── Info grid ── */
+    .info-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px; margin-bottom: 20px;
+    }
+    .info-card {
+      background: var(--card); border-radius: var(--radius);
+      padding: 16px 18px; box-shadow: var(--shadow);
+    }
+    .info-card .label { font-size: .72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .5px; }
+    .info-card .value { font-size: .93rem; font-weight: 600; margin-top: 4px; }
+
+    /* ── Card ── */
+    .card {
+      background: var(--card); border-radius: var(--radius);
+      box-shadow: var(--shadow); margin-bottom: 18px; overflow: hidden;
+    }
+    .card-title {
+      padding: 14px 20px; font-size: .88rem; font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 8px;
+      background: #fafafa;
+    }
+    .card-title .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
+    .card-body { padding: 18px 20px; }
+
+    /* ── Table ── */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+    th {
+      text-align: left; padding: 11px 14px;
+      background: #f9fafb; color: var(--text-muted);
+      font-size: .76rem; font-weight: 600; text-transform: uppercase; letter-spacing: .3px;
+      border-bottom: 1px solid var(--border);
+    }
+    td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #fafbff; }
+    .hl td { background: #f0f9ff !important; }
+
+    /* ── Tags ── */
+    .tag {
+      display: inline-block; padding: 2px 8px; border-radius: 5px;
+      font-size: .73rem; font-weight: 600; margin: 1px 2px 1px 0;
+    }
+    .tag-blue   { background: #e8f0fe; color: #1a56db; }
+    .tag-green  { background: #def7ec; color: #065f46; }
+    .tag-gray   { background: #f3f4f6; color: #374151; }
+    .tag-amber  { background: #fef3c7; color: #92400e; }
+    .tag-rose   { background: #fee2e2; color: #991b1b; }
+    .tag-purple { background: #ede9fe; color: #4c1d95; }
+    .tag-teal   { background: #ccfbf1; color: #065f46; }
+    .tag-orange { background: #ffedd5; color: #9a3412; }
+
+    /* ── Rating badge ── */
+    .rating {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 3px 10px; border-radius: 6px; font-size: .78rem; font-weight: 700;
+    }
+    .rating-aplus { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .rating-a     { background: #def7ec; color: #065f46; border: 1px solid #6ee7b7; }
+    .rating-aminus{ background: #e8f0fe; color: #1a56db; border: 1px solid #a5b4fc; }
+
+    /* ── Leader cards ── */
+    .leaders-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .leader-card {
+      background: #fafbff; border: 1px solid #e0e7ff;
+      border-radius: 10px; padding: 14px 16px;
+    }
+    .leader-name { font-weight: 700; font-size: .9rem; }
+    .leader-title { font-size: .76rem; color: var(--primary); margin-top: 3px; }
+    .leader-desc { font-size: .78rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+
+    /* ── Career grid ── */
+    .career-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 10px;
+    }
+    .career-item {
+      background: var(--bg); border-radius: 8px; padding: 12px 14px;
+      font-size: .82rem; display: flex; align-items: flex-start; gap: 8px;
+    }
+    .career-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── Formula ── */
+    .formula-box {
+      background: #f0fdf4; border: 1px solid #bbf7d0;
+      border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+      font-family: "SF Mono", "Fira Code", monospace; font-size: .88rem; color: #065f46;
+      line-height: 1.7;
+    }
+
+    /* ── Notice ── */
+    .notice {
+      border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0;
+      padding: 12px 16px; font-size: .85rem; color: #1e3a8a;
+      margin-bottom: 18px; background: var(--primary-light);
+    }
+    .notice-amber {
+      border-left-color: #f59e0b; background: #fffbeb; color: #78350f;
+    }
+    .notice-green {
+      border-left-color: #10b981; background: #ecfdf5; color: #065f46;
+    }
+
+    /* ── Score table highlight ── */
+    .score-best td { background: #ecfdf5 !important; font-weight: 600; }
+
+    /* ── Compare table (横向学校对比) ── */
+    .compare-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1a56db 100%);
+      color: #fff; padding: 20px 24px; border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .compare-header h2 { font-size: 1.1rem; font-weight: 700; }
+    .compare-header p { font-size: .83rem; opacity: .85; margin-top: 4px; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; padding: 28px 20px;
+      font-size: .78rem; color: var(--text-muted);
+      border-top: 1px solid var(--border); background: #fff;
+    }
+
+    /* ── Tab groups ── */
+    .tab-group-label {
+      font-size: .68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .8px; color: var(--text-muted);
+      padding: 10px 16px 4px; white-space: nowrap;
+      border-right: 1px solid var(--border);
+    }
+    .tab-group-label:first-child { padding-left: 20px; }
+    .tabs { align-items: center; }
+    .tab-divider { width: 1px; background: var(--border); height: 32px; flex-shrink: 0; margin: 0 4px; }
+
+    /* ── Major section ── */
+    .major-hero {
+      background: linear-gradient(135deg, #134e4a 0%, #0f766e 50%, #0891b2 100%);
+      color: #fff; border-radius: var(--radius); padding: 28px 28px 24px;
+      margin-bottom: 24px;
+    }
+    .major-hero h2 { font-size: 1.5rem; font-weight: 800; }
+    .major-hero p { margin-top: 8px; opacity: .88; font-size: .92rem; }
+    .major-hero .major-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .major-hero .major-tag {
+      background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.28);
+      border-radius: 16px; padding: 4px 12px; font-size: .78rem;
+    }
+
+    /* ── Major content cards ── */
+    .major-compare-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px; margin-bottom: 20px;
+    }
+    .school-major-card {
+      background: var(--card); border-radius: var(--radius);
+      box-shadow: var(--shadow); overflow: hidden;
+    }
+    .school-major-card .smh {
+      padding: 12px 16px; font-weight: 700; font-size: .9rem;
+      display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid var(--border); background: #fafafa;
+    }
+    .school-major-card .smh .school-icon { font-size: 1.2rem; }
+    .school-major-card .smh .rating { margin-left: auto; }
+    .school-major-card .smc { padding: 14px 16px; font-size: .84rem; line-height: 1.65; }
+    .smc .block-label {
+      font-size: .72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .4px; color: var(--text-muted); margin: 10px 0 4px;
+    }
+    .smc .block-label:first-child { margin-top: 0; }
+
+    /* ── Course table ── */
+    .course-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px; margin-top: 8px;
+    }
+    .course-item {
+      background: #f8faff; border: 1px solid #dbeafe;
+      border-radius: 8px; padding: 10px 12px; font-size: .82rem;
+    }
+    .course-item .c-stage { font-size: .7rem; color: var(--primary); font-weight: 700; margin-bottom: 4px; }
+
+    /* ── Pros/Cons ── */
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+    .pros, .cons {
+      background: #f8faff; border-radius: 8px; padding: 12px 14px; font-size: .82rem; line-height: 1.7;
+    }
+    .pros { border-left: 3px solid #10b981; }
+    .cons { border-left: 3px solid #f59e0b; }
+    .pros .pc-title { font-weight: 700; color: #065f46; font-size: .78rem; margin-bottom: 6px; }
+    .cons .pc-title { font-weight: 700; color: #92400e; font-size: .78rem; margin-bottom: 6px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .school-header { flex-wrap: wrap; }
+      .source-link { margin-left: 0; }
+      th, td { padding: 9px 10px; font-size: .8rem; }
+      .leaders-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>2026年强基计划招生专业深度汇总</h1>
+  <p>清华 · 北大 · 复旦 · 上交 · 浙大 · 南大 · 中科大</p>
+  <div class="meta">
+    <span class="badge">📚 专业培养方案</span>
+    <span class="badge">🏛️ 学科评估等级</span>
+    <span class="badge">👨‍🔬 院士 · 长江学者</span>
+    <span class="badge">💼 就业方向</span>
+    <span class="badge">数据截止 2026年4月</span>
+  </div>
+</div>
+
+<div class="tabs-wrap">
+  <div class="tabs" id="tabs">
+    <span class="tab-group-label">按学校</span>
+    <button class="tab-btn active" data-target="thu">清华</button>
+    <button class="tab-btn" data-target="pku">北大</button>
+    <button class="tab-btn" data-target="fdu">复旦</button>
+    <button class="tab-btn" data-target="sjtu">上交</button>
+    <button class="tab-btn" data-target="zju">浙大</button>
+    <button class="tab-btn" data-target="nju">南大</button>
+    <button class="tab-btn" data-target="ustc">中科大</button>
+    <button class="tab-btn" data-target="compare">综合对比</button>
+    <div class="tab-divider"></div>
+    <span class="tab-group-label">按专业</span>
+    <button class="tab-btn" data-target="major-math">数学·信计</button>
+    <button class="tab-btn" data-target="major-physics">物理学</button>
+    <button class="tab-btn" data-target="major-chemistry">化学</button>
+    <button class="tab-btn" data-target="major-bio">生命科学</button>
+    <button class="tab-btn" data-target="major-eng">工程类</button>
+    <button class="tab-btn" data-target="major-special">特色专业</button>
+    <button class="tab-btn" data-target="major-hum">人文类</button>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ══════════════ 清华大学 ══════════════ -->
+<section class="school-section active" id="thu">
+  <div class="school-header">
+    <div class="school-logo">🏛️</div>
+    <div>
+      <div class="school-name">清华大学</div>
+      <div class="school-desc">五大书院 · 基础理科 + 理工衔接 + 人文 · 第五轮学科评估多项A+</div>
+    </div>
+    <a class="source-link" href="https://join-tsinghua.edu.cn/info/1033/2166.htm" target="_blank">📄 2026简章</a>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="label">综合成绩</div><div class="value">高考85% + 校测15%</div></div>
+    <div class="info-card"><div class="label">理科选考</div><div class="value">物理 + 化学（必选）</div></div>
+    <div class="info-card"><div class="label">文科要求</div><div class="value">历史类（3+1+2省份）</div></div>
+    <div class="info-card"><div class="label">深造率</div><div class="value">本研贯通 ≥95%</div></div>
+  </div>
+
+  <p class="section-title">招生专业 · 培养方案</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>五大书院专业详情</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>书院</th><th>专业</th><th>学科评估</th><th>培养特色</th><th>毕业去向</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-blue">致理书院</span></td>
+          <td>数学与应用数学<br>物理学<br>化学<br>生物科学<br>信息与计算科学</td>
+          <td>数学 <span class="rating rating-aplus">A+</span><br>物理 <span class="rating rating-aplus">A+</span><br>化学 <span class="rating rating-aplus">A+</span></td>
+          <td>小班制精英培养，导师1:1；大一统修数理基础课；与交叉学科研究院深度联动；保研率≥90%</td>
+          <td>国内外顶尖高校/科研院所读博；中科院、MIT、Stanford；量化金融/互联网研究院</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-green">未央书院</span></td>
+          <td>数理基础科学</td>
+          <td>数学+物理双向 <span class="rating rating-aplus">A+</span></td>
+          <td>数学+物理+工程三位一体；大三分流至AI/芯片/能源方向；面向国家重大技术突破</td>
+          <td>航天/半导体/AI研究院；清华交叉信息研究院；华为2012实验室</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-purple">探微书院</span></td>
+          <td>化学生物学</td>
+          <td>化学 <span class="rating rating-aplus">A+</span> · 生物 <span class="rating rating-a">A</span></td>
+          <td>化学+生命科学交叉；依托生命科学学院、医学院；培养合成生物学家</td>
+          <td>生物医药/制药公司；医学院/生科院读博；国内外顶尖生物研究所</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-amber">行健书院</span></td>
+          <td>理论与应用力学</td>
+          <td>力学 <span class="rating rating-aplus">A+</span></td>
+          <td>力学+工程双向培养；与航天、土木、机械学院联动；可转入航天/力学/机械方向深造</td>
+          <td>航天航空研究院；中国商飞/中航工业；高校力学系</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-gray">日新书院</span></td>
+          <td>中国语言文学（古文字）<br>历史学类<br>哲学类</td>
+          <td>中文 <span class="rating rating-aplus">A+</span><br>历史 <span class="rating rating-aplus">A+</span></td>
+          <td>古典文献与现代人文结合；导师带入一线田野/档案研究；小班讨论+专题讲座</td>
+          <td>高校人文学科教职；博物馆/文化机构；出版/传媒/政府文化部门</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="section-title">学科学术领头人（部分代表）</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>清华大学强基相关学科代表性学者</div>
+    <div class="card-body">
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <div class="leader-name">丘成桐</div>
+          <div class="leader-title">中国科学院外籍院士 · 数学</div>
+          <div class="leader-desc">菲尔兹奖得主，清华丘成桐数学科学中心创始主任，主导强基数学培养体系建设。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">王小云</div>
+          <div class="leader-title">中国科学院院士 · 密码/数学</div>
+          <div class="leader-desc">SHA-1/MD5破解者，清华高研院院长，密码数学领域国际权威。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">薛其坤</div>
+          <div class="leader-title">中国科学院院士 · 物理</div>
+          <div class="leader-desc">量子反常霍尔效应实验发现者，前南科大校长，清华物理学科领军人物。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">朱邦芬</div>
+          <div class="leader-title">中国科学院院士 · 物理</div>
+          <div class="leader-desc">凝聚态物理学家，长期主持清华物理系本科教育改革，致理书院创建推动者。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">张希</div>
+          <div class="leader-title">中国科学院院士 · 化学</div>
+          <div class="leader-desc">超分子化学、纳米材料专家，主持国家重点实验室。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">颜宁</div>
+          <div class="leader-title">中国科学院院士 · 生命科学</div>
+          <div class="leader-desc">结构生物学家，解析多种膜蛋白三维结构，深圳医学科学院创始院长，原清华生命学院教授。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业 · 深造去向</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>典型毕业去向</div>
+    <div class="card-body">
+      <div class="career-grid">
+        <div class="career-item"><span class="career-icon">🎓</span><span>国内外顶尖高校读博（MIT/Stanford/清北）</span></div>
+        <div class="career-item"><span class="career-icon">🔬</span><span>中科院各研究所（物理所/化学所/生物物理所）</span></div>
+        <div class="career-item"><span class="career-icon">🚀</span><span>航天科技/航天科工/商飞（力学/数理）</span></div>
+        <div class="career-item"><span class="career-icon">💻</span><span>华为2012实验室/字节/腾讯研究院</span></div>
+        <div class="career-item"><span class="career-icon">💊</span><span>生物医药/基因编辑公司（化生方向）</span></div>
+        <div class="career-item"><span class="career-icon">🏛️</span><span>高校教职/文化机构（人文方向）</span></div>
+      </div>
+      <div class="notice notice-green" style="margin-top:14px">
+        📊 清华强基计划学生保研/出国深造比例约 <strong>90%+</strong>，以读博/读硕为主流路径，直接就业比例极低。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 北京大学 ══════════════ -->
+<section class="school-section" id="pku">
+  <div class="school-header">
+    <div class="school-logo">🔴</div>
+    <div>
+      <div class="school-name">北京大学</div>
+      <div class="school-desc">元培学院统筹 · A/B/C三组 · 四大"疯人院"：数院/物院/化院/生院</div>
+    </div>
+    <a class="source-link" href="https://bkzs.pku.edu.cn/" target="_blank">📄 招生网</a>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="label">综合成绩</div><div class="value">高考85% + 校测15%</div></div>
+    <div class="info-card"><div class="label">理科选考</div><div class="value">物理 + 化学</div></div>
+    <div class="info-card"><div class="label">竞赛破格</div><div class="value">五大全国决赛二等奖+</div></div>
+    <div class="info-card"><div class="label">深造率</div><div class="value">读博率约85%+</div></div>
+  </div>
+
+  <p class="section-title">招生专业 · 培养方案</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>A/B/C三组专业详情</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>组别</th><th>专业</th><th>学科评估(第五轮)</th><th>培养特色</th><th>毕业去向</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-blue">A组</span></td>
+          <td>数学与应用数学<br>信息与计算科学<br>物理学<br>化学<br>生物科学</td>
+          <td>数学 <span class="rating rating-aplus">A+</span><br>物理 <span class="rating rating-aplus">A+</span><br>化学 <span class="rating rating-aplus">A+</span><br>生物 <span class="rating rating-aplus">A+</span></td>
+          <td>元培学院荣誉课程体系；"四大疯人院"学风极强；大量竞赛金牌生聚集；北大数学研究院BICMR为核心平台；本研贯通培养</td>
+          <td>哈佛/普林斯顿/MIT/北大读博；中科院数学系统所；幻方/九坤量化；顶级互联网算法岗</td>
+        </tr>
+        <tr class="hl">
+          <td><span class="tag tag-amber">B组</span></td>
+          <td>理论与应用力学<br><strong>天文学</strong><br><strong>核物理</strong></td>
+          <td>力学 <span class="rating rating-aplus">A+</span><br>天文 <span class="rating rating-a">A</span></td>
+          <td><strong>天文学</strong>：全国顶尖，依托FAST/国家天文台，参与SKA国际工程；<strong>核物理</strong>：与中核/军工深度对接；力学三轮评估全国第一，依托工学院</td>
+          <td>国家天文台/LAMOST；核工业/军工；航空航天（力学）</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-green">C组</span></td>
+          <td>历史学<br>考古学<br>哲学<br>中国语言文学（古文字）</td>
+          <td>历史 <span class="rating rating-aplus">A+</span><br>哲学 <span class="rating rating-aplus">A+</span><br>中文 <span class="rating rating-aplus">A+</span></td>
+          <td>人文学科全国顶尖；考古学全国第一，依托赛克勒考古博物馆；古文字学为国家"冷门绝学"重点扶持专业</td>
+          <td>高校文史哲教职；故宫/国博；政府文化机构</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="section-title">学科学术领头人（部分代表）</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>北京大学强基相关学科代表性学者</div>
+    <div class="card-body">
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <div class="leader-name">田刚</div>
+          <div class="leader-title">中国科学院院士 · 数学</div>
+          <div class="leader-desc">微分几何、代数几何国际权威，BICMR主任，菲尔兹奖委员会委员。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">欧阳颀</div>
+          <div class="leader-title">中国科学院院士 · 物理</div>
+          <div class="leader-desc">凝聚态物理学家，北大物理学院院长，主导北大物理强基培养改革。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">刘忠范</div>
+          <div class="leader-title">中国科学院院士 · 化学</div>
+          <div class="leader-desc">石墨烯/纳米碳材料权威，北京石墨烯研究院创始院长。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">饶毅</div>
+          <div class="leader-title">北大讲席教授 · 生命科学</div>
+          <div class="leader-desc">神经科学家，首都医科大学校长，北大生命科学学院前院长。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">武向平</div>
+          <div class="leader-title">中国科学院院士 · 天文</div>
+          <div class="leader-desc">射电天文学家，参与推动SKA项目，北大天文系学科带头人。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">陈十一</div>
+          <div class="leader-title">中国科学院院士 · 力学</div>
+          <div class="leader-desc">流体力学/湍流计算专家，前南科大校长，北大工学院奠基人之一。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业 · 深造去向</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>典型毕业去向</div>
+    <div class="card-body">
+      <div class="career-grid">
+        <div class="career-item"><span class="career-icon">🎓</span><span>国内外顶尖高校读博（哈佛/MIT/普林斯顿）</span></div>
+        <div class="career-item"><span class="career-icon">🔭</span><span>国家天文台/LAMOST/FAST（天文）</span></div>
+        <div class="career-item"><span class="career-icon">⚛️</span><span>中核集团/军工单位（核物理）</span></div>
+        <div class="career-item"><span class="career-icon">📊</span><span>幻方量化/九坤/九章算术（数学）</span></div>
+        <div class="career-item"><span class="career-icon">🏺</span><span>故宫博物院/国家博物馆（考古）</span></div>
+        <div class="career-item"><span class="career-icon">🛩️</span><span>航空航天院所/中航工业（力学）</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 复旦大学 ══════════════ -->
+<section class="school-section" id="fdu">
+  <div class="school-header">
+    <div class="school-logo">🔵</div>
+    <div>
+      <div class="school-name">复旦大学</div>
+      <div class="school-desc">七校唯一开设基础医学 · 强调"通识+专业"融合 · 数学/物理/生物/基础医学第五轮均A+</div>
+    </div>
+    <a class="source-link" href="https://ao.fudan.edu.cn/d5/02/c36330a775426/page.htm" target="_blank">📄 2026简章</a>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="label">综合成绩</div><div class="value">高考85% + 校测15%</div></div>
+    <div class="info-card"><div class="label">理科选考</div><div class="value">物理 + 化学</div></div>
+    <div class="info-card"><div class="label">特色专业</div><div class="value">基础医学（七校独有）</div></div>
+    <div class="info-card"><div class="label">深造率</div><div class="value">≥85%读研/读博</div></div>
+  </div>
+
+  <p class="section-title">招生专业 · 培养方案</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>专业详情（理工 + 文史）</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>科类</th><th>专业</th><th>学科评估(第五轮)</th><th>培养特色</th><th>毕业去向</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-blue">理工</span></td>
+          <td>数学与应用数学<br>信息与计算科学<br>物理学<br>化学<br>生物科学类</td>
+          <td>数学 <span class="rating rating-aplus">A+</span><br>物理 <span class="rating rating-aplus">A+</span><br>生物 <span class="rating rating-aplus">A+</span><br>化学 <span class="rating rating-a">A</span></td>
+          <td>
+            依托复旦书院体系，推行通识教育+专业教育深度融合；物理学类含<strong>核物理</strong>方向（全国少有）；化学类含<strong>高分子化学</strong>方向；生物科学类含生物化学/细胞生物学等多方向；本科即可参与国家重点实验室科研
+          </td>
+          <td>复旦/交大/中科大/海外读博；上海生命科学研究所；张江生物医药产业园企业；量化金融（数学）</td>
+        </tr>
+        <tr class="hl">
+          <td><span class="tag tag-rose">理工</span></td>
+          <td><strong>基础医学</strong></td>
+          <td>基础医学 <span class="rating rating-aplus">A+</span></td>
+          <td>
+            <strong>七校强基中唯一的基础医学专业</strong>；依托复旦附属中山/华山等顶级医院；培养医学科学家而非临床医生；本博八年贯通培养；研究方向覆盖分子医学、肿瘤生物学、神经科学；招生名额极少（全国仅约30人/年）
+          </td>
+          <td>复旦/北大医学部/协和医学院读博；上海生命科学院；诺华/默克/阿斯利康等国际药企；重大疾病科研机构</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-green">文史</span></td>
+          <td>中国语言文学（古文字）<br>历史学<br>哲学</td>
+          <td>中文 <span class="rating rating-aplus">A+</span><br>历史 <span class="rating rating-aplus">A+</span><br>哲学 <span class="rating rating-aplus">A+</span></td>
+          <td>复旦文史哲传统深厚，老一辈学者（谭其骧、朱东润）奠基；依托古籍整理研究所；文史哲三学科打通培养</td>
+          <td>高校文史哲教职；上海社科院；出版/传媒；政府机构</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="section-title">学科学术领头人（部分代表）</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>复旦大学强基相关学科代表性学者</div>
+    <div class="card-body">
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <div class="leader-name">金力</div>
+          <div class="leader-title">中国科学院院士 · 生命科学/遗传学</div>
+          <div class="leader-desc">人类遗传学、生物信息学权威，复旦大学副校长，主导基因组学与医学交叉研究。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">赵东元</div>
+          <div class="leader-title">中国科学院院士 · 化学</div>
+          <div class="leader-desc">介孔材料全球领军人物，复旦化学系教授，国际顶级期刊高被引学者。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">马余刚</div>
+          <div class="leader-title">中国科学院院士 · 物理（核物理）</div>
+          <div class="leader-desc">核物理、重离子物理专家，参与RHIC/LHC大型加速器实验，复旦物理学科重要带头人。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">葛均波</div>
+          <div class="leader-title">中国科学院院士 · 基础医学/心血管</div>
+          <div class="leader-desc">心血管介入医学权威，复旦附属中山医院院长，基础医学强基培养的重要支撑。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">许田</div>
+          <div class="leader-title">美国科学院院士 · 生命科学</div>
+          <div class="leader-desc">遗传学、发育生物学专家，复旦生命科学学院讲席教授，推动复旦生命强基国际化。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">葛剑雄</div>
+          <div class="leader-title">资深教授 · 历史地理</div>
+          <div class="leader-desc">历史地理学权威，复旦中国历史地理研究所前所长，人文强基学科精神领袖。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业 · 深造去向</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>典型毕业去向</div>
+    <div class="card-body">
+      <div class="career-grid">
+        <div class="career-item"><span class="career-icon">🎓</span><span>国内外顶尖高校读博（≥85%）</span></div>
+        <div class="career-item"><span class="career-icon">🏥</span><span>复旦附属医院/协和/北医（基础医学）</span></div>
+        <div class="career-item"><span class="career-icon">🧬</span><span>张江生物医药园区/国际药企（生物/医学）</span></div>
+        <div class="career-item"><span class="career-icon">⚗️</span><span>中科院上海有机所/化学所（化学）</span></div>
+        <div class="career-item"><span class="career-icon">📊</span><span>量化金融/互联网算法岗（数学）</span></div>
+        <div class="career-item"><span class="career-icon">🏛️</span><span>高校文史哲教职/上海社科院（人文）</span></div>
+      </div>
+      <div class="notice notice-amber" style="margin-top:14px">
+        💡 <strong>基础医学方向特别说明</strong>：强基基础医学≠临床医学，培养目标是从事基础医学研究的科学家，不授予临床执照，毕业后主要路径为读博/科研，适合有强烈科研兴趣者。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 上海交通大学 ══════════════ -->
+<section class="school-section" id="sjtu">
+  <div class="school-header">
+    <div class="school-logo">🚢</div>
+    <div>
+      <div class="school-name">上海交通大学</div>
+      <div class="school-desc">9个专业（七校最多）· 独有船舶与海洋工程 · 生物/基础医学/船舶/材料均A+</div>
+    </div>
+    <a class="source-link" href="https://admissions.sjtu.edu.cn/" target="_blank">📄 招生网</a>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="label">综合成绩</div><div class="value">高考85% + 校测15%</div></div>
+    <div class="info-card"><div class="label">理科选考</div><div class="value">物理 + 化学</div></div>
+    <div class="info-card"><div class="label">专业总数</div><div class="value">9个（七校最多）</div></div>
+    <div class="info-card"><div class="label">深造率</div><div class="value">≥85%读研/读博</div></div>
+  </div>
+
+  <p class="section-title">招生专业 · 培养方案</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>Ⅰ/Ⅱ两组专业详情（笔试科目不同）</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>组别</th><th>笔试</th><th>专业</th><th>学科评估(第五轮)</th><th>培养特色</th><th>毕业去向</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-blue">Ⅰ组</span></td>
+          <td>数学+化学</td>
+          <td>数学与应用数学<br>化学<br>生物科学<br>生物医学科学<br>材料科学与工程</td>
+          <td>生物 <span class="rating rating-aplus">A+</span><br>基础医学 <span class="rating rating-aplus">A+</span><br>材料 <span class="rating rating-aplus">A+</span><br>化学 <span class="rating rating-a">A</span></td>
+          <td>
+            <strong>生物医学科学</strong>：医工深度交叉，依托附属仁济/瑞金/九院等8家顶级医院，系统性培养；
+            <strong>材料科学与工程</strong>：国家战略新材料方向，七校中少见，依托金属基复合材料全国重点实验室；
+            数学依托"数学物理前沿科学中心"
+          </td>
+          <td>海外顶尖高校/上交读博；上海生科院/药物所；国际材料/医疗器械企业；量化金融（数学）</td>
+        </tr>
+        <tr class="hl">
+          <td><span class="tag tag-green">Ⅱ组</span></td>
+          <td>数学+物理</td>
+          <td>物理学<br>工程力学<br><strong>船舶与海洋工程</strong><br>生物医学工程</td>
+          <td>船舶 <span class="rating rating-aplus">A+</span><br>生物医学工程 <span class="rating rating-aplus">A+</span></td>
+          <td>
+            <strong>船舶与海洋工程</strong>：全国顶尖（第一），服务国家海洋强国战略；依托船舶海洋与建筑工程学院，拥有海洋工程国家实验室；国内唯一写入强基计划的船海专业；
+            <strong>生物医学工程</strong>：AI+医学交叉前沿，与附属医院深度合作研发医疗器械
+          </td>
+          <td>中船集团/中国商船/国防科工委（船舶）；医疗器械龙头/数字医疗企业（生医工）；高校物理/力学教职</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="section-title">学科学术领头人（部分代表）</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>上海交通大学强基相关学科代表性学者</div>
+    <div class="card-body">
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <div class="leader-name">张杰</div>
+          <div class="leader-title">中国科学院院士 · 物理</div>
+          <div class="leader-desc">激光等离子体物理权威，前上海交大校长，物理强基学科领军人物。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">郑平</div>
+          <div class="leader-title">中国科学院院士 · 材料/热学</div>
+          <div class="leader-desc">传热学、多相流动权威，交大机械/材料强基重要支撑学者。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">陈国强</div>
+          <div class="leader-title">中国科学院院士 · 生命科学</div>
+          <div class="leader-desc">造血与白血病研究权威，上交基础医学、生物医学科学强基重要依托人物。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">杨槱</div>
+          <div class="leader-title">中国科学院院士 · 船舶（学科奠基）</div>
+          <div class="leader-desc">中国船舶设计教育奠基人，建立了交大船舶与海洋工程学科体系。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">贺林</div>
+          <div class="leader-title">中国科学院院士 · 遗传学</div>
+          <div class="leader-desc">医学遗传学权威，Bio-X研究院创始院长，推动交大医工交叉强基培养。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">颜波</div>
+          <div class="leader-title">长江学者特聘教授 · 化学</div>
+          <div class="leader-desc">超快激光光谱化学专家，化学强基核心师资，国家杰出青年基金获得者。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业 · 深造去向</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>典型毕业去向</div>
+    <div class="card-body">
+      <div class="career-grid">
+        <div class="career-item"><span class="career-icon">🚢</span><span>中船集团/中国商船/中远海运（船舶）</span></div>
+        <div class="career-item"><span class="career-icon">🦾</span><span>医疗器械企业/数字医疗公司（生医工）</span></div>
+        <div class="career-item"><span class="career-icon">🧲</span><span>中科院材料所/新能源电池企业（材料）</span></div>
+        <div class="career-item"><span class="career-icon">🎓</span><span>海外顶尖高校/上交/复旦读博</span></div>
+        <div class="career-item"><span class="career-icon">🧬</span><span>上海张江/浦东生物医药园区（生物医学）</span></div>
+        <div class="career-item"><span class="career-icon">📊</span><span>量化基金/金融科技（数学/物理）</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 浙江大学 ══════════════ -->
+<section class="school-section" id="zju">
+  <div class="school-header">
+    <div class="school-logo">🏔️</div>
+    <div>
+      <div class="school-name">浙江大学</div>
+      <div class="school-desc">14个专业（七校第一）· 竺可桢学院 · 生态/数学/化工等19项A+ · 浙江本土优势</div>
+    </div>
+    <a class="source-link" href="https://zdzsc.zju.edu.cn/2026/0412/c87333a3150289/page.htm" target="_blank">📄 2026简章</a>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="label">综合成绩</div><div class="value">高考85% + 校测15%</div></div>
+    <div class="info-card"><div class="label">专业总数</div><div class="value">14个（七校第一）</div></div>
+    <div class="info-card"><div class="label">培养依托</div><div class="value">竺可桢学院荣誉项目</div></div>
+    <div class="info-card"><div class="label">浙江优势</div><div class="value">计划占比七校最高</div></div>
+  </div>
+
+  <div class="notice" style="margin-bottom:18px">
+    🏠 <strong>浙江考生特别提示</strong>：浙大为浙江本土高校，各专业在浙计划通常七校中最多，且校园位于杭州市区，地域优势显著。拥有19个A+学科（含数学），基础理科全面覆盖。
+  </div>
+
+  <p class="section-title">招生专业 · 培养方案</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>六组14个专业详情</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>组别</th><th>笔试</th><th>专业</th><th>学科评估(第五轮)</th><th>培养特色</th><th>毕业去向</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-blue">Ⅰ组</span></td>
+          <td>数学+物理</td>
+          <td>数学与应用数学（含智能科学方向）</td>
+          <td>数学 <span class="rating rating-aplus">A+</span></td>
+          <td>数学+AI交叉培养，依托"数学拔尖学生培养计划2.0基地"，设数据科学/量子计算专项方向</td>
+          <td>浙大/国内外高校读博；AI企业算法岗；量化金融；半导体/密码安全</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">Ⅱ组</span></td>
+          <td>数学+物理</td>
+          <td>物理学（含量子科技/电子科学方向）<br>工程力学</td>
+          <td>物理 <span class="rating rating-a">A</span></td>
+          <td>物理学含<strong>量子科技</strong>方向（独家），与阿里达摩院量子实验室合作；工程力学服务浙江制造业</td>
+          <td>量子计算企业/中科院量子所；阿里/华为量子实验室；航空航天（力学）</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-amber">Ⅲ组</span></td>
+          <td>数学+化学</td>
+          <td>化学<br>生物工程</td>
+          <td>化工 <span class="rating rating-aplus">A+</span></td>
+          <td>化学依托浙大化工/材料双翼；生物工程面向生命科学+工程交叉，与海正/贝达等浙江药企合作</td>
+          <td>中科院化学所；医药化工企业；浙江生物医药产业链</td>
+        </tr>
+        <tr class="hl">
+          <td><span class="tag tag-amber">Ⅳ组</span></td>
+          <td>数学+化学</td>
+          <td>生物科学<br>生态学<br><strong>生物育种科学</strong></td>
+          <td>生态 <span class="rating rating-aplus">A+</span><br>生物 <span class="rating rating-a">A</span></td>
+          <td>
+            <strong>生物育种科学</strong>：服务国家粮食安全战略，浙大农学院独有，依托国家水稻改良中心/玉米改良分中心；生态学全国A+，依托生态研究所
+          </td>
+          <td>国家农科院/中科院植物所；种业龙头企业（隆平高科/先正达）；高校农业/生态研究岗</td>
+        </tr>
+        <tr class="hl">
+          <td><span class="tag tag-rose">Ⅴ组</span></td>
+          <td>数学+化学</td>
+          <td><strong>基础医学</strong></td>
+          <td>基础医学 <span class="rating rating-a">A</span></td>
+          <td>华东五校中唯一开设基础医学的非医科综合大学（与复旦并列）；依托浙大医学院+邵逸夫/附属第一医院，基础医学与临床深度融合</td>
+          <td>浙大医学院读博；附属医院基础研究岗；生物医药企业；海外医学院读博</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-green">Ⅵ组</span></td>
+          <td>语文+历史</td>
+          <td>汉语言文学（古文字）<br>历史学<br>哲学</td>
+          <td>中文 <span class="rating rating-a">A</span></td>
+          <td>依托浙大文科高研院；古籍研究传统深厚（《四库全书》相关研究）</td>
+          <td>高校教职；博物馆/文化机构；出版/传媒</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="section-title">学科学术领头人（部分代表）</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>浙江大学强基相关学科代表性学者</div>
+    <div class="card-body">
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <div class="leader-name">陈十一</div>
+          <div class="leader-title">中国科学院院士 · 力学/计算流体</div>
+          <div class="leader-desc">湍流与格子玻尔兹曼方法权威，曾任浙大工学院院长，工程力学强基核心。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">沈志勋</div>
+          <div class="leader-title">美国科学院院士 · 物理</div>
+          <div class="leader-desc">凝聚态物理/强关联电子体系专家，浙大物理系特聘教授，量子材料研究领军。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">唐睿康</div>
+          <div class="leader-title">中国科学院院士 · 化学</div>
+          <div class="leader-desc">生物矿化与仿生材料专家，浙大化学系教授，国家杰出青年基金获得者。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">朱君飞</div>
+          <div class="leader-title">长江学者特聘教授 · 数学</div>
+          <div class="leader-desc">微分方程与数学物理专家，浙大数学系系主任，主导数学强基课程体系建设。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">李家洋</div>
+          <div class="leader-title">中国科学院院士 · 生物育种</div>
+          <div class="leader-desc">水稻分子育种权威，浙大农学院院士，生物育种科学强基核心支撑。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">段树民</div>
+          <div class="leader-title">中国科学院院士 · 生命科学/神经</div>
+          <div class="leader-desc">神经生物学家，浙大医学院脑科学研究所所长，基础医学强基核心依托。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业 · 深造去向</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>典型毕业去向</div>
+    <div class="card-body">
+      <div class="career-grid">
+        <div class="career-item"><span class="career-icon">🎓</span><span>浙大/国内外高校读博（85%+）</span></div>
+        <div class="career-item"><span class="career-icon">🌾</span><span>国家农科院/种业龙头企业（生物育种）</span></div>
+        <div class="career-item"><span class="career-icon">⚛️</span><span>阿里/华为量子实验室（量子科技方向）</span></div>
+        <div class="career-item"><span class="career-icon">💊</span><span>海正/贝达/百济神州等浙江药企（生物）</span></div>
+        <div class="career-item"><span class="career-icon">🏥</span><span>浙大附属医院基础研究部门（基础医学）</span></div>
+        <div class="career-item"><span class="career-icon">🏭</span><span>浙江制造业龙头/航空航天（力学）</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 南京大学 ══════════════ -->
+<section class="school-section" id="nju">
+  <div class="school-header">
+    <div class="school-logo">🌙</div>
+    <div>
+      <div class="school-name">南京大学</div>
+      <div class="school-desc">8方向12套培养方案 · 2026新增大气方向 · 物理/化学/天文/大气科学均A+</div>
+    </div>
+    <a class="source-link" href="http://bkzs.nju.edu.cn" target="_blank">📄 招生网</a>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="label">综合成绩</div><div class="value">高考×850/满分 + 校测150</div></div>
+    <div class="info-card"><div class="label">初试时间</div><div class="value">约6月19日（高考后）</div></div>
+    <div class="info-card"><div class="label">每人只填</div><div class="value">1个专业，无调剂</div></div>
+    <div class="info-card"><div class="label">深造率</div><div class="value">≥85%读研/读博</div></div>
+  </div>
+
+  <p class="section-title">招生专业 · 培养方案</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>12套培养方案专业详情（2026新增大气方向）</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>专业</th><th>培养方向</th><th>学科评估(第五轮)</th><th>培养特色</th><th>毕业去向</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>数学与应用数学</td>
+          <td>数学方向<br>智能科学方向</td>
+          <td>数学 <span class="rating rating-a">A</span></td>
+          <td>南大数学系历史悠久，依托数学研究所；智能科学方向与人工智能学院联合培养，面向AI+数学交叉</td>
+          <td>国内外高校读博；AI企业；量化金融</td>
+        </tr>
+        <tr class="hl">
+          <td>物理学</td>
+          <td>物理学<br>天体物理<br>电子科学<br><strong>大气方向（2026新增）</strong></td>
+          <td>物理 <span class="rating rating-aplus">A+</span><br>天文 <span class="rating rating-aplus">A+</span><br>大气 <span class="rating rating-aplus">A+</span></td>
+          <td>
+            物理A+全国顶尖；<strong>天体物理</strong>方向依托南大天文系（全国最强天文学科）；<strong>大气方向</strong>2026年新增，依托南大大气科学学院（全国A+，历史最悠久）；电子科学方向与集成电路学院联合培养
+          </td>
+          <td>国家天文台/紫金山天文台（天体物理）；气象局/国家气候中心（大气）；高校物理/天文教职</td>
+        </tr>
+        <tr>
+          <td>化学</td>
+          <td>化学</td>
+          <td>化学 <span class="rating rating-aplus">A+</span></td>
+          <td>南大化学全国A+，强调基础化学理论与实验；依托配位化学国家重点实验室；保研率高</td>
+          <td>中科院化学所/有机所；国内外高校读博；化工/制药企业</td>
+        </tr>
+        <tr>
+          <td>生物科学</td>
+          <td>生物科学</td>
+          <td>生物 <span class="rating rating-a">A</span></td>
+          <td>南大生命科学学院依托鼓楼医院等临床资源；强调分子生物学与基因组学</td>
+          <td>国内外高校/中科院生物所读博；医药企业</td>
+        </tr>
+        <tr>
+          <td>信息与计算科学</td>
+          <td>信息与计算科学</td>
+          <td>计算机 <span class="rating rating-aplus">A+</span></td>
+          <td>南大计算机全国A+，信计方向与计算机学院深度融合，强调算法+AI基础理论</td>
+          <td>顶级互联网/AI企业；高校读博</td>
+        </tr>
+        <tr>
+          <td>中国语言文学（古文字）<br>历史学<br>哲学</td>
+          <td>各文科方向</td>
+          <td>中文 <span class="rating rating-aplus">A+</span><br>历史 <span class="rating rating-a">A</span><br>哲学 <span class="rating rating-a">A</span></td>
+          <td>南大文史哲传统深厚；历史学依托中国近现代史料学研究；古文字学为国家重点扶持冷门绝学</td>
+          <td>高校文史哲教职；出版/文博/机关单位</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="section-title">学科学术领头人（部分代表）</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>南京大学强基相关学科代表性学者</div>
+    <div class="card-body">
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <div class="leader-name">祝世宁</div>
+          <div class="leader-title">中国科学院院士 · 物理（光学）</div>
+          <div class="leader-desc">光学/铁电体专家，南大物理学院院长，固体微结构物理国家重点实验室主任。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">邹志刚</div>
+          <div class="leader-title">中国科学院院士 · 化学（光催化）</div>
+          <div class="leader-desc">太阳能光催化分解水制氢专家，配位化学国家重点实验室重要成员，南大化学强基核心。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">方成</div>
+          <div class="leader-title">中国科学院院士 · 天文</div>
+          <div class="leader-desc">太阳物理学权威，南大天文系奠基人之一，中国天文学科领军人物。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">吕建</div>
+          <div class="leader-title">中国科学院院士 · 计算机</div>
+          <div class="leader-desc">软件工程专家，前南大校长，推动南大计算机/信息科学A+学科建设。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">符淙斌</div>
+          <div class="leader-title">中国科学院院士 · 大气科学</div>
+          <div class="leader-desc">全球变化与区域气候学权威，南大大气科学学院学科建设重要推动者。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">莫砺锋</div>
+          <div class="leader-title">资深教授 · 中国古典文学</div>
+          <div class="leader-desc">唐宋文学权威，南大文学院前院长，强基古文字/汉语言文学培养的人文灵魂。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业 · 深造去向</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>典型毕业去向</div>
+    <div class="card-body">
+      <div class="career-grid">
+        <div class="career-item"><span class="career-icon">🔭</span><span>紫金山天文台/国家天文台（天体物理）</span></div>
+        <div class="career-item"><span class="career-icon">🌩️</span><span>中国气象局/气候变化研究院（大气）</span></div>
+        <div class="career-item"><span class="career-icon">🎓</span><span>海内外顶尖高校读博（85%+）</span></div>
+        <div class="career-item"><span class="career-icon">💊</span><span>医药化工/中科院有机所（化学）</span></div>
+        <div class="career-item"><span class="career-icon">💻</span><span>顶级互联网/AI研究院（信计）</span></div>
+        <div class="career-item"><span class="career-icon">🏛️</span><span>高校教职/党政机关/出版机构（人文）</span></div>
+      </div>
+      <div class="notice notice-amber" style="margin-top:14px">
+        ⚠️ <strong>报名规则提示</strong>：南大每位考生只能填报1个专业志愿，无调剂，入围后参加高考后笔试（初试）+面试（复试），综合成绩=高考×850/满分 + 南大考核（150分）。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 中国科学技术大学 ══════════════ -->
+<section class="school-section" id="ustc">
+  <div class="school-header">
+    <div class="school-logo">⚛️</div>
+    <div>
+      <div class="school-name">中国科学技术大学</div>
+      <div class="school-desc">独有量子信息·核工程·地球物理 · 数理化天地生核9项A+ · 中科院直通车</div>
+    </div>
+    <a class="source-link" href="https://zsb.ustc.edu.cn" target="_blank">📄 招生网</a>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="label">综合成绩</div><div class="value">高考85% + 校测15%</div></div>
+    <div class="info-card"><div class="label">笔试科目</div><div class="value">数学+物理（不含化学）</div></div>
+    <div class="info-card"><div class="label">A+学科数</div><div class="value">9项（数理化天地生核等）</div></div>
+    <div class="info-card"><div class="label">中科院通道</div><div class="value">直接推荐至中科院各所</div></div>
+  </div>
+
+  <p class="section-title">招生专业 · 培养方案</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>9大类专业详情</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>专业大类</th><th>包含方向</th><th>学科评估(第五轮)</th><th>培养特色</th><th>毕业去向</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>数学类</td>
+          <td>数学与应用数学<br>信息与计算科学</td>
+          <td>数学 <span class="rating rating-aplus">A+</span></td>
+          <td>中科大数学A+，理论数学与计算数学并重；依托国家数学与交叉科学中心；强调从数学到计算机/物理的深度贯通</td>
+          <td>国内外高校读博；中科院系统所/数学所；量化金融</td>
+        </tr>
+        <tr>
+          <td>物理学类</td>
+          <td>物理学<br>应用物理学</td>
+          <td>物理 <span class="rating rating-aplus">A+</span></td>
+          <td>物理A+全国顶尖（与北大清华并列），强调"理论+实验并重"；依托中科院近代物理所/合肥光源等大科学装置</td>
+          <td>中科院物理所/高能所/理论物理所读博；半导体/芯片研究院；高校教职</td>
+        </tr>
+        <tr>
+          <td>化学</td>
+          <td>化学</td>
+          <td>化学 <span class="rating rating-aplus">A+</span></td>
+          <td>化学A+，依托中科大化学系与中科院化学所联动；强调单分子科学、量子化学前沿</td>
+          <td>中科院化学所/大连化物所；医药企业；海外高校读博</td>
+        </tr>
+        <tr>
+          <td>生物科学类</td>
+          <td>生物科学<br>生物技术</td>
+          <td>生物 <span class="rating rating-aplus">A+</span></td>
+          <td>生物A+，依托中科院上海生命科学研究院；强调结构生物学、合成生物学前沿方向</td>
+          <td>中科院生物所/生物物理所；医药企业；海外高校读博</td>
+        </tr>
+        <tr>
+          <td>理论与应用力学</td>
+          <td>理论与应用力学</td>
+          <td>力学 <span class="rating rating-a">A</span></td>
+          <td>中科大力学强调与物理/工程的深度融合，面向航空航天和新材料研究</td>
+          <td>航空航天院所；高校教职</td>
+        </tr>
+        <tr class="hl">
+          <td><strong>核工程类</strong></td>
+          <td>核工程与核技术<br>工程物理</td>
+          <td>核科学 <span class="rating rating-aplus">A+</span></td>
+          <td><strong>七校唯一核工程方向</strong>；中科大核科学全国A+；依托国家同步辐射实验室/EAST托卡马克装置/散裂中子源；服务核能与核安全国家战略，学生可直接进入中国核工业集团、军工部门</td>
+          <td>中核集团/核电站/国防军工；中科院等离子物理所；高校核工程系</td>
+        </tr>
+        <tr class="hl">
+          <td><strong>地球物理学</strong></td>
+          <td>地球物理学</td>
+          <td>地学 <span class="rating rating-aplus">A+</span></td>
+          <td><strong>七校唯一地球物理方向</strong>；地学A+全国顶尖；依托中科院地质与地球物理所/USTC地球与空间科学学院；研究地震预测、深层资源探测等</td>
+          <td>中科院地质所/中国地震局；石油/矿产资源企业；地球科学高校教职</td>
+        </tr>
+        <tr class="hl">
+          <td><strong>量子信息科学</strong></td>
+          <td>量子信息科学</td>
+          <td>物理 <span class="rating rating-aplus">A+</span>（量子物理方向）</td>
+          <td><strong>七校唯一量子信息科学方向</strong>（同时也是全国独有）；中科大量子信息全球顶尖，依托中科院量子信息与量子科技创新研究院（潘建伟院士团队）；核心研究包括量子通信、量子计算、量子密钥分发</td>
+          <td>中科院量子信息研究院（潘建伟团队）；国盾量子/中国电科量子；海外顶尖量子研究所</td>
+        </tr>
+        <tr class="hl">
+          <td><strong>能源与动力工程</strong></td>
+          <td>能源与动力工程</td>
+          <td>（依托工程科学）</td>
+          <td><strong>七校唯一能源工程方向</strong>；依托USTC工程科学学院与中科院热物理研究所；面向新能源/热能国家战略</td>
+          <td>国家能源集团/华能/大唐；新能源汽车/储能企业；科研院所</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="section-title">学科学术领头人（部分代表）</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>中国科学技术大学强基相关学科代表性学者</div>
+    <div class="card-body">
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <div class="leader-name">潘建伟</div>
+          <div class="leader-title">中国科学院院士 · 量子信息</div>
+          <div class="leader-desc">量子信息科学全球领军人物，"墨子号"量子卫星主导者，中科大量子信息强基方向绝对核心，被誉为"量子之父"。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">侯建国</div>
+          <div class="leader-title">中国科学院院士 · 物理化学</div>
+          <div class="leader-desc">单分子物理化学权威，前中科大校长，主导USTC物理化学强基人才培养体系。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">陈仙辉</div>
+          <div class="leader-title">中国科学院院士 · 物理（超导）</div>
+          <div class="leader-desc">高温超导体研究权威，铁基超导体发现团队核心成员，中科大物理强基核心学者。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">龚流柱</div>
+          <div class="leader-title">长江学者特聘教授 · 化学</div>
+          <div class="leader-desc">不对称催化/有机合成化学专家，中科大化学系教授，化学强基核心师资。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">万卫星</div>
+          <div class="leader-title">中国科学院院士 · 地球物理</div>
+          <div class="leader-desc">空间物理学家，中国科学院地质地球物理所所长，地球物理强基依托学者。</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-name">吴宜灿</div>
+          <div class="leader-title">中国科学院院士 · 核工程</div>
+          <div class="leader-desc">中子物理与聚变核能专家，中科院等离子物理所副所长，核工程强基方向核心支撑。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业 · 深造去向</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>典型毕业去向</div>
+    <div class="card-body">
+      <div class="career-grid">
+        <div class="career-item"><span class="career-icon">⚛️</span><span>中科院量子研究院/国盾量子（量子信息）</span></div>
+        <div class="career-item"><span class="career-icon">☢️</span><span>中核集团/核电站/国防军工（核工程）</span></div>
+        <div class="career-item"><span class="career-icon">🌍</span><span>中科院地质所/中国地震局（地球物理）</span></div>
+        <div class="career-item"><span class="career-icon">🔬</span><span>中科院各研究所（数理化生各方向）</span></div>
+        <div class="career-item"><span class="career-icon">⚡</span><span>国家能源集团/新能源企业（能源工程）</span></div>
+        <div class="career-item"><span class="career-icon">🎓</span><span>海内外顶尖高校读博（MIT/Stanford/USTC）</span></div>
+      </div>
+      <div class="notice notice-green" style="margin-top:14px">
+        🔑 <strong>中科大独家优势</strong>：笔试仅考数学+物理（不含化学），对数理极强的学生更友好；且与中科院研究所全面对接，是国内"基础科学→国家大科学工程"最直接的通道。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 综合对比 ══════════════ -->
+<section class="school-section" id="compare">
+  <div class="compare-header">
+    <h2>七校综合横向对比</h2>
+    <p>强基专业维度 · 学科评估 · 独有专业 · 就业特色</p>
+  </div>
+
+  <p class="section-title">独有专业对比（哪所学校有别处没有的专业）</p>
+  <div class="card">
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>学校</th><th>强基独有/特色专业</th><th>全国独有</th></tr></thead>
+      <tbody>
+        <tr><td>清华大学</td><td>数理基础科学（理工衔接）、化学生物学、理论与应用力学</td><td>数理基础科学（工程衔接路径独特）</td></tr>
+        <tr class="hl"><td>北京大学</td><td><strong>天文学</strong>、<strong>核物理</strong>、考古学</td><td>考古学进入强基（七校独有）；核物理与天文同时开设</td></tr>
+        <tr><td>复旦大学</td><td><strong>基础医学</strong>（含核物理方向）</td><td>强基基础医学（七校仅复旦+浙大）</td></tr>
+        <tr><td>上海交通大学</td><td><strong>船舶与海洋工程</strong>、生物医学工程、材料科学与工程</td><td>船舶与海洋工程（七校唯一）</td></tr>
+        <tr class="hl"><td>浙江大学</td><td><strong>生物育种科学</strong>、量子科技方向物理、基础医学</td><td>生物育种科学（七校唯一）</td></tr>
+        <tr><td>南京大学</td><td><strong>大气科学方向（2026新增）</strong>、天体物理方向</td><td>大气科学进入物理强基方向（七校唯一）</td></tr>
+        <tr class="hl"><td>中科大</td><td><strong>量子信息科学</strong>、<strong>核工程类</strong>、<strong>地球物理学</strong>、能源与动力工程</td><td>量子信息科学（全国唯一独立方向）；地球物理（七校唯一）；能源工程（七校唯一）</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="section-title">基础学科第五轮评估等级速查（七校强基专业）</p>
+  <div class="card">
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>学科</th><th>清华</th><th>北大</th><th>复旦</th><th>上交</th><th>浙大</th><th>南大</th><th>中科大</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>数学</strong></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+        </tr>
+        <tr>
+          <td><strong>物理</strong></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+        </tr>
+        <tr>
+          <td><strong>化学</strong></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+        </tr>
+        <tr>
+          <td><strong>生物</strong></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+        </tr>
+        <tr>
+          <td><strong>力学</strong></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td>—</td>
+          <td><span class="rating rating-a">A</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td>—</td>
+          <td><span class="rating rating-a">A</span></td>
+        </tr>
+        <tr>
+          <td><strong>天文</strong></td>
+          <td>—</td>
+          <td><span class="rating rating-a">A</span></td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+        </tr>
+        <tr>
+          <td><strong>基础医学</strong></td>
+          <td>—</td>
+          <td>—</td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-aplus">A+</span></td>
+          <td><span class="rating rating-a">A</span></td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>核科学</strong></td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td><span class="rating rating-aplus">A+</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div style="padding:12px 16px;font-size:.78rem;color:var(--text-muted);">
+      ⚠️ 第五轮学科评估官方未全部公开，以上数据综合各校官方公示及公开渠道整理，仅供参考。
+    </div>
+  </div>
+
+  <p class="section-title">往年浙江省综合成绩录取参考（非官方）</p>
+  <div class="card">
+    <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 16px;margin:16px 20px 0;font-size:.83rem;color:#78350f;">
+      ⚠️ <strong>重要声明</strong>：各校官方不公开强基录取分数线，以下为公开媒体和考生论坛汇总的参考数据。<strong>综合成绩 ≠ 高考裸分</strong>，仅供横向比较参考。权威数据以各校官网录取公示为准。
+    </div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>学校</th><th>2025年浙江综合成绩参考</th><th>裸分估算</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>清华大学</td><td>668 – 686</td><td>约660分+</td><td>数理类专业更高</td></tr>
+        <tr><td>北京大学</td><td>665 – 680</td><td>约658分+</td><td>天文/核物理略低</td></tr>
+        <tr><td>复旦大学</td><td>650 – 665</td><td>约640分+</td><td>基础医学稍高</td></tr>
+        <tr><td>上海交通大学</td><td>645 – 660</td><td>约635分+</td><td>船舶/材料稍低</td></tr>
+        <tr class="score-best"><td><strong>浙江大学</strong></td><td>640 – 658</td><td>约630分+</td><td>🏠 本土高校，浙江计划最多</td></tr>
+        <tr><td>南京大学</td><td>638 – 655</td><td>约628分+</td><td>文科类有差异</td></tr>
+        <tr><td>中国科学技术大学</td><td>635 – 650</td><td>约625分+</td><td>量子/核工程稍高</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="section-title">如何选择适合你的学校与专业</p>
+  <div class="card">
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;">
+        <div style="background:#f0f9ff;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🔭 喜欢天文/宇宙</div>
+          <div style="font-size:.83rem;color:var(--text-muted);">首选<strong>北大B组</strong>（全国最强天文系+FAST资源）或<strong>南大物理→天体物理方向</strong>（天文A+）</div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">⚛️ 对量子计算感兴趣</div>
+          <div style="font-size:.83rem;color:var(--text-muted);">唯一选择：<strong>中科大量子信息科学</strong>（潘建伟团队，全国唯一独立方向）；其次浙大物理量子科技方向</div>
+        </div>
+        <div style="background:#fff7ed;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🚢 喜欢海洋/船舶工程</div>
+          <div style="font-size:.83rem;color:var(--text-muted);">唯一选择：<strong>上交Ⅱ组船舶与海洋工程</strong>（全国第一，七校唯一）</div>
+        </div>
+        <div style="background:#fdf4ff;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🧬 想做医学科研（不做临床）</div>
+          <div style="font-size:.83rem;color:var(--text-muted);">首选<strong>复旦基础医学</strong>（七校独有+顶级附属医院）或<strong>浙大基础医学Ⅴ组</strong></div>
+        </div>
+        <div style="background:#fef2f2;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">☢️ 对核能/核安全感兴趣</div>
+          <div style="font-size:.83rem;color:var(--text-muted);"><strong>中科大核工程类</strong>（唯一A+，与EAST/散裂中子源直接对接）或<strong>北大B组核物理</strong></div>
+        </div>
+        <div style="background:#ecfdf5;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🌾 粮食安全/育种方向</div>
+          <div style="font-size:.83rem;color:var(--text-muted);">唯一选择：<strong>浙大Ⅳ组生物育种科学</strong>（七校唯一，与国家水稻改良中心对接）</div>
+        </div>
+        <div style="background:#fefce8;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🌩️ 气候/气象/大气科学</div>
+          <div style="font-size:.83rem;color:var(--text-muted);">唯一选择：<strong>南大物理→大气方向（2026新增）</strong>（大气科学A+，全国最悠久学科）</div>
+        </div>
+        <div style="background:#eff6ff;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">📐 数学/物理最强，不想考化学</div>
+          <div style="font-size:.83rem;color:var(--text-muted);"><strong>中科大</strong>是唯一笔试只考数学+物理（不含化学）的院校，对纯数理强的学生最友好</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;padding:12px 14px;background:#f9fafb;border-radius:8px;font-size:.8rem;color:var(--text-muted);">
+        🔗 报名入口：<a href="https://gaokao.chsi.com.cn/gkzt/jcxkzs" target="_blank" style="color:var(--primary)">阳光高考强基计划汇总（官方报名平台）</a> · 建议关注各校官网公告，以最新简章为准。
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ 专业TAB：数学·信计 ══════════════ -->
+<section class="school-section" id="major-math">
+  <div class="major-hero">
+    <h2>📐 数学与应用数学 · 信息与计算科学</h2>
+    <p>基础学科之基础 · 数学是所有理工科的语言 · 强基计划7校均开设</p>
+    <div class="major-tags">
+      <span class="major-tag">7校全开设</span>
+      <span class="major-tag">第五轮：清华/北大/复旦/浙大/中科大 A+</span>
+      <span class="major-tag">最高就业方向：量化金融</span>
+      <span class="major-tag">深造率70-90%</span>
+    </div>
+  </div>
+
+  <p class="section-title">专业本质 · 学什么</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>数学与应用数学 vs 信息与计算科学</div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <div class="block-label" style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">📊 数学与应用数学</div>
+          <div style="font-size:.85rem;line-height:1.75">
+            研究数学本身的<strong>结构与规律</strong>，包括纯数学（代数、拓扑、分析）和应用数学（偏微分方程、数学物理）。<br>
+            偏向"证明定理"——为什么成立，而不是如何用。<br>
+            代表问题：黎曼猜想、Navier-Stokes方程存在性、P vs NP
+          </div>
+        </div>
+        <div>
+          <div class="block-label" style="font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:8px;">💻 信息与计算科学</div>
+          <div style="font-size:.85rem;line-height:1.75">
+            介于数学和计算机之间的交叉学科，研究<strong>计算的数学理论</strong>。<br>
+            核心：算法设计与复杂度分析、数值计算、优化理论、机器学习理论。<br>
+            代表问题：神经网络为什么泛化？梯度下降为什么收敛？密码是否安全？
+          </div>
+        </div>
+      </div>
+      <div class="course-grid" style="margin-top:16px;">
+        <div class="course-item"><div class="c-stage">大一大二基础</div>数学分析 · 高等代数 · 解析几何 · 概率论 · 常微分方程</div>
+        <div class="course-item"><div class="c-stage">大二大三核心</div>实变函数 · 泛函分析 · 抽象代数 · 数值分析 · 离散数学</div>
+        <div class="course-item"><div class="c-stage">大三大四专业</div>算法设计与分析 · 机器学习理论 · 凸优化 · 密码学 · 量子计算</div>
+        <div class="course-item"><div class="c-stage">研究生方向</div>代数几何 · 微分拓扑 · 计算复杂性 · 随机算法 · 深度学习理论</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">七校强基数学横向对比</p>
+  <div class="major-compare-grid">
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏛️</span>清华大学（致理书院）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">培养特色</div>
+        丘成桐数学科学中心（YMSC）为核心平台，由菲尔兹奖得主主导；设丘成桐数学英才班（年仅20人）；强调从数学到理论物理、AI的跨学科延伸。
+        <div class="block-label">核心师资</div>
+        丘成桐（院士·菲尔兹奖）、王小云（院士·密码数学）、刘若川（长江·数论）、许晨阳（长江·代数几何）
+        <div class="block-label">就业去向</div>
+        MIT/Harvard/Princeton读博为主；部分进入幻方量化、九坤、中科院数学所
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔴</span>北京大学（元培学院）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">培养特色</div>
+        北京国际数学研究中心（BICMR）——全球数学界高度认可；IMO/CMO金牌聚集地；本科即参与前沿研讨班（Seminar）；数学系历史最悠久，培养过大量顶尖数学家。
+        <div class="block-label">核心师资</div>
+        田刚（院士·几何）、刘毅（几何分析）、陈大岳（随机过程）、袁新意（长江·数论）
+        <div class="block-label">就业去向</div>
+        读博深造为主（85%+）；幻方/九坤量化；中科院数学系统所
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔵</span>复旦大学<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">培养特色</div>
+        依托复旦数学科学学院，强调基础数学与统计/金融交叉；信计方向可与大数据学院联动；通识教育+数学专业深度融合；数学A+。
+        <div class="block-label">核心师资</div>
+        李骏（院士·代数几何）、沈维孝（长江·动力系统）、洪佳林（长江·数学物理）
+        <div class="block-label">就业去向</div>
+        国内外顶尖高校读博；上海金融机构/量化基金；AI算法岗
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🚢</span>上海交通大学<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">培养特色</div>
+        依托"数学物理前沿科学中心"，强调数学与物理/工程的融合；致远学院荣誉项目（拔尖计划）提供精英小班培养；信计方向可与计算机学院联培。
+        <div class="block-label">核心师资</div>
+        张益唐（现代数论，曾任职）、李朝晖（长江·数学物理）、蔡天新（数论/科普）
+        <div class="block-label">就业去向</div>
+        海外高校读博；AI/大数据企业；量化金融
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏔️</span>浙江大学<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">培养特色</div>
+        数学强基含<strong>智能科学方向</strong>（AI+数学交叉）为浙大特色；依托竺可桢学院荣誉项目；数学A+（第五轮）；与阿里达摩院有合作，可接触AI前沿；杭州地理优势强。
+        <div class="block-label">核心师资</div>
+        朱君飞（长江·PDE）、楼红卫（长江·数学物理）、李方（长江·代数）
+        <div class="block-label">就业去向</div>
+        浙大/国内外高校读博；阿里/字节AI算法；量化基金
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🌙</span>南京大学<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">培养特色</div>
+        数学强基含<strong>智能科学方向</strong>（与南大AI学院联合培养）；数学系有深厚历史（程毅志等老一辈数学家奠基）；信计方向与计算机学院深度融合（计算机A+）。
+        <div class="block-label">核心师资</div>
+        左达峰（长江·代数）、申新华（长江·算子代数）
+        <div class="block-label">就业去向</div>
+        国内外高校读博；互联网AI算法岗；量化金融
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">⚛️</span>中国科学技术大学<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">培养特色</div>
+        数学A+；依托中科院数学与系统科学研究院（全国最强数学研究机构之一）；信计方向强调理论计算机；笔试<strong>只考数学+物理</strong>（相比其他校不含化学，利好纯数理方向考生）；本科即可参与中科院所的研究项目。
+        <div class="block-label">核心师资</div>
+        史一蓬（院士·数论）、陈发来（长江·计算几何）、王仕成（长江·动力系统）
+        <div class="block-label">就业去向</div>
+        中科院数学所/系统所读博；国内外高校；量化金融
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业方向深度解析</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>毕业后能做什么</div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;">
+        <div style="background:#fef9ee;border-radius:10px;padding:16px;border-left:4px solid #f59e0b">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">💹 量化金融（最高薪）</div>
+          <div style="font-size:.82rem;color:#374151;line-height:1.7">
+            策略研究员/因子研究员/模型开发，对冲基金如<strong>幻方量化（DeepSeek母公司）</strong>、九坤、坤象、鸣石、明汯等。<br>
+            年薪区间：100-500万+<br>
+            核心技能：随机过程·时间序列·统计建模·C++
+          </div>
+        </div>
+        <div style="background:#f0f9ff;border-radius:10px;padding:16px;border-left:4px solid #3b82f6">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🤖 AI/算法研究院</div>
+          <div style="font-size:.82rem;color:#374151;line-height:1.7">
+            机器学习理论研究员，字节AML、微软亚研、Google DeepMind（LDN）、百度研究院。<br>
+            年薪区间：50-200万<br>
+            核心技能：优化理论·统计学习理论·深度学习
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:10px;padding:16px;border-left:4px solid #10b981">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🔐 密码学/信息安全</div>
+          <div style="font-size:.82rem;color:#374151;line-height:1.7">
+            国家密码管理局、华为安全实验室、蚂蚁安全、腾讯玄武实验室。<br>
+            研究后量子密码（国家重要战略方向）。<br>
+            核心技能：数论·椭圆曲线·格密码
+          </div>
+        </div>
+        <div style="background:#fdf4ff;border-radius:10px;padding:16px;border-left:4px solid #9333ea">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🎓 高校/科研院所</div>
+          <div style="font-size:.82rem;color:#374151;line-height:1.7">
+            国内外顶尖高校数学系教职；中科院数学与系统科学研究院；清华/北大丘成桐中心。<br>
+            路径：本硕→海外博士→博后→教职
+          </div>
+        </div>
+        <div style="background:#fff7ed;border-radius:10px;padding:16px;border-left:4px solid #f97316">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">⚡ 芯片/半导体EDA</div>
+          <div style="font-size:.82rem;color:#374151;line-height:1.7">
+            EDA（电子设计自动化）算法工程师，是芯片设计软件核心。华大九天、新思科技（Synopsys）、镉达（Cadence）。<br>
+            核心技能：图论·数值优化·计算几何
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:16px">
+        <div class="pros">
+          <div class="pc-title">✅ 适合你的信号</div>
+          数学竞赛（CMO/IMO）喜欢且擅长；享受"证明"的过程而非纯写代码；对金融/AI/密码等任一方向有明确兴趣；能接受漫长的深造周期（博士5-6年）
+        </div>
+        <div class="cons">
+          <div class="pc-title">⚠️ 慎选的信号</div>
+          期待4年本科直接就业、快速拿到高薪；喜欢做产品/项目而非理论研究；对数学证明没有热情，只是觉得"数学好用就学数学"
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 专业TAB：物理学 ══════════════ -->
+<section class="school-section" id="major-physics">
+  <div class="major-hero" style="background:linear-gradient(135deg, #1e1b4b 0%, #4338ca 55%, #0891b2 100%)">
+    <h2>⚡ 物理学</h2>
+    <p>探索宇宙最基本规律 · 从量子到宇宙 · 7校均开设 · 是最接近"世界本质"的学科</p>
+    <div class="major-tags">
+      <span class="major-tag">7校全开设</span>
+      <span class="major-tag">第五轮：清华/北大/复旦/南大/中科大 A+</span>
+      <span class="major-tag">含量子/天文/大气/核物理等子方向</span>
+      <span class="major-tag">深造率75-90%</span>
+    </div>
+  </div>
+
+  <p class="section-title">专业本质 · 学什么</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>物理学学习路径与核心方向</div>
+    <div class="card-body">
+      <div style="font-size:.86rem;line-height:1.75;margin-bottom:14px">
+        物理学是最基础的自然科学——研究物质、能量、时间、空间的最根本规律。强基计划物理学特别强调<strong>理论物理+实验物理</strong>并重，本科阶段会建立完整的现代物理体系，研究生阶段再进入具体前沿方向。
+      </div>
+      <div class="course-grid">
+        <div class="course-item"><div class="c-stage">大一大二</div>力学 · 热学 · 电磁学 · 光学 · 原子物理 · 数学物理方法</div>
+        <div class="course-item"><div class="c-stage">大二大三</div>理论力学 · 量子力学 · 统计力学 · 电动力学（四大力学）</div>
+        <div class="course-item"><div class="c-stage">大三大四</div>凝聚态物理 · 粒子物理 · 固体物理 · 核物理 · 天体物理导论</div>
+        <div class="course-item"><div class="c-stage">研究生方向</div>量子信息 · 高温超导 · 拓扑物质 · 引力波探测 · 粒子对撞机</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">七校强基物理横向对比</p>
+  <div class="major-compare-grid">
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏛️</span>清华（致理+未央）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色方向</div>
+        致理书院（纯物理学术路线）+ 未央书院（数理→工程衔接）双轨；量子反常霍尔效应（薛其坤团队）全球领先；量子计算方向与清华交叉信息研究院（姚期智）合作。
+        <div class="block-label">核心师资</div>
+        薛其坤（院士·拓扑物质）、朱邦芬（院士·半导体）、季向东（院士·粒子物理）
+        <div class="block-label">独特优势</div>
+        未央书院学生可在大三后转向芯片/AI/能源工程，是七校中物理→工程衔接最顺畅的路径
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔴</span>北大（A组+B组）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色方向</div>
+        B组独有<strong>天文学</strong>和<strong>核物理</strong>方向；物理学院历史最悠久，理论物理所（ITP）产出大量顶尖物理学家；燕园氛围极强，物理系竞赛生聚集密度全国第一。
+        <div class="block-label">核心师资</div>
+        欧阳颀（院士·软物质物理）、王恩哥（院士·凝聚态）、刘玉鑫（核物理）
+        <div class="block-label">独特优势</div>
+        全国唯一强基开设<strong>天文学</strong>独立方向（B组），依托国家天文台/FAST
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔵</span>复旦（含核物理方向）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色方向</div>
+        物理学类含<strong>核物理方向</strong>（七校中较少见）；依托中科院上海光机所等合作单位；物理A+，强调理论与实验结合。
+        <div class="block-label">核心师资</div>
+        马余刚（院士·核物理，参与RHIC/LHC实验）、金晓峰（凝聚态）、龚新高（材料物理）
+        <div class="block-label">独特优势</div>
+        核物理方向参与国际大型加速器实验（CERN/BNL），国际化程度高
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🚢</span>上交（激光等离子体）<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">特色方向</div>
+        依托"李政道研究所"（诺贝尔奖得主李政道设立）；激光等离子体物理全球领先（张杰院士团队）；物理与工程交叉紧密，可转向生物医学工程方向。
+        <div class="block-label">核心师资</div>
+        张杰（院士·激光物理，前校长）、沙健（粒子物理）
+        <div class="block-label">独特优势</div>
+        李政道研究所吸引大量国际顶尖物理学家访学/合作，国际化资源丰富
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏔️</span>浙大（含量子科技方向）<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">特色方向</div>
+        物理学含<strong>量子科技方向</strong>（七校中独有，与阿里达摩院量子实验室合作）、<strong>电子科学方向</strong>（集成电路）；依托浙大物理系与浙江量子精密测量研究中心。
+        <div class="block-label">核心师资</div>
+        沈志勋（美科院院士·强关联电子体系）、王浩华（长江·量子计算）
+        <div class="block-label">独特优势</div>
+        量子科技方向与阿里/华为合作，是工业界量子计算人才输送通道
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🌙</span>南大（含天体物理/大气新增）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色方向</div>
+        物理A+；含<strong>天体物理方向</strong>（南大天文全国A+，最顶尖）；<strong>大气方向（2026新增）</strong>（南大大气科学A+，全国最悠久）；电子科学方向与集成电路学院合作。
+        <div class="block-label">核心师资</div>
+        祝世宁（院士·光学）、方成（院士·天文）、吴丹（长江·固体物理）
+        <div class="block-label">独特优势</div>
+        天文学+大气科学双A+方向，地球与宇宙科学方向全国最强组合
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">⚛️</span>中科大（依托大科学装置）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色方向</div>
+        物理A+，笔试<strong>只考数学+物理</strong>；EAST托卡马克（全球最先进聚变装置）、合肥光源（同步辐射）、散裂中子源——三大国家大科学装置；量子信息科学独立方向（潘建伟团队）世界顶尖。
+        <div class="block-label">核心师资</div>
+        潘建伟（院士·量子信息）、陈仙辉（院士·超导）、杜江峰（院士·量子调控）
+        <div class="block-label">独特优势</div>
+        大科学装置资源无可比拟；量子信息方向世界领先，直接对接中科院量子研究院
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业方向深度解析</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>物理学毕业后能做什么</div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;">
+        <div style="background:#f0f9ff;border-radius:10px;padding:16px;border-left:4px solid #3b82f6">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">⚛️ 量子科技（最前沿）</div>
+          <div style="font-size:.82rem;line-height:1.7">中科院量子研究院、国盾量子、本源量子、阿里达摩院量子、华为量子计算研究所。<br>量子通信/量子计算/量子传感三大方向。</div>
+        </div>
+        <div style="background:#fef2f2;border-radius:10px;padding:16px;border-left:4px solid #ef4444">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">💡 半导体/芯片</div>
+          <div style="font-size:.82rem;line-height:1.7">固体物理→材料物理→半导体器件。中芯国际、长江存储、应用材料、台积电大陆研发中心。是物理生最直接的高薪方向之一。</div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:10px;padding:16px;border-left:4px solid #10b981">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🔭 天文/宇宙（梦想方向）</div>
+          <div style="font-size:.82rem;line-height:1.7">国家天文台、紫金山天文台、LAMOST、FAST，参与引力波探测（LIGO/天琴）；适合对宇宙有终极好奇心的学生。</div>
+        </div>
+        <div style="background:#fef9ee;border-radius:10px;padding:16px;border-left:4px solid #f59e0b">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">📊 量化金融</div>
+          <div style="font-size:.82rem;line-height:1.7">物理系学生（尤其理论物理）同样是量化基金热门招募对象，统计力学/随机过程直接对应金融模型。</div>
+        </div>
+        <div style="background:#fdf4ff;border-radius:10px;padding:16px;border-left:4px solid #9333ea">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">🎓 高校/科研教职</div>
+          <div style="font-size:.82rem;line-height:1.7">物理学深造率最高，海外博士→博后→教职是主流路径。国内顶尖高校物理系教职竞争激烈，但需求稳定。</div>
+        </div>
+        <div style="background:#fff7ed;border-radius:10px;padding:16px;border-left:4px solid #f97316">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:8px;">☢️ 核能/军工</div>
+          <div style="font-size:.82rem;line-height:1.7">核物理方向→中核集团/中广核/军工单位（718所等），国家战略属性强，工作稳定，部分为保密岗位。</div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:16px">
+        <div class="pros">
+          <div class="pc-title">✅ 适合你的信号</div>
+          物理竞赛（IPhO/全国物理联赛）喜欢；对"为什么"比"怎么做"更感兴趣；能接受数学量极大的训练（四大力学）；有明确的科研志向或工程志向（芯片/量子）
+        </div>
+        <div class="cons">
+          <div class="pc-title">⚠️ 慎选的信号</div>
+          不喜欢大量数学推导；期望4年直接高薪就业（直接就业竞争力不如CS）；没有明确的后续方向（物理泛用性比数学/CS弱一些）
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 专业TAB：化学 ══════════════ -->
+<section class="school-section" id="major-chemistry">
+  <div class="major-hero" style="background:linear-gradient(135deg, #14532d 0%, #16a34a 55%, #0891b2 100%)">
+    <h2>⚗️ 化学</h2>
+    <p>研究物质的组成、结构、性质与变化 · 连接物理与生命科学 · 6校开设</p>
+    <div class="major-tags">
+      <span class="major-tag">6校开设（上交无独立化学方向）</span>
+      <span class="major-tag">第五轮：清华/北大/南大/中科大 A+</span>
+      <span class="major-tag">最热出口：材料/医药/新能源</span>
+      <span class="major-tag">深造率70-85%</span>
+    </div>
+  </div>
+
+  <p class="section-title">专业本质 · 学什么</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>化学四大方向与学习路径</div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:14px">
+        <div style="background:#f0fdf4;border-radius:8px;padding:12px;font-size:.83rem">
+          <div style="font-weight:700;color:#065f46;margin-bottom:6px">🔬 无机化学</div>
+          元素周期律、配位化合物、固体材料；应用：电池材料、催化剂
+        </div>
+        <div style="background:#f0f9ff;border-radius:8px;padding:12px;font-size:.83rem">
+          <div style="font-weight:700;color:#1e40af;margin-bottom:6px">⚗️ 有机化学</div>
+          碳骨架分子的合成与反应；应用：药物合成、功能材料、农药
+        </div>
+        <div style="background:#fdf4ff;border-radius:8px;padding:12px;font-size:.83rem">
+          <div style="font-weight:700;color:#581c87;margin-bottom:6px">📊 物理化学</div>
+          热力学·动力学·量子化学；应用：催化机理、电化学储能
+        </div>
+        <div style="background:#fff7ed;border-radius:8px;padding:12px;font-size:.83rem">
+          <div style="font-weight:700;color:#9a3412;margin-bottom:6px">🧬 分析化学</div>
+          仪器分析（质谱/核磁/X射线）；应用：食品安全、环境监测
+        </div>
+      </div>
+      <div class="course-grid">
+        <div class="course-item"><div class="c-stage">大一大二</div>无机化学 · 有机化学 · 分析化学 · 物理化学 · 化学实验（四大实验）</div>
+        <div class="course-item"><div class="c-stage">大三</div>结构化学 · 高分子化学 · 仪器分析 · 化学生物学导论</div>
+        <div class="course-item"><div class="c-stage">大四/研究生</div>合成化学 · 材料化学 · 催化化学 · 量子化学 · 单分子科学</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">六校强基化学横向对比</p>
+  <div class="major-compare-grid">
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏛️</span>清华大学<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        化学A+；含<strong>化学生物学</strong>方向（探微书院，七校独有路径）；依托国家重点实验室（绿色合成/仿生界面）；有机合成与材料化学为强项。
+        <div class="block-label">核心师资</div>
+        张希（院士·超分子化学）、李亚栋（院士·纳米材料）、程群峰（长江·仿生材料）
+        <div class="block-label">就业</div>
+        材料公司/制药企业；中科院化学所；海外高校读博
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔴</span>北京大学<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        化学A+；北京分子科学国家研究中心；强调纯化学理论基础，培养化学家；IChO金牌聚集地。
+        <div class="block-label">核心师资</div>
+        刘忠范（院士·石墨烯）、来鲁华（计算化学）、高毅勤（分子动力学）
+        <div class="block-label">就业</div>
+        北大/海外高校读博为主；部分进新能源/医药企业
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔵</span>复旦大学（含高分子方向）<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        化学类含<strong>高分子化学</strong>方向；依托先进材料实验室；赵东元院士介孔材料全球顶尖。
+        <div class="block-label">核心师资</div>
+        赵东元（院士·介孔材料，高被引学者）、任斌（长江·分析化学）
+        <div class="block-label">就业</div>
+        材料/高分子企业；制药；复旦/海外读博
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏔️</span>浙江大学<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        化学A；化工A+（紧密相关）；强调化学与材料/能源交叉；与浙江医药化工产业链对接紧密。
+        <div class="block-label">核心师资</div>
+        唐睿康（院士·仿生材料）、翁孟波（院士·高分子）
+        <div class="block-label">就业</div>
+        浙江医药化工企业（海正/华海/贝达）；材料企业；读博
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🌙</span>南京大学（配位化学国重）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        化学A+；依托<strong>配位化学国家重点实验室</strong>（全国唯一）；光催化制氢全国领先；MOF材料研究国际一流。
+        <div class="block-label">核心师资</div>
+        邹志刚（院士·光催化）、朱成建（长江·有机化学）、唐曌（长江·手性化学）
+        <div class="block-label">就业</div>
+        中科院化学所/大连化物所读博；光伏/储能企业；制药
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">⚛️</span>中科大（单分子科学）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        化学A+；<strong>单分子科学</strong>（侯建国院士）全球领先；量子化学理论研究国际一流；与中科院化学所/大连化物所直接对接。
+        <div class="block-label">核心师资</div>
+        侯建国（院士·单分子物理化学）、江俊（长江·理论化学）、龚流柱（长江·有机合成）
+        <div class="block-label">就业</div>
+        中科院化学所/大连化物所读博；量子计算化学；医药企业
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业方向</p>
+  <div class="card">
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+        <div style="background:#f0fdf4;border-radius:8px;padding:12px;font-size:.83rem;border-left:3px solid #16a34a"><strong>💊 医药/生物医药</strong><br>有机合成→制药研发：辉瑞/阿斯利康/恒瑞/百济神州</div>
+        <div style="background:#f0f9ff;border-radius:8px;padding:12px;font-size:.83rem;border-left:3px solid #2563eb"><strong>🔋 新能源/电池材料</strong><br>锂电池/固态电池：宁德时代/比亚迪研究院/中科院物理所</div>
+        <div style="background:#fdf4ff;border-radius:8px;padding:12px;font-size:.83rem;border-left:3px solid #9333ea"><strong>🧱 新材料/半导体</strong><br>光刻胶等卡脖子方向：中科院化学所/宁波材料所</div>
+        <div style="background:#fff7ed;border-radius:8px;padding:12px;font-size:.83rem;border-left:3px solid #f97316"><strong>🌱 绿色化工/催化</strong><br>光催化制氢/CO₂转化：国家双碳目标战略方向</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 专业TAB：生命科学 ══════════════ -->
+<section class="school-section" id="major-bio">
+  <div class="major-hero" style="background:linear-gradient(135deg, #7c2d12 0%, #dc2626 50%, #9333ea 100%)">
+    <h2>🧬 生命科学 · 生物科学 · 基础医学</h2>
+    <p>探索生命的分子机制 · 最需要科研热情的方向 · 深造率最高（90%+）</p>
+    <div class="major-tags">
+      <span class="major-tag">生物科学：7校全开设</span>
+      <span class="major-tag">基础医学：仅复旦+浙大</span>
+      <span class="major-tag">深造率90%+</span>
+      <span class="major-tag">⚠️ 不授临床执照</span>
+    </div>
+  </div>
+
+  <p class="section-title">两类方向的本质区别</p>
+  <div class="card">
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px">
+        <div style="background:#f0fdf4;border-radius:10px;padding:16px">
+          <div style="font-weight:700;font-size:.95rem;margin-bottom:8px;">🌿 生物科学</div>
+          <div style="font-size:.84rem;line-height:1.75">研究生命的基本规律，从细胞到生态系统。核心是"生命为什么是这样的"。<br>强基培养重点：分子生物学、基因组学、合成生物学、进化生物学。</div>
+        </div>
+        <div style="background:#fef2f2;border-radius:10px;padding:16px">
+          <div style="font-weight:700;font-size:.95rem;margin-bottom:8px;">🏥 基础医学（仅复旦/浙大）</div>
+          <div style="font-size:.84rem;line-height:1.75">研究疾病的分子机制，目标是成为<strong>医学科学家而非临床医生</strong>。<br><strong style="color:#dc2626">⚠️ 不授临床执照，不能坐诊</strong>，毕业主路径是读博做科研。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">七校强基生命科学横向对比</p>
+  <div class="major-compare-grid">
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏛️</span>清华（探微书院）<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        生物科学与化学生物学方向融合；依托生命科学学院+医学院；颜宁院士结构生物学世界顶尖（已归国）。
+        <div class="block-label">核心师资</div>
+        颜宁（院士·结构生物学）、贾桂芳（长江·生物化学）
+        <div class="block-label">就业</div>
+        海外顶尖高校读博为主；生物医药企业研发部
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔴</span>北大（生命科学A+）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        生物A+；强调进化生物学、神经科学；饶毅教授强力推动生命科学教育改革；本科即参与顶尖实验室。
+        <div class="block-label">核心师资</div>
+        饶毅（神经科学）、罗述金（长江·发育生物学）、黄岩谊（长江·生化）
+        <div class="block-label">就业</div>
+        哈佛/MIT/UCSF读博为主；中科院生物物理所
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔵</span>复旦（生物+<strong>基础医学A+</strong>）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        生物A+，基础医学A+；<strong>七校唯一的基础医学方向（与浙大并列）</strong>；依托中山/华山/肿瘤医院；金力院士人类遗传学世界顶尖；基础医学本博贯通8年。
+        <div class="block-label">核心师资</div>
+        金力（院士·人类遗传学）、葛均波（院士·心血管）
+        <div class="block-label">就业</div>
+        基础医学→海外医学院读博为最优路径；国际制药企业MSL/研究员
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🚢</span>上交（生物医学科学A+）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        生物A+，基础医学A+；含<strong>生物医学科学</strong>（医工交叉）；依托仁济/瑞金8家顶级附属医院；Bio-X研究院人类遗传学领先。
+        <div class="block-label">核心师资</div>
+        陈国强（院士·造血与白血病）、贺林（院士·医学遗传学）
+        <div class="block-label">就业</div>
+        海外顶尖高校/上交医学院读博；医疗器械/数字医疗企业
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏔️</span>浙大（生物+<strong>基础医学</strong>+生物育种）<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        生物A，生态A+（全国第一）；含<strong>基础医学（Ⅴ组）</strong>；含<strong>生物育种科学（Ⅳ组，七校唯一）</strong>；依托邵逸夫/附属一院；医工交叉特色强。
+        <div class="block-label">核心师资</div>
+        段树民（院士·神经科学）、李家洋（院士·生物育种）
+        <div class="block-label">就业</div>
+        浙大医学院读博；附属医院基础研究；浙江生物医药产业园区
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🌙</span>南大（分子生物学A）<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        生物A；张辰宇发现外泌体miRNA震动学术界；强调分子生物学与基因组学；规模较小，精英化培养。
+        <div class="block-label">核心师资</div>
+        张辰宇（外泌体/miRNA）、陈谦（长江·细胞生物学）
+        <div class="block-label">就业</div>
+        国内外高校读博；南京医药产业（扬子江/先声）
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">⚛️</span>中科大（生物A+，结构生物学）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        生物A+；依托中科院上海生命科学研究院（全国最大综合生命科学研究机构）；结构生物学、合成生物学前沿；本科可参与所级项目。
+        <div class="block-label">核心师资</div>
+        施蕴渝（院士·生物物理）、陈子江（院士·生殖医学）
+        <div class="block-label">就业</div>
+        中科院生命科学各所读博；国内外高校；医药企业
+      </div>
+    </div>
+  </div>
+
+  <div class="notice notice-amber" style="margin:20px 0 0">
+    💡 <strong>特别提醒</strong>：生命科学是强基中<strong>深造率最高、直接就业竞争力相对较弱</strong>的专业。如果想本科毕业直接找高薪工作，此方向风险较大。但对有科研热情、愿意读博的学生，长期回报极高（PI收入不亚于互联网中层）。
+  </div>
+</section>
+
+<!-- ══════════════ 专业TAB：工程类 ══════════════ -->
+<section class="school-section" id="major-eng">
+  <div class="major-hero" style="background:linear-gradient(135deg, #312e81 0%, #1d4ed8 50%, #0369a1 100%)">
+    <h2>⚙️ 工程类强基专业</h2>
+    <p>理论与应用力学 · 船舶与海洋工程 · 生物医学工程 · 材料科学与工程</p>
+    <div class="major-tags">
+      <span class="major-tag">力学：清华/北大/上交/浙大/中科大</span>
+      <span class="major-tag">船舶：上交唯一·全国第一</span>
+      <span class="major-tag">生医工：上交强基独有</span>
+      <span class="major-tag">材料：上交强基独有</span>
+    </div>
+  </div>
+
+  <p class="section-title">理论与应用力学</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>力学：连接物理与工程的古老学科</div>
+    <div class="card-body">
+      <div style="font-size:.85rem;line-height:1.75;margin-bottom:12px">从航天飞机气动外形到高铁桥梁结构，从深海潜器到心脏瓣膜——力学研究物体在力作用下的运动与变形。</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px">
+        <div style="background:#f8faff;border-radius:8px;padding:12px;font-size:.82rem">
+          <div style="font-weight:700;margin-bottom:4px">🏛️ 清华（行健书院）力学A+</div>
+          强调力学+工程衔接；可转航天/土木/机械；行健书院可选直博进入力学/航天方向
+        </div>
+        <div style="background:#f8faff;border-radius:8px;padding:12px;font-size:.82rem">
+          <div style="font-weight:700;margin-bottom:4px">🔴 北大（工学院）力学A+</div>
+          三轮评估全国第一；周培源创立；陈十一院士（湍流/计算流体）奠基
+        </div>
+        <div style="background:#f8faff;border-radius:8px;padding:12px;font-size:.82rem">
+          <div style="font-weight:700;margin-bottom:4px">🚢 上交（Ⅱ组）力学</div>
+          与船舶/生医工同组；数学+物理笔试；力学→船海方向转换通道
+        </div>
+        <div style="background:#f8faff;border-radius:8px;padding:12px;font-size:.82rem">
+          <div style="font-weight:700;margin-bottom:4px">⚛️ 中科大力学A</div>
+          与大科学装置（EAST/合肥光源）直接对接；含流体力学、固体力学方向
+        </div>
+      </div>
+      <div style="margin-top:12px;font-size:.85rem"><strong>力学就业</strong>：航天科技/科工 · 中国商飞（大飞机） · 中船/核电 · 汽车/风电企业CAE工程师 · 高校教职</div>
+    </div>
+  </div>
+
+  <p class="section-title">船舶与海洋工程（上交唯一·强基七校独有）</p>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>海洋强国战略核心专业 · 上海交通大学 Ⅱ组</div>
+    <div class="card-body">
+      <div style="background:#f0f9ff;border-radius:8px;padding:14px;font-size:.85rem;margin-bottom:12px">
+        🌊 <strong>国家战略背景</strong>：中国是全球第一造船大国（2024年承接全球约55%订单），但大型LNG船、极地船、豪华邮轮等高端船型长期依赖欧韩。2024年首艘国产大邮轮"爱达·魔都号"下水，背后就是上交船建学院。
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:12px">
+        <div>
+          <div class="block-label">学什么</div>
+          <div style="font-size:.84rem;line-height:1.75">船舶静力学/稳性 · 船舶阻力与推进 · 船体结构 · 海洋平台工程 · 水下声学 · 极地工程与破冰技术</div>
+        </div>
+        <div>
+          <div class="block-label">研究前沿</div>
+          <div style="font-size:.84rem;line-height:1.75">🚢 绿色船舶（LNG/氨/氢燃料）<br>🧊 极地工程与破冰<br>🤖 智能/无人驾驶船<br>🌊 深海潜器/ROV机器人</div>
+        </div>
+      </div>
+      <div class="career-grid">
+        <div class="career-item"><span class="career-icon">🚢</span><span>中船集团/中船重工（央企，全球最大）</span></div>
+        <div class="career-item"><span class="career-icon">⛽</span><span>中海油/海洋石油（深海平台）</span></div>
+        <div class="career-item"><span class="career-icon">🤖</span><span>深之蓝/博雅工道（水下机器人）</span></div>
+        <div class="career-item"><span class="career-icon">🛡️</span><span>中船重工（军工舰艇方向）</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">生物医学工程 + 材料科学（上交Ⅰ/Ⅱ组）</p>
+  <div class="card">
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div class="block-label">🦾 生物医学工程（Ⅱ组）</div>
+          <div style="font-size:.84rem;line-height:1.75">医学+工程交叉，研究医疗仪器/生物传感器/医学影像AI。<br>就业：迈瑞医疗、联影医疗（MRI/CT）、波士顿科学、美敦力；或读博进脑机接口方向</div>
+        </div>
+        <div>
+          <div class="block-label">🧱 材料科学与工程（Ⅰ组，强基唯一）</div>
+          <div style="font-size:.84rem;line-height:1.75">上交材料A+，依托<strong>金属基复合材料全国重点实验室</strong>。<br>方向：半导体材料（光刻胶）· 高温合金（航空发动机）· 锂电池材料<br>就业：宁德时代/华为材料所/中科院材料所</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 专业TAB：特色专业 ══════════════ -->
+<section class="school-section" id="major-special">
+  <div class="major-hero" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0891b2 100%)">
+    <h2>✨ 强基特色专业（唯一/稀缺方向）</h2>
+    <p>量子信息 · 核工程 · 天文学 · 地球物理 · 大气科学 · 生物育种</p>
+    <div class="major-tags">
+      <span class="major-tag">每个方向仅1-2所学校开设</span>
+      <span class="major-tag">国家战略需求最直接</span>
+      <span class="major-tag">就业方向极为明确</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>⚛️ 量子信息科学（中科大·全国唯一独立方向）</div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px">
+        <div>
+          <div class="block-label">学什么</div>
+          <div style="font-size:.84rem;line-height:1.75">量子力学原理·量子纠缠·量子逻辑门·量子密钥分发（BB84）·量子纠错·量子线路优化</div>
+        </div>
+        <div>
+          <div class="block-label">三大研究方向</div>
+          <div style="font-size:.84rem;line-height:1.75">🔐 量子通信（"墨子号"卫星，绝对安全加密）<br>💻 量子计算（超导/光子量子计算机）<br>🎯 量子传感（原子钟/量子雷达）</div>
+        </div>
+      </div>
+      <div style="background:#e0f2fe;border-radius:8px;padding:12px 14px;font-size:.84rem;margin-bottom:10px">
+        🌟 <strong>核心优势</strong>：潘建伟院士团队——全球量子通信领域绝对领先，"墨子号"量子卫星、京沪量子干线均由该团队完成，全国唯一与国家量子战略直接绑定的强基专业。
+      </div>
+      <div style="font-size:.85rem"><strong>就业</strong>：中科院量子信息与量子科技创新研究院 · 国盾量子 · 本源量子 · 华为量子计算研究所 · 中国电科量子研究院 · 海外量子研究所</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>☢️ 核工程类（中科大·核科学A+）</div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px">
+        <div>
+          <div class="block-label">学什么</div>
+          <div style="font-size:.84rem;line-height:1.75">核物理基础·反应堆物理·核热工水力·辐射防护·核安全·聚变能源（托卡马克）</div>
+        </div>
+        <div>
+          <div class="block-label">国家战略背景</div>
+          <div style="font-size:.84rem;line-height:1.75">中国计划2035年前建成约150台核电机组，核电人才缺口极大；EAST托卡马克（全球最先进聚变装置在合肥）是中科大学生实习基地。</div>
+        </div>
+      </div>
+      <div style="font-size:.85rem"><strong>就业</strong>：中核集团/中广核/国家电投核电 · 国家核工业研究设计院 · 国防核武器研究所 · 中科院等离子所（聚变研究）</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>🔭 天文学（北大B组·全国最强 / 南大天体物理A+）</div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px">
+        <div>
+          <div class="block-label">北大天文（B组）</div>
+          <div style="font-size:.84rem;line-height:1.75">与国家天文台深度合作，参与FAST（500米口径射电望远镜）数据分析；武向平院士（射电天文）领衔；参与国际SKA大科学工程。</div>
+        </div>
+        <div>
+          <div class="block-label">南大天体物理（物理→天体方向）</div>
+          <div style="font-size:.84rem;line-height:1.75">天文学科全国A+，历史最悠久；紫金山天文台直接合作；方成院士（太阳物理）奠基；天琴引力波探测计划合作。</div>
+        </div>
+      </div>
+      <div style="font-size:.85rem"><strong>就业</strong>：国家天文台 · 紫金山天文台 · FAST · 参与SKA/LIGO/LISA项目 · 高校天文系教职 · 航天局（轨道计算）</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>🌍 地球物理 · 🌩️ 大气科学（2026新增） · 🌾 生物育种</div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px">
+        <div style="background:#f8faff;border-radius:8px;padding:14px;font-size:.83rem">
+          <div style="font-weight:700;margin-bottom:6px">🌍 地球物理学（中科大）</div>
+          研究地球内部结构/地震波/地磁场。<br>
+          <strong>就业</strong>：中科院地质地球物理所 · 中国地震局 · 中石油（地球物理勘探） · 国土资源部
+        </div>
+        <div style="background:#f0fff4;border-radius:8px;padding:14px;font-size:.83rem">
+          <div style="font-weight:700;margin-bottom:6px">🌩️ 大气科学（南大·2026新增）</div>
+          大气动力学·气候变化·数值天气预报。大气科学全国A+，全国最悠久。<br>
+          <strong>就业</strong>：中国气象局 · 国家气候中心 · 中科院大气物理所 · 高校大气系
+        </div>
+        <div style="background:#fefce8;border-radius:8px;padding:14px;font-size:.83rem">
+          <div style="font-weight:700;margin-bottom:6px">🌾 生物育种科学（浙大·全国唯一）</div>
+          CRISPR/全基因组选择育种，国家水稻改良中心支撑，李家洋院士领衔。<br>
+          <strong>就业</strong>：国家农科院 · 隆平高科 · 先正达 · 中国种子集团
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 专业TAB：人文类 ══════════════ -->
+<section class="school-section" id="major-hum">
+  <div class="major-hero" style="background:linear-gradient(135deg, #7c2d12 0%, #9a3412 50%, #b45309 100%)">
+    <h2>📜 人文类强基专业</h2>
+    <p>中国语言文学（古文字）· 历史学 · 哲学 · 考古学 · "冷门绝学"国家战略扶持</p>
+    <div class="major-tags">
+      <span class="major-tag">文史哲：7校均开设</span>
+      <span class="major-tag">考古学：北大独有（强基七校）</span>
+      <span class="major-tag">深造率60-80%</span>
+    </div>
+  </div>
+
+  <p class="section-title">三大方向本质</p>
+  <div class="card">
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px">
+        <div style="background:#fff7ed;border-radius:10px;padding:14px">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:6px">📖 中国语言文学（古文字方向）</div>
+          <div style="font-size:.83rem;line-height:1.7">核心是<strong>古文字学</strong>：甲骨文/金文/简帛文字识读与研究；"出土文献"（清华简/马王堆帛书）解读的支柱学科；国家对"冷门绝学"专项资助。</div>
+        </div>
+        <div style="background:#fef2f2;border-radius:10px;padding:14px">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:6px">🏺 历史学（含考古学·北大独有）</div>
+          <div style="font-size:.83rem;line-height:1.7">研究人类社会演变过程。<strong>考古学</strong>是历史学最实证的分支，北大强基独有（依托赛克勒考古博物馆），历史学强调文献阅读、档案研究、田野调查。</div>
+        </div>
+        <div style="background:#fdf4ff;border-radius:10px;padding:14px">
+          <div style="font-weight:700;font-size:.9rem;margin-bottom:6px">🤔 哲学</div>
+          <div style="font-size:.83rem;line-height:1.7">研究存在/知识/价值/理性的基本问题；强基哲学强调中国哲学（儒道释）与西方哲学融通；AI时代伦理学需求快速增长。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">七校人文强基横向对比</p>
+  <div class="major-compare-grid">
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏛️</span>清华（日新书院·文史哲A+）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        中文A+、历史A+；强调出土文献（甲骨文/楚简）；"清华简"解读震动学术界；小班精英培养。
+        <div class="block-label">核心师资</div>
+        李学勤（甲骨文权威，学派传承）、彭林（礼学）、汪晖（历史社会学）
+        <div class="block-label">就业</div>
+        高校文史哲教职；党政机关（文字类）；出版/传媒
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔴</span>北大（含考古学·全国第一）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        文史哲全部A+；<strong>考古学全国第一</strong>（依托赛克勒考古博物馆）；历史系产出大量史学家；哲学系全国最强之一。
+        <div class="block-label">核心师资</div>
+        陈戎女（古文字）、陈苏镇（汉史）、赵敦华（西方哲学）
+        <div class="block-label">就业</div>
+        故宫/国家博物馆（考古）；高校教职；文博机构
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🔵</span>复旦（文史哲传统深厚）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        文史哲均A+；古籍整理研究所全国著名；谭其骧历史地理学派影响深远；葛剑雄（历史地理权威）。
+        <div class="block-label">核心师资</div>
+        葛剑雄（历史地理）、裘锡圭（古文字，学派传承）
+        <div class="block-label">就业</div>
+        上海社科院；高校教职；出版/传媒；政府文化部门
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🚢</span>上交（文史哲）<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        上交人文强基规模较小；强调理工人文融合通识（李政道讲座/科学史）；哲学系有科技哲学特色。
+        <div class="block-label">就业</div>
+        高校教职；传媒/出版；党政机关
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🏔️</span>浙大（文史哲）<span class="rating rating-a">A</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        依托浙大文科高研院和古籍研究所；强调文史哲打通培养；杭州文化资源丰富（国家版本馆/西泠印社）。
+        <div class="block-label">就业</div>
+        浙江省文化机构；高校教职；出版/传媒
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">🌙</span>南大（中文A+）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        中文A+；莫砺锋（唐宋文学权威）；程千帆（古典文学）学派传承；哲学系历史深厚；南京近现代史档案资源丰富。
+        <div class="block-label">核心师资</div>
+        莫砺锋（唐宋文学）、徐兴无（文献学）
+        <div class="block-label">就业</div>
+        高校教职；南京/江苏文化机构；党政机关；出版
+      </div>
+    </div>
+    <div class="school-major-card">
+      <div class="smh"><span class="school-icon">⚛️</span>中科大（科技史A+·独特方向）<span class="rating rating-aplus">A+</span></div>
+      <div class="smc">
+        <div class="block-label">特色</div>
+        中科大不设文史哲强基，但<strong>科学技术史A+（全国第一）</strong>——研究科学发现和技术创新的历史与哲学，是理工+人文的独特交叉方向。
+        <div class="block-label">就业</div>
+        科技政策研究部门；科技哲学教职；科学博物馆；智库
+      </div>
+    </div>
+  </div>
+
+  <p class="section-title">就业方向</p>
+  <div class="card">
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+        <div style="background:#fff7ed;border-radius:8px;padding:12px;font-size:.83rem;border-left:3px solid #f59e0b"><strong>🏛️ 高校文史哲教职</strong><br>路径：博士→博后→教职（竞争激烈，名校学历要求）</div>
+        <div style="background:#fef2f2;border-radius:8px;padding:12px;font-size:.83rem;border-left:3px solid #dc2626"><strong>🏺 博物馆/文化机构</strong><br>故宫/国家博物馆/省级博物馆；文化部/国家文物局；非遗保护中心</div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:12px;font-size:.83rem;border-left:3px solid #16a34a"><strong>📚 出版/传媒</strong><br>商务印书馆/中华书局编辑；人民日报文化版；文化类内容公司</div>
+        <div style="background:#f0f9ff;border-radius:8px;padding:12px;font-size:.83rem;border-left:3px solid #2563eb"><strong>🏢 政府机关</strong><br>党政机关文字综合岗；文化和旅游部；各省宣传系统</div>
+        <div style="background:#fdf4ff;border-radius:8px;padding:12px;font-size:.83rem;border-left:3px solid #9333ea"><strong>🤖 AI伦理/科技哲学（新兴）</strong><br>AI伦理研究员（腾讯SSV/百度研究院）；科技政策智库；科技媒体</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /.container -->
+
+<footer>
+  <p>数据来源：各高校2026年强基计划招生简章官网 · 第五轮学科评估公开信息综合整理 · 2026年4月</p>
+  <p style="margin-top:6px;">清华 · 北大 · 复旦 · 上交 · 浙大 · 南大 · 中科大 | 学科评估数据为非官方整理，仅供参考，以学校官网为准</p>
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const sections = document.querySelectorAll('.school-section');
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.target;
+      tabs.forEach(b => b.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(target).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

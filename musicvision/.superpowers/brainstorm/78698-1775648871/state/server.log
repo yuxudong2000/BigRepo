@@ -12,3 +12,4 @@
 {"type":"screen-added","file":"/Users/yuxudong/Documents/BigRepo/musicvision/.superpowers/brainstorm/78698-1775648871/content/ui-layout.html"}
 {"source":"user-event","type":"click","text":"B\n    侧边控制面板信息更集中，操作更高效","choice":"sidebar","id":null,"timestamp":1775650275402}
 {"type":"screen-added","file":"/Users/yuxudong/Documents/BigRepo/musicvision/.superpowers/brainstorm/78698-1775648871/content/ui-layout-v2.html"}
+{"type":"server-stopped","reason":"idle timeout"}
