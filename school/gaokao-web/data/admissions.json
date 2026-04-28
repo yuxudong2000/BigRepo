@@ -1,0 +1,4331 @@
+[
+  {
+    "school_code": "1103",
+    "school_name": "北京大学",
+    "major_code": "6",
+    "major_name": "理科试验班类(理科基础类专业)",
+    "plan_count": 24,
+    "score_line": 700,
+    "rank": 100
+  },
+  {
+    "school_code": "3102",
+    "school_name": "复旦大学",
+    "major_code": "5",
+    "major_name": "理科试验班(相辉学堂)",
+    "plan_count": 1,
+    "score_line": 699,
+    "rank": 113
+  },
+  {
+    "school_code": "3131",
+    "school_name": "上海交通大学",
+    "major_code": "3",
+    "major_name": "计算机科学与技术（ACM班）",
+    "plan_count": 1,
+    "score_line": 698,
+    "rank": 143
+  },
+  {
+    "school_code": "1147",
+    "school_name": "清华大学",
+    "major_code": "2",
+    "major_name": "理科试验班(理科各专业)",
+    "plan_count": 29,
+    "score_line": 697,
+    "rank": 155
+  },
+  {
+    "school_code": "3131",
+    "school_name": "上海交通大学",
+    "major_code": "4",
+    "major_name": "电子信息类",
+    "plan_count": 8,
+    "score_line": 696,
+    "rank": 191
+  },
+  {
+    "school_code": "1189",
+    "school_name": "中国科学院大学",
+    "major_code": "1",
+    "major_name": "人工智能",
+    "plan_count": 1,
+    "score_line": 696,
+    "rank": 193
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "21",
+    "major_name": "工科试验班(竺可桢学院图灵班)",
+    "plan_count": 3,
+    "score_line": 695,
+    "rank": 202
+  },
+  {
+    "school_code": "3102",
+    "school_name": "复旦大学",
+    "major_code": "4",
+    "major_name": "理科试验班",
+    "plan_count": 3,
+    "score_line": 695,
+    "rank": 217
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "20",
+    "major_name": "机器人工程(荣誉项目班)",
+    "plan_count": 8,
+    "score_line": 692,
+    "rank": 394
+  },
+  {
+    "school_code": "1189",
+    "school_name": "中国科学院大学",
+    "major_code": "2",
+    "major_name": "计算机科学与技术",
+    "plan_count": 3,
+    "score_line": 691,
+    "rank": 403
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "18",
+    "major_name": "工科试验班(EE类)",
+    "plan_count": 7,
+    "score_line": 689,
+    "rank": 516
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "17",
+    "major_name": "人工智能",
+    "plan_count": 33,
+    "score_line": 689,
+    "rank": 533
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "19",
+    "major_name": "工科试验班(智能光电芯片及系统创新班)",
+    "plan_count": 3,
+    "score_line": 689,
+    "rank": 537
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "23",
+    "major_name": "工科试验班(智能制造与机器人创新班)",
+    "plan_count": 4,
+    "score_line": 688,
+    "rank": 650
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "7",
+    "major_name": "人工智能",
+    "plan_count": 4,
+    "score_line": 687,
+    "rank": 693
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "10",
+    "major_name": "计算机科学与技术(至诚班)",
+    "plan_count": 2,
+    "score_line": 687,
+    "rank": 721
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "1",
+    "major_name": "计算机科学与技术(拔尖学生培养计划)",
+    "plan_count": 1,
+    "score_line": 687,
+    "rank": 737
+  },
+  {
+    "school_code": "1159",
+    "school_name": "中国人民大学",
+    "major_code": "21",
+    "major_name": "人工智能",
+    "plan_count": 4,
+    "score_line": 686,
+    "rank": 755
+  },
+  {
+    "school_code": "1159",
+    "school_name": "中国人民大学",
+    "major_code": "23",
+    "major_name": "计算机类(图灵计算机拔尖人才班)",
+    "plan_count": 2,
+    "score_line": 685,
+    "rank": 865
+  },
+  {
+    "school_code": "1159",
+    "school_name": "中国人民大学",
+    "major_code": "25",
+    "major_name": "统计学类(国民经济与数科创新人才班)",
+    "plan_count": 2,
+    "score_line": 684,
+    "rank": 1036
+  },
+  {
+    "school_code": "1159",
+    "school_name": "中国人民大学",
+    "major_code": "22",
+    "major_name": "计算机类",
+    "plan_count": 3,
+    "score_line": 683,
+    "rank": 1122
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "6",
+    "major_name": "计算机科学与技术",
+    "plan_count": 5,
+    "score_line": 683,
+    "rank": 1134
+  },
+  {
+    "school_code": "1159",
+    "school_name": "中国人民大学",
+    "major_code": "24",
+    "major_name": "统计学类",
+    "plan_count": 6,
+    "score_line": 683,
+    "rank": 1166
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "8",
+    "major_name": "理科试验班(匡亚明学院大理科班)",
+    "plan_count": 6,
+    "score_line": 683,
+    "rank": 1217
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "3",
+    "major_name": "工科试验班类(未来空天领军计划)",
+    "plan_count": 2,
+    "score_line": 682,
+    "rank": 1247
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "11",
+    "major_name": "计算机科学与技术(计算机金融实验班)",
+    "plan_count": 3,
+    "score_line": 682,
+    "rank": 1287
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "16",
+    "major_name": "工科试验班(信息)",
+    "plan_count": 232,
+    "score_line": 681,
+    "rank": 1368
+  },
+  {
+    "school_code": "2309",
+    "school_name": "哈尔滨工业大学",
+    "major_code": "3",
+    "major_name": "工科试验班(AI院士特色班)",
+    "plan_count": 1,
+    "score_line": 681,
+    "rank": 1380
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "5",
+    "major_name": "微电子科学与工程(卓越人才培养试验班)",
+    "plan_count": 2,
+    "score_line": 681,
+    "rank": 1439
+  },
+  {
+    "school_code": "2309",
+    "school_name": "哈尔滨工业大学",
+    "major_code": "2",
+    "major_name": "工科试验班(自主智能系统院士特色班)",
+    "plan_count": 1,
+    "score_line": 681,
+    "rank": 1445
+  },
+  {
+    "school_code": "1159",
+    "school_name": "中国人民大学",
+    "major_code": "26",
+    "major_name": "数学类",
+    "plan_count": 1,
+    "score_line": 680,
+    "rank": 1474
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "6",
+    "major_name": "人工智能(卓越人才培养试验班)",
+    "plan_count": 1,
+    "score_line": 680,
+    "rank": 1478
+  },
+  {
+    "school_code": "2309",
+    "school_name": "哈尔滨工业大学",
+    "major_code": "1",
+    "major_name": "工科试验班(院士特色班)",
+    "plan_count": 2,
+    "score_line": 680,
+    "rank": 1588
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "5",
+    "major_name": "软件工程",
+    "plan_count": 6,
+    "score_line": 679,
+    "rank": 1637
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "12",
+    "major_name": "软件工程(软工商业创新班)",
+    "plan_count": 6,
+    "score_line": 679,
+    "rank": 1641
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "2",
+    "major_name": "数学与应用数学(拔尖学生培养计划)",
+    "plan_count": 1,
+    "score_line": 679,
+    "rank": 1715
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "13",
+    "major_name": "工科试验班类(未来工程师项目制育人试验班)",
+    "plan_count": 3,
+    "score_line": 678,
+    "rank": 1810
+  },
+  {
+    "school_code": "3455",
+    "school_name": "中国科学技术大学",
+    "major_code": "5",
+    "major_name": "工科试验班(信息智能方向)",
+    "plan_count": 24,
+    "score_line": 677,
+    "rank": 1973
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "4",
+    "major_name": "网络空间安全(卓越人才培养试验班)",
+    "plan_count": 1,
+    "score_line": 677,
+    "rank": 1975
+  },
+  {
+    "school_code": "3455",
+    "school_name": "中国科学技术大学",
+    "major_code": "4",
+    "major_name": "工科试验班(航空航天、人形机器人、低碳能源技术及安全)",
+    "plan_count": 6,
+    "score_line": 677,
+    "rank": 2008
+  },
+  {
+    "school_code": "2309",
+    "school_name": "哈尔滨工业大学",
+    "major_code": "5",
+    "major_name": "工科试验班(AI加先进技术领军班深圳拔尖班)",
+    "plan_count": 2,
+    "score_line": 677,
+    "rank": 2016
+  },
+  {
+    "school_code": "2309",
+    "school_name": "哈尔滨工业大学",
+    "major_code": "4",
+    "major_name": "工科试验班(未来技术拔尖班)",
+    "plan_count": 5,
+    "score_line": 677,
+    "rank": 2066
+  },
+  {
+    "school_code": "1127",
+    "school_name": "北京理工大学",
+    "major_code": "1",
+    "major_name": "工科试验班(卓越班)",
+    "plan_count": 3,
+    "score_line": 676,
+    "rank": 2184
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "14",
+    "major_name": "电气工程及其自动化(电气AI启明实验班)",
+    "plan_count": 2,
+    "score_line": 675,
+    "rank": 2316
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "5",
+    "major_name": "自动化(钱学森班)",
+    "plan_count": 2,
+    "score_line": 675,
+    "rank": 2323
+  },
+  {
+    "school_code": "3455",
+    "school_name": "中国科学技术大学",
+    "major_code": "1",
+    "major_name": "理科试验班类(物理及应用物理)",
+    "plan_count": 19,
+    "score_line": 675,
+    "rank": 2418
+  },
+  {
+    "school_code": "3455",
+    "school_name": "中国科学技术大学",
+    "major_code": "2",
+    "major_name": "理科试验班类(数学及大数据技术)",
+    "plan_count": 13,
+    "score_line": 675,
+    "rank": 2511
+  },
+  {
+    "school_code": "3455",
+    "school_name": "中国科学技术大学",
+    "major_code": "3",
+    "major_name": "理科试验班类(智能化学及生命科技)",
+    "plan_count": 8,
+    "score_line": 675,
+    "rank": 2528
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "9",
+    "major_name": "理科试验班类(化学与生命科学类)",
+    "plan_count": 2,
+    "score_line": 674,
+    "rank": 2579
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "28",
+    "major_name": "软件工程(特软班)",
+    "plan_count": 1,
+    "score_line": 674,
+    "rank": 2599
+  },
+  {
+    "school_code": "3165",
+    "school_name": "同济大学",
+    "major_code": "1",
+    "major_name": "工科试验班(国豪精英班)",
+    "plan_count": 13,
+    "score_line": 674,
+    "rank": 2630
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "20",
+    "major_name": "电子信息类(集成电路启明实验班)",
+    "plan_count": 2,
+    "score_line": 674,
+    "rank": 2715
+  },
+  {
+    "school_code": "1127",
+    "school_name": "北京理工大学",
+    "major_code": "2",
+    "major_name": "工科试验班(未来精工技术)",
+    "plan_count": 4,
+    "score_line": 674,
+    "rank": 2720
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "18",
+    "major_name": "电子信息类(未来技术实验班)",
+    "plan_count": 4,
+    "score_line": 673,
+    "rank": 2771
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "4",
+    "major_name": "理科试验班类(数理科学类)",
+    "plan_count": 9,
+    "score_line": 673,
+    "rank": 2803
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "16",
+    "major_name": "电子信息工程(智能通信启明实验班)",
+    "plan_count": 2,
+    "score_line": 673,
+    "rank": 2844
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "13",
+    "major_name": "工科试验班",
+    "plan_count": 412,
+    "score_line": 673,
+    "rank": 2895
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "7",
+    "major_name": "人工智能(新工科卓越计划)",
+    "plan_count": 2,
+    "score_line": 673,
+    "rank": 2922
+  },
+  {
+    "school_code": "3165",
+    "school_name": "同济大学",
+    "major_code": "14",
+    "major_name": "人工智能(拔尖班)",
+    "plan_count": 5,
+    "score_line": 673,
+    "rank": 2960
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "1",
+    "major_name": "电子信息类（成电英才电子与计算机科技创新领军人才计划）",
+    "plan_count": 2,
+    "score_line": 672,
+    "rank": 2980
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "4",
+    "major_name": "能源与动力工程(钱学森班)",
+    "plan_count": 2,
+    "score_line": 672,
+    "rank": 2983
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "6",
+    "major_name": "计算机科学与技术(国家拔尖计划)",
+    "plan_count": 2,
+    "score_line": 672,
+    "rank": 2991
+  },
+  {
+    "school_code": "3206",
+    "school_name": "东南大学",
+    "major_code": "7",
+    "major_name": "工科试验班(吴健雄班)",
+    "plan_count": 15,
+    "score_line": 672,
+    "rank": 3014
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "2",
+    "major_name": "计算机科学与技术(国家珠峰计划拔尖人才实验班)",
+    "plan_count": 2,
+    "score_line": 672,
+    "rank": 3074
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "10",
+    "major_name": "工科试验班类(计算与智能科学类)",
+    "plan_count": 18,
+    "score_line": 672,
+    "rank": 3120
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "33",
+    "major_name": "网络空间安全(创新班)",
+    "plan_count": 2,
+    "score_line": 671,
+    "rank": 3196
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "35",
+    "major_name": "人工智能(自强班)",
+    "plan_count": 1,
+    "score_line": 671,
+    "rank": 3197
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "8",
+    "major_name": "工科试验班类(医工交叉试验班)",
+    "plan_count": 4,
+    "score_line": 671,
+    "rank": 3252
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "22",
+    "major_name": "计算机类(计算机学院)",
+    "plan_count": 13,
+    "score_line": 671,
+    "rank": 3277
+  },
+  {
+    "school_code": "3206",
+    "school_name": "东南大学",
+    "major_code": "4",
+    "major_name": "未来机器人(未来技术班)",
+    "plan_count": 5,
+    "score_line": 671,
+    "rank": 3297
+  },
+  {
+    "school_code": "1127",
+    "school_name": "北京理工大学",
+    "major_code": "3",
+    "major_name": "工科试验班(徐特立英才班)",
+    "plan_count": 16,
+    "score_line": 671,
+    "rank": 3314
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "11",
+    "major_name": "工科试验班类(信息科学与技术类)",
+    "plan_count": 30,
+    "score_line": 671,
+    "rank": 3400
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "1",
+    "major_name": "理科试验班(弘毅学堂)",
+    "plan_count": 2,
+    "score_line": 671,
+    "rank": 3403
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "3",
+    "major_name": "计算机科学与技术(智能金融与区块链金融双A联合学位实验班)",
+    "plan_count": 2,
+    "score_line": 671,
+    "rank": 3406
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "2",
+    "major_name": "理科试验班(弘毅双学位试验班)",
+    "plan_count": 2,
+    "score_line": 670,
+    "rank": 3454
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "8",
+    "major_name": "计算机科学与技术(AI交叉复合型创新人才双学位培养计划)",
+    "plan_count": 2,
+    "score_line": 670,
+    "rank": 3506
+  },
+  {
+    "school_code": "3206",
+    "school_name": "东南大学",
+    "major_code": "5",
+    "major_name": "集成电路设计与集成系统",
+    "plan_count": 6,
+    "score_line": 670,
+    "rank": 3539
+  },
+  {
+    "school_code": "3165",
+    "school_name": "同济大学",
+    "major_code": "2",
+    "major_name": "工科试验班(卓越计划班)",
+    "plan_count": 20,
+    "score_line": 670,
+    "rank": 3565
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "25",
+    "major_name": "工科试验班(机器人与智能机械试验班)",
+    "plan_count": 2,
+    "score_line": 670,
+    "rank": 3602
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "17",
+    "major_name": "光电信息科学与工程",
+    "plan_count": 11,
+    "score_line": 670,
+    "rank": 3655
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "36",
+    "major_name": "人工智能",
+    "plan_count": 1,
+    "score_line": 669,
+    "rank": 3745
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "10",
+    "major_name": "机器人工程",
+    "plan_count": 2,
+    "score_line": 669,
+    "rank": 3776
+  },
+  {
+    "school_code": "4460",
+    "school_name": "哈尔滨工业大学(深圳)",
+    "major_code": "1",
+    "major_name": "工科试验班(计算机与电子通信)",
+    "plan_count": 40,
+    "score_line": 669,
+    "rank": 3791
+  },
+  {
+    "school_code": "1130",
+    "school_name": "北京师范大学",
+    "major_code": "9",
+    "major_name": "数学类",
+    "plan_count": 4,
+    "score_line": 669,
+    "rank": 3831
+  },
+  {
+    "school_code": "3325",
+    "school_name": "中国人民大学(苏州校区)",
+    "major_code": "7",
+    "major_name": "数据科学与大数据技术(AI与智慧治理方向)",
+    "plan_count": 3,
+    "score_line": 669,
+    "rank": 3944
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "7",
+    "major_name": "理科试验班类(中法工程师学院)",
+    "plan_count": 3,
+    "score_line": 669,
+    "rank": 3969
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "8",
+    "major_name": "数学与应用数学(国家拔尖计划)",
+    "plan_count": 3,
+    "score_line": 669,
+    "rank": 3970
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "15",
+    "major_name": "工科试验班(材料、化工与高分子)",
+    "plan_count": 175,
+    "score_line": 668,
+    "rank": 4021
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "29",
+    "major_name": "计算机类（计算机学院）",
+    "plan_count": 6,
+    "score_line": 668,
+    "rank": 4053
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "4",
+    "major_name": "机器人工程(机器人学院)",
+    "plan_count": 2,
+    "score_line": 668,
+    "rank": 4057
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "15",
+    "major_name": "自动化",
+    "plan_count": 6,
+    "score_line": 668,
+    "rank": 4066
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "7",
+    "major_name": "微电子科学与工程",
+    "plan_count": 2,
+    "score_line": 668,
+    "rank": 4102
+  },
+  {
+    "school_code": "1203",
+    "school_name": "南开大学",
+    "major_code": "17",
+    "major_name": "理科试验班(数学与智能省身班)",
+    "plan_count": 5,
+    "score_line": 668,
+    "rank": 4115
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "9",
+    "major_name": "数据科学与大数据技术(AI交叉复合型创新人才双学位培养计划)",
+    "plan_count": 2,
+    "score_line": 668,
+    "rank": 4116
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "24",
+    "major_name": "计算机类(网安学院)",
+    "plan_count": 8,
+    "score_line": 668,
+    "rank": 4120
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "13",
+    "major_name": "电气工程及其自动化",
+    "plan_count": 16,
+    "score_line": 668,
+    "rank": 4140
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "26",
+    "major_name": "应用生物科学(生工食品)",
+    "plan_count": 21,
+    "score_line": 668,
+    "rank": 4170
+  },
+  {
+    "school_code": "1116",
+    "school_name": "北京航空航天大学",
+    "major_code": "9",
+    "major_name": "工科试验班类(航空航天类)",
+    "plan_count": 23,
+    "score_line": 668,
+    "rank": 4186
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "11",
+    "major_name": "工科试验班(电气类)",
+    "plan_count": 18,
+    "score_line": 668,
+    "rank": 4275
+  },
+  {
+    "school_code": "1203",
+    "school_name": "南开大学",
+    "major_code": "16",
+    "major_name": "工科试验班(卓越拔尖计划伯苓班)",
+    "plan_count": 4,
+    "score_line": 667,
+    "rank": 4423
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "11",
+    "major_name": "数学类(泰山学堂数理实验班)",
+    "plan_count": 2,
+    "score_line": 667,
+    "rank": 4447
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "19",
+    "major_name": "电子信息类(集成电路学院)",
+    "plan_count": 15,
+    "score_line": 667,
+    "rank": 4458
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "16",
+    "major_name": "数学类(数学自强班)",
+    "plan_count": 2,
+    "score_line": 667,
+    "rank": 4521
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "12",
+    "major_name": "理科试验班(生命、环境、化学与地学)",
+    "plan_count": 137,
+    "score_line": 667,
+    "rank": 4601
+  },
+  {
+    "school_code": "3206",
+    "school_name": "东南大学",
+    "major_code": "2",
+    "major_name": "工科试验班(智慧能源与电气工程)",
+    "plan_count": 5,
+    "score_line": 666,
+    "rank": 4621
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "10",
+    "major_name": "计算机类",
+    "plan_count": 8,
+    "score_line": 666,
+    "rank": 4637
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "34",
+    "major_name": "计算机类（国家网络安全学院）",
+    "plan_count": 8,
+    "score_line": 666,
+    "rank": 4651
+  },
+  {
+    "school_code": "2111",
+    "school_name": "大连理工大学",
+    "major_code": "12",
+    "major_name": "人工智能(新工科大师班)",
+    "plan_count": 1,
+    "score_line": 666,
+    "rank": 4655
+  },
+  {
+    "school_code": "3165",
+    "school_name": "同济大学",
+    "major_code": "4",
+    "major_name": "工科试验班(信息与智能网联类)",
+    "plan_count": 41,
+    "score_line": 666,
+    "rank": 4696
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "4",
+    "major_name": "航空航天类(陈士橹飞天班)",
+    "plan_count": 4,
+    "score_line": 666,
+    "rank": 4697
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "1",
+    "major_name": "计算机类(元班)",
+    "plan_count": 4,
+    "score_line": 666,
+    "rank": 4704
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "16",
+    "major_name": "电子信息工程(科技与艺术联合学位实验班)",
+    "plan_count": 3,
+    "score_line": 666,
+    "rank": 4758
+  },
+  {
+    "school_code": "3206",
+    "school_name": "东南大学",
+    "major_code": "6",
+    "major_name": "计算机类",
+    "plan_count": 22,
+    "score_line": 666,
+    "rank": 4759
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "23",
+    "major_name": "工科试验班(电气类)",
+    "plan_count": 15,
+    "score_line": 666,
+    "rank": 4809
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "27",
+    "major_name": "微电子科学与工程（集成电路学院）",
+    "plan_count": 2,
+    "score_line": 666,
+    "rank": 4860
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "12",
+    "major_name": "工科试验班(计算机科学技术类)",
+    "plan_count": 12,
+    "score_line": 666,
+    "rank": 4871
+  },
+  {
+    "school_code": "3206",
+    "school_name": "东南大学",
+    "major_code": "3",
+    "major_name": "电子信息类",
+    "plan_count": 26,
+    "score_line": 665,
+    "rank": 4914
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "16",
+    "major_name": "微电子科学与工程",
+    "plan_count": 8,
+    "score_line": 665,
+    "rank": 4933
+  },
+  {
+    "school_code": "1127",
+    "school_name": "北京理工大学",
+    "major_code": "4",
+    "major_name": "工科试验班(信息科学技术)",
+    "plan_count": 30,
+    "score_line": 665,
+    "rank": 4935
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "17",
+    "major_name": "电子科学与技术",
+    "plan_count": 6,
+    "score_line": 665,
+    "rank": 4954
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "2",
+    "major_name": "航空航天类(黄玉珊航空班)",
+    "plan_count": 3,
+    "score_line": 665,
+    "rank": 4973
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "30",
+    "major_name": "统计学",
+    "plan_count": 4,
+    "score_line": 665,
+    "rank": 4975
+  },
+  {
+    "school_code": "3165",
+    "school_name": "同济大学",
+    "major_code": "3",
+    "major_name": "工科试验班(智能化制造与新能源类)",
+    "plan_count": 10,
+    "score_line": 665,
+    "rank": 4984
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "17",
+    "major_name": "数学类",
+    "plan_count": 2,
+    "score_line": 665,
+    "rank": 4985
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "21",
+    "major_name": "自动化类",
+    "plan_count": 13,
+    "score_line": 665,
+    "rank": 4999
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "15",
+    "major_name": "电子信息类(电信学院)",
+    "plan_count": 13,
+    "score_line": 665,
+    "rank": 5108
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "14",
+    "major_name": "信息工程",
+    "plan_count": 8,
+    "score_line": 665,
+    "rank": 5186
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "6",
+    "major_name": "集成电路设计与集成系统",
+    "plan_count": 5,
+    "score_line": 664,
+    "rank": 5237
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "3",
+    "major_name": "工科试验班(卓越人才班)",
+    "plan_count": 3,
+    "score_line": 664,
+    "rank": 5258
+  },
+  {
+    "school_code": "1203",
+    "school_name": "南开大学",
+    "major_code": "15",
+    "major_name": "理科试验班(卓越拔尖计划伯苓班)",
+    "plan_count": 3,
+    "score_line": 664,
+    "rank": 5298
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "13",
+    "major_name": "软件工程",
+    "plan_count": 10,
+    "score_line": 664,
+    "rank": 5315
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "16",
+    "major_name": "计算机类",
+    "plan_count": 2,
+    "score_line": 664,
+    "rank": 5372
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "32",
+    "major_name": "导航工程(智能导航创新班)",
+    "plan_count": 4,
+    "score_line": 664,
+    "rank": 5373
+  },
+  {
+    "school_code": "1127",
+    "school_name": "北京理工大学",
+    "major_code": "5",
+    "major_name": "工科试验班(电子信息实验班)",
+    "plan_count": 32,
+    "score_line": 664,
+    "rank": 5375
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "22",
+    "major_name": "理科试验班(数学类)",
+    "plan_count": 4,
+    "score_line": 664,
+    "rank": 5384
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "26",
+    "major_name": "工科试验班(智慧能源与智能制造类)",
+    "plan_count": 6,
+    "score_line": 664,
+    "rank": 5456
+  },
+  {
+    "school_code": "3206",
+    "school_name": "东南大学",
+    "major_code": "1",
+    "major_name": "工科试验班(智能制造与智能系统)",
+    "plan_count": 13,
+    "score_line": 664,
+    "rank": 5478
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "4",
+    "major_name": "电子信息类(信息与通信)",
+    "plan_count": 10,
+    "score_line": 663,
+    "rank": 5531
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "22",
+    "major_name": "工科试验班(碳中和自强班)",
+    "plan_count": 2,
+    "score_line": 663,
+    "rank": 5542
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "20",
+    "major_name": "工科试验班(航天航空类)",
+    "plan_count": 8,
+    "score_line": 663,
+    "rank": 5574
+  },
+  {
+    "school_code": "3165",
+    "school_name": "同济大学",
+    "major_code": "5",
+    "major_name": "理科试验班",
+    "plan_count": 11,
+    "score_line": 663,
+    "rank": 5630
+  },
+  {
+    "school_code": "4436",
+    "school_name": "中山大学",
+    "major_code": "8",
+    "major_name": "计算机类",
+    "plan_count": 3,
+    "score_line": 663,
+    "rank": 5632
+  },
+  {
+    "school_code": "1203",
+    "school_name": "南开大学",
+    "major_code": "10",
+    "major_name": "理科试验班(数学与大数据)",
+    "plan_count": 6,
+    "score_line": 663,
+    "rank": 5639
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "12",
+    "major_name": "计算机类(计算机科学拔尖基地班)",
+    "plan_count": 2,
+    "score_line": 663,
+    "rank": 5649
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "2",
+    "major_name": "电子信息类(元班)",
+    "plan_count": 3,
+    "score_line": 663,
+    "rank": 5709
+  },
+  {
+    "school_code": "1203",
+    "school_name": "南开大学",
+    "major_code": "12",
+    "major_name": "工科试验班(信息科学与技术)",
+    "plan_count": 6,
+    "score_line": 663,
+    "rank": 5710
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "30",
+    "major_name": "电子信息类(电子信息学院)",
+    "plan_count": 19,
+    "score_line": 663,
+    "rank": 5712
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "9",
+    "major_name": "机械类",
+    "plan_count": 17,
+    "score_line": 663,
+    "rank": 5715
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "24",
+    "major_name": "工科试验班(智慧能源创新班)",
+    "plan_count": 3,
+    "score_line": 663,
+    "rank": 5747
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "14",
+    "major_name": "电子信息类(电子信息与物理科学复合培养)",
+    "plan_count": 4,
+    "score_line": 663,
+    "rank": 5765
+  },
+  {
+    "school_code": "5150",
+    "school_name": "电子科技大学(沙河校区)",
+    "major_code": "5",
+    "major_name": "软件工程(AI交叉复合型创新人才培养实验班)",
+    "plan_count": 2,
+    "score_line": 663,
+    "rank": 5777
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "23",
+    "major_name": "航空航天类",
+    "plan_count": 4,
+    "score_line": 663,
+    "rank": 5785
+  },
+  {
+    "school_code": "1210",
+    "school_name": "天津大学",
+    "major_code": "9",
+    "major_name": "工科试验班(未来技术学院)",
+    "plan_count": 6,
+    "score_line": 662,
+    "rank": 5865
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "31",
+    "major_name": "遥感科学与技术",
+    "plan_count": 8,
+    "score_line": 662,
+    "rank": 5872
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "15",
+    "major_name": "数学类(大数据与智能计算、数学及应用、计算科学)",
+    "plan_count": 3,
+    "score_line": 662,
+    "rank": 5876
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "1",
+    "major_name": "工科试验班(AI先进技术拔尖班)",
+    "plan_count": 2,
+    "score_line": 662,
+    "rank": 5878
+  },
+  {
+    "school_code": "5150",
+    "school_name": "电子科技大学(沙河校区)",
+    "major_code": "6",
+    "major_name": "软件工程(国家卓越工程师教育培养计划特色班)",
+    "plan_count": 2,
+    "score_line": 662,
+    "rank": 5912
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "5",
+    "major_name": "工科试验班(电子工程类)",
+    "plan_count": 9,
+    "score_line": 662,
+    "rank": 5930
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "28",
+    "major_name": "数学与应用数学",
+    "plan_count": 7,
+    "score_line": 662,
+    "rank": 5947
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "13",
+    "major_name": "电子信息类(智能仪器、智能控制)",
+    "plan_count": 5,
+    "score_line": 662,
+    "rank": 5957
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "21",
+    "major_name": "电子信息类(地球与空间科学技术学院)",
+    "plan_count": 3,
+    "score_line": 662,
+    "rank": 5982
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "19",
+    "major_name": "工科试验班(智能制造类)",
+    "plan_count": 14,
+    "score_line": 662,
+    "rank": 6008
+  },
+  {
+    "school_code": "4436",
+    "school_name": "中山大学",
+    "major_code": "15",
+    "major_name": "人工智能",
+    "plan_count": 4,
+    "score_line": 662,
+    "rank": 6024
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "23",
+    "major_name": "理科试验班(物理类)",
+    "plan_count": 8,
+    "score_line": 662,
+    "rank": 6081
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "24",
+    "major_name": "工科试验班(海洋，含智慧海洋卓越班)",
+    "plan_count": 86,
+    "score_line": 662,
+    "rank": 6085
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "37",
+    "major_name": "数据科学与大数据技术",
+    "plan_count": 6,
+    "score_line": 662,
+    "rank": 6103
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "1",
+    "major_name": "航空航天类(智慧三航拔尖班)",
+    "plan_count": 22,
+    "score_line": 662,
+    "rank": 6189
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "31",
+    "major_name": "物理学",
+    "plan_count": 3,
+    "score_line": 662,
+    "rank": 6224
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "32",
+    "major_name": "电子信息科学与技术",
+    "plan_count": 3,
+    "score_line": 661,
+    "rank": 6242
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "1",
+    "major_name": "数学类",
+    "plan_count": 5,
+    "score_line": 661,
+    "rank": 6245
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "18",
+    "major_name": "物理学类",
+    "plan_count": 6,
+    "score_line": 661,
+    "rank": 6288
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "6",
+    "major_name": "计算机类",
+    "plan_count": 6,
+    "score_line": 661,
+    "rank": 6291
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "20",
+    "major_name": "生物科学类",
+    "plan_count": 2,
+    "score_line": 661,
+    "rank": 6305
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "18",
+    "major_name": "工科试验班(智慧能源类)",
+    "plan_count": 14,
+    "score_line": 661,
+    "rank": 6314
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "2",
+    "major_name": "物理学类",
+    "plan_count": 5,
+    "score_line": 661,
+    "rank": 6316
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "8",
+    "major_name": "统计学类",
+    "plan_count": 8,
+    "score_line": 661,
+    "rank": 6323
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "2",
+    "major_name": "工科试验班(院士特色班)",
+    "plan_count": 2,
+    "score_line": 661,
+    "rank": 6326
+  },
+  {
+    "school_code": "5011",
+    "school_name": "重庆大学",
+    "major_code": "12",
+    "major_name": "工科试验班(卓越计划)",
+    "plan_count": 5,
+    "score_line": 661,
+    "rank": 6341
+  },
+  {
+    "school_code": "4436",
+    "school_name": "中山大学",
+    "major_code": "17",
+    "major_name": "电子信息工程",
+    "plan_count": 8,
+    "score_line": 661,
+    "rank": 6343
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "10",
+    "major_name": "自动化",
+    "plan_count": 2,
+    "score_line": 661,
+    "rank": 6351
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "7",
+    "major_name": "电气类",
+    "plan_count": 3,
+    "score_line": 661,
+    "rank": 6491
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "12",
+    "major_name": "电子信息类(光电集成与光网络)",
+    "plan_count": 10,
+    "score_line": 661,
+    "rank": 6508
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "9",
+    "major_name": "电子科学与技术",
+    "plan_count": 2,
+    "score_line": 661,
+    "rank": 6569
+  },
+  {
+    "school_code": "4436",
+    "school_name": "中山大学",
+    "major_code": "19",
+    "major_name": "微电子科学与工程",
+    "plan_count": 2,
+    "score_line": 660,
+    "rank": 6616
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "201",
+    "major_name": "核工程与核技术(定向)",
+    "plan_count": 2,
+    "score_line": 660,
+    "rank": 6642
+  },
+  {
+    "school_code": "3109",
+    "school_name": "上海财经大学",
+    "major_code": "28",
+    "major_name": "数学与应用数学",
+    "plan_count": 2,
+    "score_line": 660,
+    "rank": 6659
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "12",
+    "major_name": "数学类",
+    "plan_count": 6,
+    "score_line": 660,
+    "rank": 6663
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "6",
+    "major_name": "工科试验班(AI与低空技术)",
+    "plan_count": 2,
+    "score_line": 660,
+    "rank": 6680
+  },
+  {
+    "school_code": "3165",
+    "school_name": "同济大学",
+    "major_code": "16",
+    "major_name": "机械类(中外合作办学)",
+    "plan_count": 10,
+    "score_line": 660,
+    "rank": 6685
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "11",
+    "major_name": "数学类",
+    "plan_count": 3,
+    "score_line": 660,
+    "rank": 6686
+  },
+  {
+    "school_code": "5113",
+    "school_name": "电子科技大学",
+    "major_code": "11",
+    "major_name": "工科试验班(机器人、电气信息、智能制造)",
+    "plan_count": 10,
+    "score_line": 660,
+    "rank": 6703
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "12",
+    "major_name": "能源动力类",
+    "plan_count": 14,
+    "score_line": 660,
+    "rank": 6709
+  },
+  {
+    "school_code": "4055",
+    "school_name": "武汉大学",
+    "major_code": "19",
+    "major_name": "化学类",
+    "plan_count": 2,
+    "score_line": 660,
+    "rank": 6737
+  },
+  {
+    "school_code": "4436",
+    "school_name": "中山大学",
+    "major_code": "14",
+    "major_name": "数学类",
+    "plan_count": 4,
+    "score_line": 660,
+    "rank": 6748
+  },
+  {
+    "school_code": "4443",
+    "school_name": "南方科技大学",
+    "major_code": "1",
+    "major_name": "人工智能",
+    "plan_count": 3,
+    "score_line": 660,
+    "rank": 6753
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "17",
+    "major_name": "软件工程",
+    "plan_count": 2,
+    "score_line": 660,
+    "rank": 6762
+  },
+  {
+    "school_code": "1203",
+    "school_name": "南开大学",
+    "major_code": "14",
+    "major_name": "理科试验班(物理与光电信息技术工程)",
+    "plan_count": 5,
+    "score_line": 660,
+    "rank": 6773
+  },
+  {
+    "school_code": "1130",
+    "school_name": "北京师范大学",
+    "major_code": "10",
+    "major_name": "物理学类",
+    "plan_count": 4,
+    "score_line": 660,
+    "rank": 6778
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "8",
+    "major_name": "信息工程",
+    "plan_count": 2,
+    "score_line": 660,
+    "rank": 6788
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "10",
+    "major_name": "电子信息类(柔性电子拔尖班)",
+    "plan_count": 5,
+    "score_line": 660,
+    "rank": 6827
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "36",
+    "major_name": "软件工程",
+    "plan_count": 22,
+    "score_line": 660,
+    "rank": 6866
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "13",
+    "major_name": "计算机类(计算机)",
+    "plan_count": 10,
+    "score_line": 660,
+    "rank": 6896
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "16",
+    "major_name": "计算机类",
+    "plan_count": 14,
+    "score_line": 660,
+    "rank": 6903
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "4",
+    "major_name": "化学(拔尖基地启明实验班)",
+    "plan_count": 3,
+    "score_line": 660,
+    "rank": 6904
+  },
+  {
+    "school_code": "2111",
+    "school_name": "大连理工大学",
+    "major_code": "3",
+    "major_name": "电子信息类(创新班)",
+    "plan_count": 6,
+    "score_line": 660,
+    "rank": 6910
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "35",
+    "major_name": "计算机科学与技术",
+    "plan_count": 16,
+    "score_line": 660,
+    "rank": 6919
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "5",
+    "major_name": "航空航天类(航天)",
+    "plan_count": 6,
+    "score_line": 660,
+    "rank": 6957
+  },
+  {
+    "school_code": "1210",
+    "school_name": "天津大学",
+    "major_code": "2",
+    "major_name": "工科试验班(电气信息类)",
+    "plan_count": 12,
+    "score_line": 659,
+    "rank": 7016
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "28",
+    "major_name": "计算机科学与技术(拔尖基地班)",
+    "plan_count": 2,
+    "score_line": 659,
+    "rank": 7017
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "34",
+    "major_name": "微电子科学与工程",
+    "plan_count": 6,
+    "score_line": 659,
+    "rank": 7048
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "3",
+    "major_name": "航空航天类(长空创新班)",
+    "plan_count": 2,
+    "score_line": 659,
+    "rank": 7061
+  },
+  {
+    "school_code": "4436",
+    "school_name": "中山大学",
+    "major_code": "21",
+    "major_name": "物理学",
+    "plan_count": 2,
+    "score_line": 659,
+    "rank": 7066
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "3",
+    "major_name": "航空航天类(航空)",
+    "plan_count": 8,
+    "score_line": 659,
+    "rank": 7093
+  },
+  {
+    "school_code": "1146",
+    "school_name": "华北电力大学(北京)",
+    "major_code": "1",
+    "major_name": "电气工程及其自动化",
+    "plan_count": 14,
+    "score_line": 659,
+    "rank": 7118
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "4",
+    "major_name": "工科试验班(智能装备与先进制造)",
+    "plan_count": 4,
+    "score_line": 659,
+    "rank": 7169
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "29",
+    "major_name": "统计学类",
+    "plan_count": 7,
+    "score_line": 659,
+    "rank": 7214
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "7",
+    "major_name": "海洋工程类(黄震中海洋班)",
+    "plan_count": 4,
+    "score_line": 659,
+    "rank": 7216
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "11",
+    "major_name": "材料类",
+    "plan_count": 5,
+    "score_line": 659,
+    "rank": 7234
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "33",
+    "major_name": "通信工程",
+    "plan_count": 4,
+    "score_line": 659,
+    "rank": 7295
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "14",
+    "major_name": "工科试验班(智慧城市与建筑工程)",
+    "plan_count": 174,
+    "score_line": 659,
+    "rank": 7296
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "1",
+    "major_name": "数学类(含双学士学位)",
+    "plan_count": 5,
+    "score_line": 658,
+    "rank": 7332
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "15",
+    "major_name": "能源动力类",
+    "plan_count": 5,
+    "score_line": 658,
+    "rank": 7333
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "8",
+    "major_name": "电子信息类(电子信息)",
+    "plan_count": 8,
+    "score_line": 658,
+    "rank": 7351
+  },
+  {
+    "school_code": "4436",
+    "school_name": "中山大学",
+    "major_code": "20",
+    "major_name": "网络空间安全",
+    "plan_count": 9,
+    "score_line": 658,
+    "rank": 7364
+  },
+  {
+    "school_code": "1210",
+    "school_name": "天津大学",
+    "major_code": "3",
+    "major_name": "工科试验班(智能与计算类)",
+    "plan_count": 10,
+    "score_line": 658,
+    "rank": 7378
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "10",
+    "major_name": "理科试验班(化学优本班)",
+    "plan_count": 3,
+    "score_line": 658,
+    "rank": 7381
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "14",
+    "major_name": "计算机类(网络安全)",
+    "plan_count": 8,
+    "score_line": 658,
+    "rank": 7419
+  },
+  {
+    "school_code": "1210",
+    "school_name": "天津大学",
+    "major_code": "4",
+    "major_name": "工科试验班(精仪与光电信息类)",
+    "plan_count": 10,
+    "score_line": 658,
+    "rank": 7420
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "7",
+    "major_name": "软件工程",
+    "plan_count": 3,
+    "score_line": 658,
+    "rank": 7449
+  },
+  {
+    "school_code": "2310",
+    "school_name": "哈尔滨工业大学(威海)",
+    "major_code": "2",
+    "major_name": "工科试验班(机器人与智能装备拔尖班)",
+    "plan_count": 25,
+    "score_line": 658,
+    "rank": 7453
+  },
+  {
+    "school_code": "1",
+    "school_name": "浙江大学",
+    "major_code": "25",
+    "major_name": "应用生物科学(农学，含竺可桢学院新农科实验班)",
+    "plan_count": 140,
+    "score_line": 658,
+    "rank": 7462
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "1",
+    "major_name": "理科试验班类(生命科学)",
+    "plan_count": 1,
+    "score_line": 658,
+    "rank": 7481
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "7",
+    "major_name": "生物科学(生命科学与技术启明实验班)",
+    "plan_count": 4,
+    "score_line": 658,
+    "rank": 7488
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "5",
+    "major_name": "电子信息类",
+    "plan_count": 8,
+    "score_line": 658,
+    "rank": 7500
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "13",
+    "major_name": "化学类",
+    "plan_count": 2,
+    "score_line": 658,
+    "rank": 7501
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "21",
+    "major_name": "大数据管理与应用",
+    "plan_count": 3,
+    "score_line": 658,
+    "rank": 7515
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "12",
+    "major_name": "数学类",
+    "plan_count": 2,
+    "score_line": 658,
+    "rank": 7526
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "6",
+    "major_name": "航空航天类(民用航空)",
+    "plan_count": 3,
+    "score_line": 658,
+    "rank": 7588
+  },
+  {
+    "school_code": "5011",
+    "school_name": "重庆大学",
+    "major_code": "4",
+    "major_name": "计算机科学与技术(拔尖计划)",
+    "plan_count": 3,
+    "score_line": 658,
+    "rank": 7628
+  },
+  {
+    "school_code": "2111",
+    "school_name": "大连理工大学",
+    "major_code": "9",
+    "major_name": "数学类(华罗庚数学国家基础学科拔尖计划班)",
+    "plan_count": 2,
+    "score_line": 658,
+    "rank": 7659
+  },
+  {
+    "school_code": "1130",
+    "school_name": "北京师范大学",
+    "major_code": "11",
+    "major_name": "理科试验班",
+    "plan_count": 7,
+    "score_line": 658,
+    "rank": 7660
+  },
+  {
+    "school_code": "1203",
+    "school_name": "南开大学",
+    "major_code": "11",
+    "major_name": "理科试验班(物质科学与可持续发展)",
+    "plan_count": 5,
+    "score_line": 658,
+    "rank": 7674
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "9",
+    "major_name": "电子信息类(集成电路)",
+    "plan_count": 8,
+    "score_line": 658,
+    "rank": 7724
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "11",
+    "major_name": "自动化类",
+    "plan_count": 6,
+    "score_line": 658,
+    "rank": 7736
+  },
+  {
+    "school_code": "2111",
+    "school_name": "大连理工大学",
+    "major_code": "11",
+    "major_name": "人工智能(创新班)",
+    "plan_count": 4,
+    "score_line": 658,
+    "rank": 7759
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "12",
+    "major_name": "物理学类",
+    "plan_count": 3,
+    "score_line": 657,
+    "rank": 7765
+  },
+  {
+    "school_code": "5011",
+    "school_name": "重庆大学",
+    "major_code": "3",
+    "major_name": "电气工程及其自动化",
+    "plan_count": 8,
+    "score_line": 657,
+    "rank": 7769
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "14",
+    "major_name": "工科试验班(化工与材料类)",
+    "plan_count": 3,
+    "score_line": 657,
+    "rank": 7781
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "6",
+    "major_name": "计算机科学与技术(拔尖创新班)",
+    "plan_count": 2,
+    "score_line": 657,
+    "rank": 7789
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "17",
+    "major_name": "工科试验班(航空航天类，含双学士学位项目)",
+    "plan_count": 10,
+    "score_line": 657,
+    "rank": 7800
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "39",
+    "major_name": "生物科学类",
+    "plan_count": 2,
+    "score_line": 657,
+    "rank": 7808
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "15",
+    "major_name": "计算机类(软件)",
+    "plan_count": 10,
+    "score_line": 657,
+    "rank": 7815
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "4",
+    "major_name": "电气工程及其自动化(拔尖创新班)",
+    "plan_count": 2,
+    "score_line": 657,
+    "rank": 7821
+  },
+  {
+    "school_code": "6127",
+    "school_name": "西安交通大学",
+    "major_code": "27",
+    "major_name": "电气工程及其自动化(中外合作办学)",
+    "plan_count": 6,
+    "score_line": 657,
+    "rank": 7829
+  },
+  {
+    "school_code": "1146",
+    "school_name": "华北电力大学(北京)",
+    "major_code": "2",
+    "major_name": "智能电网信息工程",
+    "plan_count": 3,
+    "score_line": 657,
+    "rank": 7831
+  },
+  {
+    "school_code": "2111",
+    "school_name": "大连理工大学",
+    "major_code": "10",
+    "major_name": "人工智能(未来技术班)",
+    "plan_count": 10,
+    "score_line": 657,
+    "rank": 7852
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "5",
+    "major_name": "生物科学类",
+    "plan_count": 5,
+    "score_line": 657,
+    "rank": 7869
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "18",
+    "major_name": "理科试验班(海洋与生态环境类)",
+    "plan_count": 2,
+    "score_line": 657,
+    "rank": 7875
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "4",
+    "major_name": "通信工程（大类招生）",
+    "plan_count": 11,
+    "score_line": 657,
+    "rank": 7890
+  },
+  {
+    "school_code": "3109",
+    "school_name": "上海财经大学",
+    "major_code": "15",
+    "major_name": "信息管理与信息系统",
+    "plan_count": 2,
+    "score_line": 657,
+    "rank": 7893
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "13",
+    "major_name": "物理学类",
+    "plan_count": 2,
+    "score_line": 657,
+    "rank": 7898
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "9",
+    "major_name": "人工智能（大类招生）",
+    "plan_count": 8,
+    "score_line": 657,
+    "rank": 7902
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "21",
+    "major_name": "计算机类",
+    "plan_count": 12,
+    "score_line": 657,
+    "rank": 7912
+  },
+  {
+    "school_code": "3105",
+    "school_name": "华东师范大学",
+    "major_code": "38",
+    "major_name": "化学",
+    "plan_count": 2,
+    "score_line": 657,
+    "rank": 7930
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "2",
+    "major_name": "理科试验班(信息科学)",
+    "plan_count": 1,
+    "score_line": 657,
+    "rank": 7948
+  },
+  {
+    "school_code": "3109",
+    "school_name": "上海财经大学",
+    "major_code": "18",
+    "major_name": "统计学类",
+    "plan_count": 6,
+    "score_line": 657,
+    "rank": 7991
+  },
+  {
+    "school_code": "2111",
+    "school_name": "大连理工大学",
+    "major_code": "8",
+    "major_name": "智能制造工程(创新班)",
+    "plan_count": 4,
+    "score_line": 657,
+    "rank": 8005
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "9",
+    "major_name": "计算机类(含双学士学位)",
+    "plan_count": 17,
+    "score_line": 657,
+    "rank": 8008
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "23",
+    "major_name": "人工智能",
+    "plan_count": 4,
+    "score_line": 657,
+    "rank": 8027
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "30",
+    "major_name": "计算机科学与技术",
+    "plan_count": 4,
+    "score_line": 657,
+    "rank": 8040
+  },
+  {
+    "school_code": "4034",
+    "school_name": "华中科技大学",
+    "major_code": "3",
+    "major_name": "化学类",
+    "plan_count": 3,
+    "score_line": 657,
+    "rank": 8070
+  },
+  {
+    "school_code": "4436",
+    "school_name": "中山大学",
+    "major_code": "7",
+    "major_name": "生物科学类",
+    "plan_count": 2,
+    "score_line": 657,
+    "rank": 8112
+  },
+  {
+    "school_code": "189",
+    "school_name": "北京航空航天大学（杭州国际校园）",
+    "major_code": "2",
+    "major_name": "工科试验班类(中外合作办学，中法未来科技试验班)",
+    "plan_count": 80,
+    "score_line": 657,
+    "rank": 8113
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "3",
+    "major_name": "理科试验班(智能装备)",
+    "plan_count": 1,
+    "score_line": 657,
+    "rank": 8133
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "13",
+    "major_name": "网络空间安全(含双学士学位)",
+    "plan_count": 4,
+    "score_line": 657,
+    "rank": 8145
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "8",
+    "major_name": "网络空间安全（大类招生）",
+    "plan_count": 6,
+    "score_line": 657,
+    "rank": 8159
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "19",
+    "major_name": "计算机科学与技术",
+    "plan_count": 6,
+    "score_line": 656,
+    "rank": 8180
+  },
+  {
+    "school_code": "3325",
+    "school_name": "中国人民大学(苏州校区)",
+    "major_code": "6",
+    "major_name": "数学与应用数学(中外合作办学)(人大与索邦)",
+    "plan_count": 4,
+    "score_line": 656,
+    "rank": 8194
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "37",
+    "major_name": "人工智能",
+    "plan_count": 3,
+    "score_line": 656,
+    "rank": 8222
+  },
+  {
+    "school_code": "1127",
+    "school_name": "北京理工大学",
+    "major_code": "10",
+    "major_name": "车辆工程(中外合作办学)",
+    "plan_count": 2,
+    "score_line": 656,
+    "rank": 8290
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "3",
+    "major_name": "低空技术与工程",
+    "plan_count": 3,
+    "score_line": 656,
+    "rank": 8291
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "5",
+    "major_name": "电子信息类(拔尖创新班)",
+    "plan_count": 2,
+    "score_line": 656,
+    "rank": 8292
+  },
+  {
+    "school_code": "3543",
+    "school_name": "厦门大学",
+    "major_code": "19",
+    "major_name": "理科试验班(生命科学与医药健康类)",
+    "plan_count": 4,
+    "score_line": 656,
+    "rank": 8294
+  },
+  {
+    "school_code": "2310",
+    "school_name": "哈尔滨工业大学(威海)",
+    "major_code": "1",
+    "major_name": "工科试验班(AI加先进技术领军班)",
+    "plan_count": 72,
+    "score_line": 656,
+    "rank": 8329
+  },
+  {
+    "school_code": "2111",
+    "school_name": "大连理工大学",
+    "major_code": "1",
+    "major_name": "电子信息类",
+    "plan_count": 20,
+    "score_line": 656,
+    "rank": 8349
+  },
+  {
+    "school_code": "1123",
+    "school_name": "北京科技大学",
+    "major_code": "1",
+    "major_name": "材料科学与工程(高精尖班)",
+    "plan_count": 1,
+    "score_line": 656,
+    "rank": 8381
+  },
+  {
+    "school_code": "1210",
+    "school_name": "天津大学",
+    "major_code": "5",
+    "major_name": "工科试验班(智慧化工与绿色低碳类)",
+    "plan_count": 5,
+    "score_line": 656,
+    "rank": 8395
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "5",
+    "major_name": "电子信息类",
+    "plan_count": 8,
+    "score_line": 656,
+    "rank": 8397
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "19",
+    "major_name": "电子信息类",
+    "plan_count": 14,
+    "score_line": 656,
+    "rank": 8404
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "23",
+    "major_name": "计算机科学与技术",
+    "plan_count": 6,
+    "score_line": 656,
+    "rank": 8414
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "12",
+    "major_name": "机器人工程(AI智造复合创新班)",
+    "plan_count": 4,
+    "score_line": 656,
+    "rank": 8415
+  },
+  {
+    "school_code": "2111",
+    "school_name": "大连理工大学",
+    "major_code": "2",
+    "major_name": "大数据管理与应用(新工科拔尖班)",
+    "plan_count": 6,
+    "score_line": 656,
+    "rank": 8428
+  },
+  {
+    "school_code": "3240",
+    "school_name": "南京大学",
+    "major_code": "14",
+    "major_name": "大气科学(中外合作办学)",
+    "plan_count": 5,
+    "score_line": 656,
+    "rank": 8445
+  },
+  {
+    "school_code": "1121",
+    "school_name": "北京交通大学",
+    "major_code": "1",
+    "major_name": "理科试验班类(詹天佑试点班信息类)",
+    "plan_count": 3,
+    "score_line": 656,
+    "rank": 8473
+  },
+  {
+    "school_code": "4424",
+    "school_name": "华南理工大学",
+    "major_code": "5",
+    "major_name": "工科试验班(智能交通与数字建造)",
+    "plan_count": 2,
+    "score_line": 656,
+    "rank": 8476
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "3",
+    "major_name": "软件工程",
+    "plan_count": 6,
+    "score_line": 656,
+    "rank": 8496
+  },
+  {
+    "school_code": "188",
+    "school_name": "宁波东方理工大学",
+    "major_code": "1",
+    "major_name": "计算机科学与技术(大类招生)",
+    "plan_count": 70,
+    "score_line": 656,
+    "rank": 8518
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "27",
+    "major_name": "农村区域发展",
+    "plan_count": 3,
+    "score_line": 656,
+    "rank": 8554
+  },
+  {
+    "school_code": "3109",
+    "school_name": "上海财经大学",
+    "major_code": "19",
+    "major_name": "数学类",
+    "plan_count": 4,
+    "score_line": 656,
+    "rank": 8559
+  },
+  {
+    "school_code": "1121",
+    "school_name": "北京交通大学",
+    "major_code": "2",
+    "major_name": "理科试验班类(詹天佑试点班智能类)",
+    "plan_count": 3,
+    "score_line": 656,
+    "rank": 8583
+  },
+  {
+    "school_code": "3104",
+    "school_name": "华东理工大学",
+    "major_code": "23",
+    "major_name": "计算机科学与技术（双学士学位项目）",
+    "plan_count": 4,
+    "score_line": 655,
+    "rank": 8599
+  },
+  {
+    "school_code": "3281",
+    "school_name": "苏州大学",
+    "major_code": "22",
+    "major_name": "软件工程",
+    "plan_count": 2,
+    "score_line": 655,
+    "rank": 8602
+  },
+  {
+    "school_code": "1210",
+    "school_name": "天津大学",
+    "major_code": "6",
+    "major_name": "工科试验班(智能制造与建造)",
+    "plan_count": 7,
+    "score_line": 655,
+    "rank": 8626
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "20",
+    "major_name": "电气工程及其自动化",
+    "plan_count": 14,
+    "score_line": 655,
+    "rank": 8641
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "6",
+    "major_name": "航空航天工程",
+    "plan_count": 2,
+    "score_line": 655,
+    "rank": 8643
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "18",
+    "major_name": "理科试验班(唐敖庆班)",
+    "plan_count": 1,
+    "score_line": 655,
+    "rank": 8671
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "54",
+    "major_name": "人工智能(王湘浩班)",
+    "plan_count": 1,
+    "score_line": 655,
+    "rank": 8689
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "20",
+    "major_name": "自动化类(自动化与电气类)",
+    "plan_count": 10,
+    "score_line": 655,
+    "rank": 8706
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "24",
+    "major_name": "计算机科学与技术(智能实验班)",
+    "plan_count": 4,
+    "score_line": 655,
+    "rank": 8712
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "8",
+    "major_name": "生物科学类",
+    "plan_count": 3,
+    "score_line": 655,
+    "rank": 8719
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "2",
+    "major_name": "光电信息科学与工程",
+    "plan_count": 4,
+    "score_line": 655,
+    "rank": 8723
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "36",
+    "major_name": "生物技术",
+    "plan_count": 2,
+    "score_line": 655,
+    "rank": 8761
+  },
+  {
+    "school_code": "1121",
+    "school_name": "北京交通大学",
+    "major_code": "5",
+    "major_name": "计算机类",
+    "plan_count": 5,
+    "score_line": 655,
+    "rank": 8831
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "22",
+    "major_name": "电子信息工程",
+    "plan_count": 3,
+    "score_line": 655,
+    "rank": 8836
+  },
+  {
+    "school_code": "189",
+    "school_name": "北京航空航天大学（杭州国际校园）",
+    "major_code": "1",
+    "major_name": "工科试验班类(中外合作办学，中法航空试验班)",
+    "plan_count": 60,
+    "score_line": 655,
+    "rank": 8837
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "16",
+    "major_name": "自动化类",
+    "plan_count": 10,
+    "score_line": 655,
+    "rank": 8849
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "35",
+    "major_name": "低空技术与工程",
+    "plan_count": 3,
+    "score_line": 655,
+    "rank": 8853
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "31",
+    "major_name": "软件工程",
+    "plan_count": 5,
+    "score_line": 655,
+    "rank": 8855
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "33",
+    "major_name": "人工智能",
+    "plan_count": 5,
+    "score_line": 655,
+    "rank": 8871
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "8",
+    "major_name": "电气类",
+    "plan_count": 20,
+    "score_line": 655,
+    "rank": 8930
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "20",
+    "major_name": "计算机类(智能科技新工科实验班)",
+    "plan_count": 18,
+    "score_line": 655,
+    "rank": 8942
+  },
+  {
+    "school_code": "1127",
+    "school_name": "北京理工大学",
+    "major_code": "9",
+    "major_name": "光电信息科学与工程(中外合作办学)",
+    "plan_count": 2,
+    "score_line": 655,
+    "rank": 8949
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "17",
+    "major_name": "理科试验班(唐敖庆班)",
+    "plan_count": 2,
+    "score_line": 655,
+    "rank": 8979
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "21",
+    "major_name": "电子信息类(通信电子与光电方向)",
+    "plan_count": 10,
+    "score_line": 655,
+    "rank": 8982
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "17",
+    "major_name": "计算机类",
+    "plan_count": 3,
+    "score_line": 655,
+    "rank": 9006
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "22",
+    "major_name": "网络空间安全",
+    "plan_count": 6,
+    "score_line": 655,
+    "rank": 9007
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "21",
+    "major_name": "自动化",
+    "plan_count": 7,
+    "score_line": 655,
+    "rank": 9011
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "33",
+    "major_name": "资源环境科学(拔尖创新班)",
+    "plan_count": 1,
+    "score_line": 655,
+    "rank": 9036
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "22",
+    "major_name": "人工智能(未来技术学院)",
+    "plan_count": 2,
+    "score_line": 654,
+    "rank": 9042
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "34",
+    "major_name": "农学(智能农业创新班)",
+    "plan_count": 1,
+    "score_line": 654,
+    "rank": 9050
+  },
+  {
+    "school_code": "3732",
+    "school_name": "山东大学威海分校",
+    "major_code": "6",
+    "major_name": "数学类",
+    "plan_count": 5,
+    "score_line": 654,
+    "rank": 9063
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "7",
+    "major_name": "工科试验班(智能制造)",
+    "plan_count": 10,
+    "score_line": 654,
+    "rank": 9093
+  },
+  {
+    "school_code": "5150",
+    "school_name": "电子科技大学(沙河校区)",
+    "major_code": "1",
+    "major_name": "电子信息类(中外合作办学)(通信、微电子)",
+    "plan_count": 3,
+    "score_line": 654,
+    "rank": 9114
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "11",
+    "major_name": "电子科学与技术",
+    "plan_count": 2,
+    "score_line": 654,
+    "rank": 9116
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "7",
+    "major_name": "大数据管理与应用(拔尖创新班)",
+    "plan_count": 4,
+    "score_line": 654,
+    "rank": 9167
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "12",
+    "major_name": "自动化类",
+    "plan_count": 6,
+    "score_line": 654,
+    "rank": 9169
+  },
+  {
+    "school_code": "4460",
+    "school_name": "哈尔滨工业大学(深圳)",
+    "major_code": "2",
+    "major_name": "通信工程(中外合作办学)",
+    "plan_count": 6,
+    "score_line": 654,
+    "rank": 9192
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "34",
+    "major_name": "微电子科学与工程",
+    "plan_count": 2,
+    "score_line": 654,
+    "rank": 9224
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "26",
+    "major_name": "信息安全",
+    "plan_count": 4,
+    "score_line": 654,
+    "rank": 9236
+  },
+  {
+    "school_code": "3109",
+    "school_name": "上海财经大学",
+    "major_code": "16",
+    "major_name": "数据科学与大数据技术",
+    "plan_count": 5,
+    "score_line": 654,
+    "rank": 9259
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "10",
+    "major_name": "信息与计算科学（信息与计算科学+人工智能双学士学位）",
+    "plan_count": 3,
+    "score_line": 654,
+    "rank": 9271
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "35",
+    "major_name": "集成电路设计与集成系统",
+    "plan_count": 2,
+    "score_line": 654,
+    "rank": 9289
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "17",
+    "major_name": "机械类",
+    "plan_count": 9,
+    "score_line": 654,
+    "rank": 9301
+  },
+  {
+    "school_code": "5011",
+    "school_name": "重庆大学",
+    "major_code": "10",
+    "major_name": "工科试验班(计算机与智能软件)",
+    "plan_count": 16,
+    "score_line": 654,
+    "rank": 9308
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "25",
+    "major_name": "通信工程",
+    "plan_count": 2,
+    "score_line": 654,
+    "rank": 9339
+  },
+  {
+    "school_code": "5150",
+    "school_name": "电子科技大学(沙河校区)",
+    "major_code": "2",
+    "major_name": "电子信息类(中外合作办学)(电子信息)",
+    "plan_count": 6,
+    "score_line": 654,
+    "rank": 9356
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "18",
+    "major_name": "电气工程及其自动化",
+    "plan_count": 8,
+    "score_line": 654,
+    "rank": 9364
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "17",
+    "major_name": "智能制造工程",
+    "plan_count": 5,
+    "score_line": 654,
+    "rank": 9413
+  },
+  {
+    "school_code": "1123",
+    "school_name": "北京科技大学",
+    "major_code": "2",
+    "major_name": "理科试验班(纳米科学与工程试验班)",
+    "plan_count": 1,
+    "score_line": 654,
+    "rank": 9468
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "12",
+    "major_name": "数学类",
+    "plan_count": 8,
+    "score_line": 654,
+    "rank": 9488
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "18",
+    "major_name": "智能车辆工程",
+    "plan_count": 3,
+    "score_line": 653,
+    "rank": 9508
+  },
+  {
+    "school_code": "3281",
+    "school_name": "苏州大学",
+    "major_code": "21",
+    "major_name": "计算机科学与技术",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9511
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "4",
+    "major_name": "农学",
+    "plan_count": 4,
+    "score_line": 653,
+    "rank": 9521
+  },
+  {
+    "school_code": "3281",
+    "school_name": "苏州大学",
+    "major_code": "26",
+    "major_name": "人工智能",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9524
+  },
+  {
+    "school_code": "4499",
+    "school_name": "深圳理工大学",
+    "major_code": "1",
+    "major_name": "计算机科学与技术(特色班)",
+    "plan_count": 15,
+    "score_line": 653,
+    "rank": 9525
+  },
+  {
+    "school_code": "5011",
+    "school_name": "重庆大学",
+    "major_code": "9",
+    "major_name": "工科试验班(未来信息)",
+    "plan_count": 25,
+    "score_line": 653,
+    "rank": 9526
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "13",
+    "major_name": "计算机科学与技术",
+    "plan_count": 3,
+    "score_line": 653,
+    "rank": 9562
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "32",
+    "major_name": "物联网工程",
+    "plan_count": 3,
+    "score_line": 653,
+    "rank": 9577
+  },
+  {
+    "school_code": "1121",
+    "school_name": "北京交通大学",
+    "major_code": "4",
+    "major_name": "电子信息类",
+    "plan_count": 6,
+    "score_line": 653,
+    "rank": 9598
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "2",
+    "major_name": "物理学类",
+    "plan_count": 8,
+    "score_line": 653,
+    "rank": 9604
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "33",
+    "major_name": "信息安全",
+    "plan_count": 4,
+    "score_line": 653,
+    "rank": 9611
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "10",
+    "major_name": "数学类",
+    "plan_count": 4,
+    "score_line": 653,
+    "rank": 9632
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "17",
+    "major_name": "自动化",
+    "plan_count": 12,
+    "score_line": 653,
+    "rank": 9641
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "13",
+    "major_name": "物理学类",
+    "plan_count": 6,
+    "score_line": 653,
+    "rank": 9646
+  },
+  {
+    "school_code": "3109",
+    "school_name": "上海财经大学",
+    "major_code": "21",
+    "major_name": "人工智能",
+    "plan_count": 5,
+    "score_line": 653,
+    "rank": 9647
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "17",
+    "major_name": "机械类",
+    "plan_count": 8,
+    "score_line": 653,
+    "rank": 9658
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "23",
+    "major_name": "机器人工程",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9674
+  },
+  {
+    "school_code": "5011",
+    "school_name": "重庆大学",
+    "major_code": "13",
+    "major_name": "工科试验班(智能网联汽车创新班)",
+    "plan_count": 6,
+    "score_line": 653,
+    "rank": 9678
+  },
+  {
+    "school_code": "3732",
+    "school_name": "山东大学威海分校",
+    "major_code": "5",
+    "major_name": "电子信息类(智能工程新工科实验班)",
+    "plan_count": 6,
+    "score_line": 653,
+    "rank": 9682
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "6",
+    "major_name": "统计学类",
+    "plan_count": 3,
+    "score_line": 653,
+    "rank": 9708
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "15",
+    "major_name": "人工智能",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9736
+  },
+  {
+    "school_code": "3281",
+    "school_name": "苏州大学",
+    "major_code": "18",
+    "major_name": "数学类",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9738
+  },
+  {
+    "school_code": "1127",
+    "school_name": "北京理工大学",
+    "major_code": "8",
+    "major_name": "能源与动力工程(中外合作办学)",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9760
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "14",
+    "major_name": "智能飞行器技术",
+    "plan_count": 5,
+    "score_line": 653,
+    "rank": 9805
+  },
+  {
+    "school_code": "4440",
+    "school_name": "深圳大学",
+    "major_code": "22",
+    "major_name": "人工智能(IEEE荣誉班)",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9815
+  },
+  {
+    "school_code": "3281",
+    "school_name": "苏州大学",
+    "major_code": "24",
+    "major_name": "电气工程及其自动化",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9822
+  },
+  {
+    "school_code": "3259",
+    "school_name": "南京师范大学",
+    "major_code": "14",
+    "major_name": "数学类",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9843
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "6",
+    "major_name": "高分子材料与工程",
+    "plan_count": 8,
+    "score_line": 653,
+    "rank": 9852
+  },
+  {
+    "school_code": "6116",
+    "school_name": "西安电子科技大学",
+    "major_code": "3",
+    "major_name": "电子信息类(集成电路)",
+    "plan_count": 18,
+    "score_line": 653,
+    "rank": 9859
+  },
+  {
+    "school_code": "5011",
+    "school_name": "重庆大学",
+    "major_code": "6",
+    "major_name": "理科试验班(数理基础)",
+    "plan_count": 5,
+    "score_line": 653,
+    "rank": 9860
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "18",
+    "major_name": "能源动力类(能源类)",
+    "plan_count": 8,
+    "score_line": 653,
+    "rank": 9879
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "14",
+    "major_name": "农业工程类",
+    "plan_count": 2,
+    "score_line": 653,
+    "rank": 9887
+  },
+  {
+    "school_code": "1121",
+    "school_name": "北京交通大学",
+    "major_code": "3",
+    "major_name": "自动化类(智能系统与智能制造)",
+    "plan_count": 5,
+    "score_line": 653,
+    "rank": 9921
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "29",
+    "major_name": "大数据管理与应用",
+    "plan_count": 3,
+    "score_line": 652,
+    "rank": 9946
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "18",
+    "major_name": "能源动力类(电气与智慧能源新工科实验班)",
+    "plan_count": 16,
+    "score_line": 652,
+    "rank": 9953
+  },
+  {
+    "school_code": "3104",
+    "school_name": "华东理工大学",
+    "major_code": "12",
+    "major_name": "计算机类",
+    "plan_count": 13,
+    "score_line": 652,
+    "rank": 9961
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "20",
+    "major_name": "机器人工程",
+    "plan_count": 8,
+    "score_line": 652,
+    "rank": 9969
+  },
+  {
+    "school_code": "1123",
+    "school_name": "北京科技大学",
+    "major_code": "4",
+    "major_name": "理科试验班(拔尖人才计划)",
+    "plan_count": 4,
+    "score_line": 652,
+    "rank": 9979
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "39",
+    "major_name": "计算机科学与技术",
+    "plan_count": 7,
+    "score_line": 652,
+    "rank": 10007
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "16",
+    "major_name": "电子信息类",
+    "plan_count": 7,
+    "score_line": 652,
+    "rank": 10016
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "26",
+    "major_name": "信息与计算科学",
+    "plan_count": 5,
+    "score_line": 652,
+    "rank": 10026
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "15",
+    "major_name": "生物科学类",
+    "plan_count": 2,
+    "score_line": 652,
+    "rank": 10038
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "25",
+    "major_name": "飞行器适航技术",
+    "plan_count": 4,
+    "score_line": 652,
+    "rank": 10059
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "36",
+    "major_name": "微电子科学与工程(集成电路设计)",
+    "plan_count": 8,
+    "score_line": 652,
+    "rank": 10077
+  },
+  {
+    "school_code": "1127",
+    "school_name": "北京理工大学",
+    "major_code": "7",
+    "major_name": "航空航天工程(中外合作办学)",
+    "plan_count": 2,
+    "score_line": 652,
+    "rank": 10091
+  },
+  {
+    "school_code": "6116",
+    "school_name": "西安电子科技大学",
+    "major_code": "1",
+    "major_name": "电子信息类(通信)",
+    "plan_count": 15,
+    "score_line": 652,
+    "rank": 10099
+  },
+  {
+    "school_code": "2309",
+    "school_name": "哈尔滨工业大学",
+    "major_code": "8",
+    "major_name": "数学与应用数学(中外合作办学)",
+    "plan_count": 10,
+    "score_line": 652,
+    "rank": 10106
+  },
+  {
+    "school_code": "1165",
+    "school_name": "中央财经大学",
+    "major_code": "12",
+    "major_name": "大数据管理与应用(许国志大数据英才班)",
+    "plan_count": 4,
+    "score_line": 652,
+    "rank": 10141
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "11",
+    "major_name": "应用物理学（应用物理学+电子信息科学与技术双学士学位）",
+    "plan_count": 4,
+    "score_line": 652,
+    "rank": 10142
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "12",
+    "major_name": "应用物理学",
+    "plan_count": 4,
+    "score_line": 652,
+    "rank": 10143
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "45",
+    "major_name": "电气工程及其自动化",
+    "plan_count": 2,
+    "score_line": 652,
+    "rank": 10151
+  },
+  {
+    "school_code": "3281",
+    "school_name": "苏州大学",
+    "major_code": "25",
+    "major_name": "电气工程与智能控制",
+    "plan_count": 2,
+    "score_line": 652,
+    "rank": 10160
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "55",
+    "major_name": "人工智能",
+    "plan_count": 4,
+    "score_line": 652,
+    "rank": 10186
+  },
+  {
+    "school_code": "6116",
+    "school_name": "西安电子科技大学",
+    "major_code": "7",
+    "major_name": "计算机类(智能)",
+    "plan_count": 15,
+    "score_line": 652,
+    "rank": 10187
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "13",
+    "major_name": "量子信息科学",
+    "plan_count": 2,
+    "score_line": 652,
+    "rank": 10201
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "20",
+    "major_name": "电子信息类",
+    "plan_count": 17,
+    "score_line": 652,
+    "rank": 10205
+  },
+  {
+    "school_code": "4072",
+    "school_name": "武汉理工大学",
+    "major_code": "1",
+    "major_name": "材料科学与工程(珠峰实验班)",
+    "plan_count": 2,
+    "score_line": 652,
+    "rank": 10223
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "4",
+    "major_name": "生物科学类(含双学士学位)",
+    "plan_count": 8,
+    "score_line": 652,
+    "rank": 10225
+  },
+  {
+    "school_code": "3209",
+    "school_name": "河海大学",
+    "major_code": "40",
+    "major_name": "计算机类(大禹班)",
+    "plan_count": 2,
+    "score_line": 652,
+    "rank": 10241
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "26",
+    "major_name": "车辆工程(智能电动车辆工程方向，饶斌班)",
+    "plan_count": 1,
+    "score_line": 652,
+    "rank": 10254
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "11",
+    "major_name": "工科试验班(先进化工与高端装备类)",
+    "plan_count": 13,
+    "score_line": 652,
+    "rank": 10259
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "20",
+    "major_name": "数学与应用数学",
+    "plan_count": 4,
+    "score_line": 652,
+    "rank": 10280
+  },
+  {
+    "school_code": "5011",
+    "school_name": "重庆大学",
+    "major_code": "8",
+    "major_name": "工科试验班(高端装备与智能制造)",
+    "plan_count": 25,
+    "score_line": 652,
+    "rank": 10289
+  },
+  {
+    "school_code": "1334",
+    "school_name": "华北电力大学(保定)",
+    "major_code": "1",
+    "major_name": "电气工程及其自动化",
+    "plan_count": 19,
+    "score_line": 652,
+    "rank": 10300
+  },
+  {
+    "school_code": "4440",
+    "school_name": "深圳大学",
+    "major_code": "23",
+    "major_name": "人工智能",
+    "plan_count": 1,
+    "score_line": 652,
+    "rank": 10305
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "14",
+    "major_name": "化学类",
+    "plan_count": 4,
+    "score_line": 652,
+    "rank": 10318
+  },
+  {
+    "school_code": "6204",
+    "school_name": "兰州大学",
+    "major_code": "20",
+    "major_name": "数学与应用数学(基地班)",
+    "plan_count": 3,
+    "score_line": 652,
+    "rank": 10363
+  },
+  {
+    "school_code": "4440",
+    "school_name": "深圳大学",
+    "major_code": "15",
+    "major_name": "计算机科学与技术(腾班)",
+    "plan_count": 2,
+    "score_line": 652,
+    "rank": 10365
+  },
+  {
+    "school_code": "3731",
+    "school_name": "山东大学",
+    "major_code": "14",
+    "major_name": "化学类",
+    "plan_count": 2,
+    "score_line": 651,
+    "rank": 10381
+  },
+  {
+    "school_code": "3763",
+    "school_name": "中国海洋大学",
+    "major_code": "5",
+    "major_name": "计算机类",
+    "plan_count": 4,
+    "score_line": 651,
+    "rank": 10400
+  },
+  {
+    "school_code": "3112",
+    "school_name": "上海大学",
+    "major_code": "14",
+    "major_name": "计算机科学与技术",
+    "plan_count": 5,
+    "score_line": 651,
+    "rank": 10409
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "24",
+    "major_name": "智能制造工程",
+    "plan_count": 4,
+    "score_line": 651,
+    "rank": 10416
+  },
+  {
+    "school_code": "1133",
+    "school_name": "北京外国语大学",
+    "major_code": "45",
+    "major_name": "计算机科学与技术(数智技术)",
+    "plan_count": 1,
+    "score_line": 651,
+    "rank": 10442
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "20",
+    "major_name": "物理学类",
+    "plan_count": 5,
+    "score_line": 651,
+    "rank": 10449
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "18",
+    "major_name": "飞行器设计与工程(中外合作办学)",
+    "plan_count": 5,
+    "score_line": 651,
+    "rank": 10458
+  },
+  {
+    "school_code": "6116",
+    "school_name": "西安电子科技大学",
+    "major_code": "5",
+    "major_name": "计算机类",
+    "plan_count": 30,
+    "score_line": 651,
+    "rank": 10470
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "16",
+    "major_name": "生物技术",
+    "plan_count": 4,
+    "score_line": 651,
+    "rank": 10473
+  },
+  {
+    "school_code": "6116",
+    "school_name": "西安电子科技大学",
+    "major_code": "2",
+    "major_name": "电子信息类(电子工程)",
+    "plan_count": 15,
+    "score_line": 651,
+    "rank": 10476
+  },
+  {
+    "school_code": "3251",
+    "school_name": "南京理工大学",
+    "major_code": "7",
+    "major_name": "计算机类",
+    "plan_count": 32,
+    "score_line": 651,
+    "rank": 10529
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "32",
+    "major_name": "集成电路设计与集成系统(集成电路科技英才特色班)",
+    "plan_count": 1,
+    "score_line": 651,
+    "rank": 10538
+  },
+  {
+    "school_code": "2308",
+    "school_name": "哈尔滨工程大学",
+    "major_code": "15",
+    "major_name": "计算机科学与技术(兴海领军)",
+    "plan_count": 1,
+    "score_line": 651,
+    "rank": 10546
+  },
+  {
+    "school_code": "4314",
+    "school_name": "湖南大学",
+    "major_code": "15",
+    "major_name": "化学工程与工艺",
+    "plan_count": 2,
+    "score_line": 651,
+    "rank": 10602
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "16",
+    "major_name": "能源与动力工程",
+    "plan_count": 2,
+    "score_line": 651,
+    "rank": 10610
+  },
+  {
+    "school_code": "3281",
+    "school_name": "苏州大学",
+    "major_code": "23",
+    "major_name": "通信工程",
+    "plan_count": 2,
+    "score_line": 651,
+    "rank": 10617
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "15",
+    "major_name": "工科试验班(轨道交通基础设施与安全类)",
+    "plan_count": 5,
+    "score_line": 651,
+    "rank": 10619
+  },
+  {
+    "school_code": "3104",
+    "school_name": "华东理工大学",
+    "major_code": "1",
+    "major_name": "工科试验班(智能与机器人)",
+    "plan_count": 11,
+    "score_line": 651,
+    "rank": 10625
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "24",
+    "major_name": "软件工程(特色班)",
+    "plan_count": 2,
+    "score_line": 651,
+    "rank": 10637
+  },
+  {
+    "school_code": "3281",
+    "school_name": "苏州大学",
+    "major_code": "19",
+    "major_name": "统计学",
+    "plan_count": 2,
+    "score_line": 651,
+    "rank": 10640
+  },
+  {
+    "school_code": "1123",
+    "school_name": "北京科技大学",
+    "major_code": "13",
+    "major_name": "计算机类",
+    "plan_count": 7,
+    "score_line": 651,
+    "rank": 10706
+  },
+  {
+    "school_code": "3732",
+    "school_name": "山东大学威海分校",
+    "major_code": "7",
+    "major_name": "物理学类",
+    "plan_count": 4,
+    "score_line": 651,
+    "rank": 10712
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "21",
+    "major_name": "物联网工程",
+    "plan_count": 2,
+    "score_line": 651,
+    "rank": 10740
+  },
+  {
+    "school_code": "6145",
+    "school_name": "西北工业大学",
+    "major_code": "19",
+    "major_name": "航空航天工程(中外合作办学)",
+    "plan_count": 5,
+    "score_line": 651,
+    "rank": 10767
+  },
+  {
+    "school_code": "1140",
+    "school_name": "北京邮电大学",
+    "major_code": "13",
+    "major_name": "电子信息工程(中外合作办学)",
+    "plan_count": 2,
+    "score_line": 651,
+    "rank": 10775
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "14",
+    "major_name": "电子信息类",
+    "plan_count": 3,
+    "score_line": 651,
+    "rank": 10776
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "16",
+    "major_name": "计算机类",
+    "plan_count": 8,
+    "score_line": 651,
+    "rank": 10809
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "24",
+    "major_name": "计算机科学与技术(中外合作办学)",
+    "plan_count": 4,
+    "score_line": 650,
+    "rank": 10811
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "35",
+    "major_name": "动物科学(未来领军创新班)",
+    "plan_count": 1,
+    "score_line": 650,
+    "rank": 10838
+  },
+  {
+    "school_code": "3281",
+    "school_name": "苏州大学",
+    "major_code": "27",
+    "major_name": "机械电子工程",
+    "plan_count": 2,
+    "score_line": 650,
+    "rank": 10853
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "29",
+    "major_name": "光电信息科学与工程",
+    "plan_count": 5,
+    "score_line": 650,
+    "rank": 10869
+  },
+  {
+    "school_code": "3112",
+    "school_name": "上海大学",
+    "major_code": "22",
+    "major_name": "电子信息类(未来技术学院)",
+    "plan_count": 4,
+    "score_line": 650,
+    "rank": 10876
+  },
+  {
+    "school_code": "6116",
+    "school_name": "西安电子科技大学",
+    "major_code": "6",
+    "major_name": "计算机类(网络安全)",
+    "plan_count": 15,
+    "score_line": 650,
+    "rank": 10886
+  },
+  {
+    "school_code": "1123",
+    "school_name": "北京科技大学",
+    "major_code": "12",
+    "major_name": "人工智能",
+    "plan_count": 5,
+    "score_line": 650,
+    "rank": 10887
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "24",
+    "major_name": "管理科学与工程类",
+    "plan_count": 5,
+    "score_line": 650,
+    "rank": 10891
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "43",
+    "major_name": "数据科学与大数据技术",
+    "plan_count": 2,
+    "score_line": 650,
+    "rank": 10895
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "31",
+    "major_name": "电子信息类",
+    "plan_count": 3,
+    "score_line": 650,
+    "rank": 10906
+  },
+  {
+    "school_code": "4365",
+    "school_name": "中南大学",
+    "major_code": "14",
+    "major_name": "材料类(冶金材料类)",
+    "plan_count": 14,
+    "score_line": 650,
+    "rank": 10932
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "8",
+    "major_name": "航空航天类",
+    "plan_count": 40,
+    "score_line": 650,
+    "rank": 10941
+  },
+  {
+    "school_code": "1165",
+    "school_name": "中央财经大学",
+    "major_code": "14",
+    "major_name": "计算机类",
+    "plan_count": 5,
+    "score_line": 650,
+    "rank": 10942
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "19",
+    "major_name": "数学类",
+    "plan_count": 6,
+    "score_line": 650,
+    "rank": 10948
+  },
+  {
+    "school_code": "2111",
+    "school_name": "大连理工大学",
+    "major_code": "6",
+    "major_name": "机械设计制造及其自动化(中外合作办学)",
+    "plan_count": 4,
+    "score_line": 650,
+    "rank": 10949
+  },
+  {
+    "school_code": "2309",
+    "school_name": "哈尔滨工业大学",
+    "major_code": "9",
+    "major_name": "应用物理学(中外合作办学)",
+    "plan_count": 8,
+    "score_line": 650,
+    "rank": 10972
+  },
+  {
+    "school_code": "4039",
+    "school_name": "华中师范大学",
+    "major_code": "21",
+    "major_name": "物理学(国家拔尖学生培养基地班)",
+    "plan_count": 1,
+    "score_line": 650,
+    "rank": 10974
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "27",
+    "major_name": "车辆工程",
+    "plan_count": 2,
+    "score_line": 650,
+    "rank": 10986
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "15",
+    "major_name": "机械类",
+    "plan_count": 7,
+    "score_line": 650,
+    "rank": 10992
+  },
+  {
+    "school_code": "6116",
+    "school_name": "西安电子科技大学",
+    "major_code": "4",
+    "major_name": "电子信息类(电子科学、信息物理、空天信息)",
+    "plan_count": 25,
+    "score_line": 650,
+    "rank": 10996
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "42",
+    "major_name": "软件工程",
+    "plan_count": 5,
+    "score_line": 650,
+    "rank": 11014
+  },
+  {
+    "school_code": "1157",
+    "school_name": "中国农业大学",
+    "major_code": "13",
+    "major_name": "食品科学与工程类",
+    "plan_count": 7,
+    "score_line": 650,
+    "rank": 11023
+  },
+  {
+    "school_code": "5011",
+    "school_name": "重庆大学",
+    "major_code": "7",
+    "major_name": "工科试验班(智慧能源与先进材料)",
+    "plan_count": 20,
+    "score_line": 650,
+    "rank": 11028
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "21",
+    "major_name": "机械工程",
+    "plan_count": 9,
+    "score_line": 650,
+    "rank": 11066
+  },
+  {
+    "school_code": "1121",
+    "school_name": "北京交通大学",
+    "major_code": "7",
+    "major_name": "理科试验班",
+    "plan_count": 4,
+    "score_line": 650,
+    "rank": 11083
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "11",
+    "major_name": "智能制造工程",
+    "plan_count": 4,
+    "score_line": 650,
+    "rank": 11084
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "33",
+    "major_name": "集成电路设计与集成系统",
+    "plan_count": 2,
+    "score_line": 650,
+    "rank": 11086
+  },
+  {
+    "school_code": "3112",
+    "school_name": "上海大学",
+    "major_code": "13",
+    "major_name": "电子信息工程",
+    "plan_count": 4,
+    "score_line": 650,
+    "rank": 11089
+  },
+  {
+    "school_code": "5120",
+    "school_name": "四川大学",
+    "major_code": "3",
+    "major_name": "化学类",
+    "plan_count": 13,
+    "score_line": 650,
+    "rank": 11092
+  },
+  {
+    "school_code": "2124",
+    "school_name": "东北大学",
+    "major_code": "7",
+    "major_name": "工科试验班",
+    "plan_count": 2,
+    "score_line": 650,
+    "rank": 11139
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "15",
+    "major_name": "车辆工程",
+    "plan_count": 2,
+    "score_line": 650,
+    "rank": 11154
+  },
+  {
+    "school_code": "3246",
+    "school_name": "南京航空航天大学",
+    "major_code": "28",
+    "major_name": "大数据管理与应用",
+    "plan_count": 3,
+    "score_line": 650,
+    "rank": 11183
+  },
+  {
+    "school_code": "3251",
+    "school_name": "南京理工大学",
+    "major_code": "4",
+    "major_name": "机器人工程",
+    "plan_count": 4,
+    "score_line": 650,
+    "rank": 11201
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "36",
+    "major_name": "空间信息与数字技术",
+    "plan_count": 2,
+    "score_line": 650,
+    "rank": 11203
+  },
+  {
+    "school_code": "2308",
+    "school_name": "哈尔滨工程大学",
+    "major_code": "18",
+    "major_name": "核工程与核技术(兴海领军)",
+    "plan_count": 1,
+    "score_line": 650,
+    "rank": 11247
+  },
+  {
+    "school_code": "2220",
+    "school_name": "吉林大学",
+    "major_code": "38",
+    "major_name": "机器人工程",
+    "plan_count": 3,
+    "score_line": 650,
+    "rank": 11283
+  }
+]

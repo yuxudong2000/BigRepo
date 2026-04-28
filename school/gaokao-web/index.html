@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2025年浙江高考投档线 - 理工科专业查询</title>
+  <!-- 内联数据：支持 file:// 本地直接打开 -->
+  <script src="data/data.js"></script>
+  <style>
+    :root {
+      --primary: #1a56db;
+      --primary-light: #e8f0fe;
+      --primary-dark: #1241a0;
+      --secondary: #0ea5e9;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --danger: #ef4444;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface2: #f1f5f9;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow: 0 4px 16px rgba(0,0,0,0.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1a56db 0%, #1241a0 50%, #0c2d6b 100%);
+      color: #fff;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-icon {
+      width: 40px; height: 40px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .logo-text h1 { font-size: 18px; font-weight: 700; line-height: 1.2; }
+    .logo-text p { font-size: 12px; opacity: 0.75; margin-top: 2px; }
+    .header-stats { display: flex; gap: 20px; }
+    .stat-badge {
+      text-align: center;
+      background: rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 8px 16px;
+    }
+    .stat-badge .num { font-size: 20px; font-weight: 700; }
+    .stat-badge .label { font-size: 11px; opacity: 0.75; margin-top: 2px; }
+
+    /* Main layout */
+    .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+    /* Filter Panel */
+    .filter-panel {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .filter-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .filter-item label {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .filter-item input,
+    .filter-item select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      color: var(--text);
+      background: var(--surface);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .filter-item input:focus,
+    .filter-item select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light); }
+    .filter-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn {
+      padding: 8px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+    }
+    .btn-outline:hover { background: var(--primary-light); }
+    .result-info {
+      margin-left: auto;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* View tabs */
+    .view-tabs {
+      display: flex;
+      gap: 4px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 4px;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+    .view-tab {
+      padding: 7px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
+    .view-tab.active { background: var(--primary); color: #fff; }
+
+    /* Table */
+    .table-wrapper {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .table-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead { background: linear-gradient(to bottom, #f8fafc, #f1f5f9); }
+    th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1.5px solid var(--border);
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+    }
+    th:hover { color: var(--primary); }
+    th .sort-icon { margin-left: 4px; opacity: 0.5; font-size: 11px; }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #f8faff; }
+    .school-cell { font-weight: 600; color: var(--text); }
+    .major-cell { color: var(--text); max-width: 320px; }
+    .major-name { font-weight: 500; }
+    .major-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    .tag-cs { background: #dbeafe; color: #1d4ed8; }
+    .tag-ee { background: #dcfce7; color: #166534; }
+    .tag-math { background: #fef3c7; color: #92400e; }
+    .tag-mech { background: #fce7f3; color: #9d174d; }
+    .tag-aero { background: #e0e7ff; color: #3730a3; }
+    .tag-other { background: #f1f5f9; color: #475569; }
+    .score-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .score-700 { background: #fef3c7; color: #92400e; }
+    .score-690 { background: #fee2e2; color: #991b1b; }
+    .score-680 { background: #fce7f3; color: #831843; }
+    .score-670 { background: #ede9fe; color: #4c1d95; }
+    .score-660 { background: #dbeafe; color: #1e40af; }
+    .score-650 { background: #dcfce7; color: #14532d; }
+    .rank-text { color: var(--text-muted); font-size: 13px; }
+    .plan-badge {
+      background: var(--surface2);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .detail-btn {
+      padding: 5px 12px;
+      font-size: 12px;
+      border-radius: 6px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .detail-btn:hover { background: var(--primary); color: #fff; }
+    .detail-btn.has-data { background: #dcfce7; color: #166534; }
+    .detail-btn.has-data:hover { background: #16a34a; color: #fff; }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .page-btn {
+      min-width: 36px; height: 36px;
+      padding: 0 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      transition: all 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .page-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .page-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* Card View */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 20px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .card:hover { box-shadow: var(--shadow); border-color: #93c5fd; transform: translateY(-2px); }
+    .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .card-school { font-size: 15px; font-weight: 700; color: var(--text); }
+    .card-major { font-size: 13px; color: var(--text-muted); margin-top: 3px; line-height: 1.4; }
+    .card-score { text-align: right; flex-shrink: 0; }
+    .card-score .num { font-size: 24px; font-weight: 800; color: var(--primary); }
+    .card-score .sub { font-size: 11px; color: var(--text-light); }
+    .card-divider { height: 1px; background: var(--border); margin: 12px 0; }
+    .card-meta { display: flex; gap: 16px; }
+    .meta-item { font-size: 12px; color: var(--text-muted); }
+    .meta-item strong { color: var(--text); font-weight: 600; }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(15, 23, 42, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--surface);
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+      width: 100%;
+      max-width: 820px;
+      max-height: 90vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: linear-gradient(to bottom, #f8fafc, #fff);
+    }
+    .modal-icon {
+      width: 48px; height: 48px;
+      background: var(--primary-light);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .modal-title { flex: 1; }
+    .modal-title h2 { font-size: 18px; font-weight: 700; }
+    .modal-title p { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+    .modal-close {
+      padding: 6px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 20px;
+      line-height: 1;
+      transition: background 0.2s;
+    }
+    .modal-close:hover { background: var(--surface2); }
+    .modal-score-row {
+      display: flex;
+      gap: 12px;
+      padding: 12px 24px;
+      background: var(--primary-light);
+      flex-wrap: wrap;
+    }
+    .score-chip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--primary-dark);
+    }
+    .score-chip strong { font-weight: 700; font-size: 16px; }
+    .modal-body {
+      overflow-y: auto;
+      flex: 1;
+      padding: 0;
+    }
+    .detail-section {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .detail-section:last-child { border-bottom: none; }
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .info-item {
+      background: var(--surface2);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+    .info-item .label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; font-weight: 500; }
+    .info-item .value { font-size: 14px; font-weight: 600; color: var(--text); }
+    .info-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    .info-list li::before {
+      content: '•';
+      color: var(--primary);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .faculty-grid { display: flex; flex-direction: column; gap: 10px; }
+    .faculty-card {
+      background: var(--surface2);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .faculty-avatar {
+      width: 36px; height: 36px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .faculty-info .name { font-weight: 600; font-size: 14px; }
+    .faculty-info .title { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .faculty-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+    .faculty-tag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .tag-academician { background: #fef3c7; color: #92400e; }
+    .tag-changjiang { background: #fee2e2; color: #991b1b; }
+    .tag-qingnian { background: #dbeafe; color: #1e40af; }
+    .tag-jiechu { background: #f3e8ff; color: #6b21a8; }
+    .career-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .career-tag {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      background: var(--surface2);
+      color: var(--text);
+    }
+    .loading-spinner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 40px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .spinner {
+      width: 20px; height: 20px;
+      border: 2px solid var(--border);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .no-data {
+      text-align: center;
+      padding: 32px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .no-data .icon { font-size: 32px; margin-bottom: 8px; }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--text-muted);
+    }
+    .empty-state .icon { font-size: 48px; margin-bottom: 12px; }
+    .empty-state h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+    .empty-state p { font-size: 13px; }
+
+    /* School Groups */
+    .school-groups { display: flex; flex-direction: column; gap: 16px; }
+    .school-group {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .group-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: linear-gradient(to right, var(--primary-light), transparent);
+      cursor: pointer;
+      gap: 12px;
+    }
+    .group-header:hover { background: linear-gradient(to right, #dbeafe, transparent); }
+    .group-school { font-size: 16px; font-weight: 700; }
+    .group-meta { display: flex; gap: 12px; align-items: center; }
+    .group-count { font-size: 12px; color: var(--text-muted); }
+    .group-top-score {
+      font-size: 14px; font-weight: 700; color: var(--primary);
+    }
+    .group-toggle { font-size: 18px; color: var(--text-muted); transition: transform 0.2s; }
+    .group-toggle.open { transform: rotate(180deg); }
+    .group-body { display: none; }
+    .group-body.open { display: block; }
+    .group-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .group-table td { padding: 10px 20px; border-top: 1px solid var(--border); }
+    .group-table tr:hover td { background: #f8faff; }
+    .group-major { font-weight: 500; flex: 1; }
+
+    @media (max-width: 768px) {
+      .header-stats { display: none; }
+      .filter-grid { grid-template-columns: 1fr 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .container { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">🎓</div>
+      <div class="logo-text">
+        <h1>2025年浙江高考投档线 · 理工科专业</h1>
+        <p>650分以上 · 66所院校 · 481条录取数据 · 含专业深度分析</p>
+      </div>
+    </div>
+    <div class="header-stats" id="headerStats">
+      <div class="stat-badge"><div class="num" id="statTotal">481</div><div class="label">总条目</div></div>
+      <div class="stat-badge"><div class="num" id="statSchools">66</div><div class="label">院校</div></div>
+      <div class="stat-badge"><div class="num" id="statFiltered">-</div><div class="label">筛选结果</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Filter Panel -->
+  <div class="filter-panel">
+    <div class="filter-title">🔍 筛选条件</div>
+    <div class="filter-grid">
+      <div class="filter-item">
+        <label>学校名称</label>
+        <select id="filterSchool">
+          <option value="">全部院校</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label>专业关键词</label>
+        <input type="text" id="filterMajor" placeholder="如：计算机、人工智能" />
+      </div>
+      <div class="filter-item">
+        <label>最低分数线</label>
+        <input type="number" id="filterScoreMin" placeholder="如：680" min="650" max="750" />
+      </div>
+      <div class="filter-item">
+        <label>最高分数线</label>
+        <input type="number" id="filterScoreMax" placeholder="如：700" min="650" max="750" />
+      </div>
+      <div class="filter-item">
+        <label>最大位次</label>
+        <input type="number" id="filterRankMax" placeholder="如：5000" min="1" />
+      </div>
+      <div class="filter-item">
+        <label>专业类别</label>
+        <select id="filterCategory">
+          <option value="">全部类别</option>
+          <option value="cs">计算机/软件/AI</option>
+          <option value="ee">电子/通信/集成电路</option>
+          <option value="math">数学/统计/数据科学</option>
+          <option value="mech">机械/自动化/机器人</option>
+          <option value="aero">航空航天</option>
+          <option value="energy">能源/电气</option>
+          <option value="chem">化学/材料/化工</option>
+          <option value="phy">物理/量子</option>
+          <option value="bio">生物/生命科学</option>
+          <option value="other">其他理工科</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter-actions">
+      <button class="btn btn-primary" onclick="applyFilter()">🔍 查询</button>
+      <button class="btn btn-outline" onclick="resetFilter()">↺ 重置</button>
+      <div class="result-info" id="resultInfo">共 <strong id="resultCount">481</strong> 条结果</div>
+    </div>
+  </div>
+
+  <!-- View Tabs + Controls -->
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:10px;">
+    <div class="view-tabs">
+      <button class="view-tab active" onclick="switchView('table', this)">📋 列表视图</button>
+      <button class="view-tab" onclick="switchView('card', this)">🃏 卡片视图</button>
+      <button class="view-tab" onclick="switchView('school', this)">🏫 按院校分组</button>
+    </div>
+    <div style="font-size:13px;color:var(--text-muted);">
+      排序：
+      <select id="sortSelect" onchange="applyFilter()" style="padding:6px 10px;border:1.5px solid var(--border);border-radius:6px;font-size:13px;outline:none;">
+        <option value="score_desc">分数线 ↓</option>
+        <option value="score_asc">分数线 ↑</option>
+        <option value="rank_asc">位次 ↑</option>
+        <option value="school_asc">院校名称</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Table View -->
+  <div id="viewTable">
+    <div class="table-wrapper">
+      <div class="table-scroll">
+        <table id="mainTable">
+          <thead>
+            <tr>
+              <th onclick="sortBy('school_name')">院校 <span class="sort-icon">⇅</span></th>
+              <th onclick="sortBy('major_name')">专业/招生班型 <span class="sort-icon">⇅</span></th>
+              <th onclick="sortBy('plan_count')">计划数 <span class="sort-icon">⇅</span></th>
+              <th onclick="sortBy('score_line')">分数线 <span class="sort-icon">⇅</span></th>
+              <th onclick="sortBy('rank')">位次 <span class="sort-icon">⇅</span></th>
+              <th>详情</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <div class="pagination" id="tablePagination"></div>
+    </div>
+  </div>
+
+  <!-- Card View -->
+  <div id="viewCard" style="display:none;">
+    <div class="cards-grid" id="cardGrid"></div>
+    <div class="pagination" id="cardPagination" style="margin-top:16px;"></div>
+  </div>
+
+  <!-- School Group View -->
+  <div id="viewSchool" style="display:none;">
+    <div class="school-groups" id="schoolGroups"></div>
+  </div>
+</div>
+
+<!-- Detail Modal -->
+<div class="modal-overlay" id="detailModal" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-icon" id="modalIcon">🎓</div>
+      <div class="modal-title">
+        <h2 id="modalTitle">-</h2>
+        <p id="modalSubtitle">-</p>
+      </div>
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-score-row" id="modalScoreRow"></div>
+    <div class="modal-body" id="modalBody">
+      <div class="loading-spinner"><div class="spinner"></div>加载专业详情...</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ========== DATA ==========
+let allData = [];
+let detailsData = {};
+let filteredData = [];
+let currentPage = 1;
+let currentSort = { key: 'score_line', dir: 'desc' };
+let currentView = 'table';
+const PAGE_SIZE = 20;
+
+// Category mapping
+const CATEGORY_MAP = {
+  cs: ['计算机', '软件工程', '人工智能', '网络空间安全', '信息安全', '数据科学', '大数据', '信息与计算', '程序', 'AI'],
+  ee: ['电子信息', '通信工程', '电子科学', '集成电路', '微电子', '光电', '电子工程', '电信'],
+  math: ['数学', '统计学', '信息与计算科学', '量子信息'],
+  mech: ['机械', '自动化', '机器人', '智能制造', '车辆工程'],
+  aero: ['航空航天', '飞行器', '导航'],
+  energy: ['能源', '电气工程', '动力工程', '核工程', '智能电网'],
+  chem: ['化学', '化工', '材料', '高分子'],
+  phy: ['物理学', '应用物理'],
+  bio: ['生物', '农学', '食品', '生命科学', '动物'],
+  other: []
+};
+
+function getCategory(major) {
+  const name = major || '';
+  for (const [cat, keywords] of Object.entries(CATEGORY_MAP)) {
+    if (cat === 'other') continue;
+    if (keywords.some(k => name.includes(k))) return cat;
+  }
+  return 'other';
+}
+
+function getCategoryTag(major) {
+  const cat = getCategory(major);
+  const labels = {
+    cs: ['tag-cs', 'CS/AI'],
+    ee: ['tag-ee', '电子/通信'],
+    math: ['tag-math', '数学/统计'],
+    mech: ['tag-mech', '机械/自动化'],
+    aero: ['tag-aero', '航空航天'],
+    energy: ['tag-ee', '能源/电气'],
+    chem: ['tag-math', '化学/材料'],
+    phy: ['tag-aero', '物理'],
+    bio: ['tag-other', '生物/农学'],
+    other: ['tag-other', '理工科']
+  };
+  return labels[cat] || labels.other;
+}
+
+function getScoreClass(score) {
+  if (score >= 695) return 'score-700';
+  if (score >= 685) return 'score-690';
+  if (score >= 675) return 'score-680';
+  if (score >= 665) return 'score-670';
+  if (score >= 658) return 'score-660';
+  return 'score-650';
+}
+
+// ========== LOAD DATA ==========
+async function loadData() {
+  // 优先用内联数据（支持 file:// 本地直接打开）
+  if (window.__ADMISSIONS_DATA__) {
+    allData = window.__ADMISSIONS_DATA__;
+    detailsData = window.__DETAILS_DATA__ || {};
+    populateSchoolFilter();
+    applyFilter();
+    document.getElementById('statTotal').textContent = allData.length;
+    document.getElementById('statSchools').textContent = [...new Set(allData.map(d => d.school_name))].length;
+    return;
+  }
+  // 降级：通过 HTTP 服务加载（部署环境）
+  try {
+    const [admRes, detailRes] = await Promise.all([
+      fetch('data/admissions.json'),
+      fetch('data/school_details.json').catch(() => ({ json: () => ({}) }))
+    ]);
+    allData = await admRes.json();
+    try { detailsData = await detailRes.json(); } catch(e) { detailsData = {}; }
+    
+    populateSchoolFilter();
+    applyFilter();
+    document.getElementById('statTotal').textContent = allData.length;
+    document.getElementById('statSchools').textContent = [...new Set(allData.map(d => d.school_name))].length;
+  } catch(e) {
+    console.error('Load error:', e);
+  }
+}
+
+function populateSchoolFilter() {
+  const sel = document.getElementById('filterSchool');
+  const schools = [...new Set(allData.map(d => d.school_name))].sort();
+  schools.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s; opt.textContent = s;
+    sel.appendChild(opt);
+  });
+}
+
+// ========== FILTER & SORT ==========
+function applyFilter() {
+  const school = document.getElementById('filterSchool').value;
+  const major = document.getElementById('filterMajor').value.trim();
+  const scoreMin = parseInt(document.getElementById('filterScoreMin').value) || 0;
+  const scoreMax = parseInt(document.getElementById('filterScoreMax').value) || 999;
+  const rankMax = parseInt(document.getElementById('filterRankMax').value) || 999999;
+  const category = document.getElementById('filterCategory').value;
+  const sort = document.getElementById('sortSelect').value;
+
+  filteredData = allData.filter(d => {
+    if (school && d.school_name !== school) return false;
+    if (major && !d.major_name.includes(major)) return false;
+    if (d.score_line < scoreMin || d.score_line > scoreMax) return false;
+    if (d.rank > rankMax) return false;
+    if (category) {
+      const cat = getCategory(d.major_name);
+      if (cat !== category) return false;
+    }
+    return true;
+  });
+
+  // Sort
+  const [sortKey, sortDir] = sort.split('_');
+  filteredData.sort((a, b) => {
+    let av = a[sortKey === 'school' ? 'school_name' : sortKey + '_line' in a ? sortKey + '_line' : sortKey];
+    let bv = b[sortKey === 'school' ? 'school_name' : sortKey + '_line' in b ? sortKey + '_line' : sortKey];
+    if (sortKey === 'score') { av = a.score_line; bv = b.score_line; }
+    if (sortKey === 'rank') { av = a.rank; bv = b.rank; }
+    if (sortKey === 'school') { av = a.school_name; bv = b.school_name; }
+    if (typeof av === 'string') return sortDir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
+    return sortDir === 'asc' ? av - bv : bv - av;
+  });
+
+  document.getElementById('resultCount').textContent = filteredData.length;
+  document.getElementById('statFiltered').textContent = filteredData.length;
+  currentPage = 1;
+  renderCurrentView();
+}
+
+function resetFilter() {
+  document.getElementById('filterSchool').value = '';
+  document.getElementById('filterMajor').value = '';
+  document.getElementById('filterScoreMin').value = '';
+  document.getElementById('filterScoreMax').value = '';
+  document.getElementById('filterRankMax').value = '';
+  document.getElementById('filterCategory').value = '';
+  document.getElementById('sortSelect').value = 'score_desc';
+  applyFilter();
+}
+
+function sortBy(key) {
+  const sort = document.getElementById('sortSelect');
+  if (key === 'school_name') sort.value = 'school_asc';
+  else if (key === 'score_line') {
+    sort.value = sort.value === 'score_desc' ? 'score_asc' : 'score_desc';
+  } else if (key === 'rank') sort.value = 'rank_asc';
+  applyFilter();
+}
+
+// ========== VIEWS ==========
+function switchView(view, btn) {
+  document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('viewTable').style.display = 'none';
+  document.getElementById('viewCard').style.display = 'none';
+  document.getElementById('viewSchool').style.display = 'none';
+  document.getElementById('view' + view.charAt(0).toUpperCase() + view.slice(1)).style.display = '';
+  currentView = view;
+  currentPage = 1;
+  renderCurrentView();
+}
+
+function renderCurrentView() {
+  if (currentView === 'table') renderTable();
+  else if (currentView === 'card') renderCards();
+  else renderSchoolGroups();
+}
+
+// ========== TABLE ==========
+function renderTable() {
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageData = filteredData.slice(start, start + PAGE_SIZE);
+  const tbody = document.getElementById('tableBody');
+
+  if (filteredData.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state"><div class="icon">🔍</div><h3>暂无数据</h3><p>请调整筛选条件</p></div></td></tr>`;
+    renderPagination('tablePagination', 0);
+    return;
+  }
+
+  const rows = pageData.map(d => {
+    const [tagClass, tagLabel] = getCategoryTag(d.major_name);
+    const hasDetail = detailsData[d.school_name + '|' + d.major_name];
+    return `<tr onclick="openDetail('${esc(d.school_name)}', '${esc(d.major_name)}')" style="cursor:pointer;">
+      <td class="school-cell">${d.school_name}</td>
+      <td class="major-cell">
+        <div class="major-name">${d.major_name}</div>
+        <div class="major-tags"><span class="tag ${tagClass}">${tagLabel}</span></div>
+      </td>
+      <td><span class="plan-badge">${d.plan_count}人</span></td>
+      <td><span class="score-badge ${getScoreClass(d.score_line)}">${d.score_line}</span></td>
+      <td class="rank-text">#${d.rank.toLocaleString()}</td>
+      <td onclick="event.stopPropagation()">
+        <button class="detail-btn ${hasDetail ? 'has-data' : ''}" onclick="openDetail('${esc(d.school_name)}', '${esc(d.major_name)}')">
+          ${hasDetail ? '📊 查看详情' : '🔍 深度分析'}
+        </button>
+      </td>
+    </tr>`;
+  }).join('');
+  tbody.innerHTML = rows;
+  renderPagination('tablePagination', filteredData.length);
+}
+
+// ========== CARDS ==========
+function renderCards() {
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageData = filteredData.slice(start, start + PAGE_SIZE);
+  const grid = document.getElementById('cardGrid');
+
+  if (filteredData.length === 0) {
+    grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1"><div class="icon">🔍</div><h3>暂无数据</h3><p>请调整筛选条件</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = pageData.map(d => {
+    const [tagClass, tagLabel] = getCategoryTag(d.major_name);
+    return `<div class="card" onclick="openDetail('${esc(d.school_name)}', '${esc(d.major_name)}')">
+      <div class="card-header">
+        <div>
+          <div class="card-school">${d.school_name}</div>
+          <div class="card-major">${d.major_name}</div>
+        </div>
+        <div class="card-score">
+          <div class="num">${d.score_line}</div>
+          <div class="sub">分数线</div>
+        </div>
+      </div>
+      <div class="major-tags"><span class="tag ${tagClass}">${tagLabel}</span></div>
+      <div class="card-divider"></div>
+      <div class="card-meta">
+        <div class="meta-item">位次 <strong>#${d.rank.toLocaleString()}</strong></div>
+        <div class="meta-item">计划 <strong>${d.plan_count}人</strong></div>
+        <div class="meta-item">${detailsData[d.school_name + '|' + d.major_name] ? '<span style="color:var(--success)">✓ 已有详情</span>' : '<span style="color:var(--text-light)">暂无详情</span>'}</div>
+      </div>
+    </div>`;
+  }).join('');
+  renderPagination('cardPagination', filteredData.length);
+}
+
+// ========== SCHOOL GROUPS ==========
+function renderSchoolGroups() {
+  const groups = {};
+  filteredData.forEach(d => {
+    if (!groups[d.school_name]) groups[d.school_name] = [];
+    groups[d.school_name].push(d);
+  });
+
+  const container = document.getElementById('schoolGroups');
+  if (Object.keys(groups).length === 0) {
+    container.innerHTML = `<div class="empty-state"><div class="icon">🔍</div><h3>暂无数据</h3><p>请调整筛选条件</p></div>`;
+    return;
+  }
+
+  const schoolsSorted = Object.entries(groups).sort((a,b) => {
+    const maxA = Math.max(...a[1].map(d => d.score_line));
+    const maxB = Math.max(...b[1].map(d => d.score_line));
+    return maxB - maxA;
+  });
+
+  container.innerHTML = schoolsSorted.map(([school, items]) => {
+    const maxScore = Math.max(...items.map(d => d.score_line));
+    const rows = items.map(d => `
+      <tr onclick="openDetail('${esc(d.school_name)}', '${esc(d.major_name)}')" style="cursor:pointer;">
+        <td style="width:45%"><span class="major-name">${d.major_name}</span></td>
+        <td><span class="plan-badge">${d.plan_count}人</span></td>
+        <td><span class="score-badge ${getScoreClass(d.score_line)}">${d.score_line}</span></td>
+        <td class="rank-text">#${d.rank.toLocaleString()}</td>
+        <td><button class="detail-btn ${detailsData[d.school_name+'|'+d.major_name]?'has-data':''}" onclick="event.stopPropagation();openDetail('${esc(d.school_name)}','${esc(d.major_name)}')">${detailsData[d.school_name+'|'+d.major_name]?'📊 详情':'🔍 分析'}</button></td>
+      </tr>`).join('');
+    
+    return `<div class="school-group">
+      <div class="group-header" onclick="toggleGroup(this)">
+        <div class="group-school">🏫 ${school}</div>
+        <div class="group-meta">
+          <span class="group-count">${items.length} 个专业</span>
+          <span class="group-top-score">最高 ${maxScore} 分</span>
+          <span class="group-toggle">▼</span>
+        </div>
+      </div>
+      <div class="group-body">
+        <table class="group-table"><tbody>${rows}</tbody></table>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleGroup(header) {
+  const body = header.nextElementSibling;
+  const icon = header.querySelector('.group-toggle');
+  body.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// ========== PAGINATION ==========
+function renderPagination(containerId, total) {
+  const totalPages = Math.ceil(total / PAGE_SIZE);
+  const container = document.getElementById(containerId);
+  if (totalPages <= 1) { container.innerHTML = ''; return; }
+
+  let html = '';
+  const addBtn = (page, label, disabled, active) => {
+    html += `<button class="page-btn ${active?'active':''}" ${disabled?'disabled':''} onclick="goPage(${page},'${containerId}')">${label}</button>`;
+  };
+
+  addBtn(currentPage-1, '‹', currentPage===1, false);
+  const start = Math.max(1, currentPage-2);
+  const end = Math.min(totalPages, currentPage+2);
+  if (start > 1) { addBtn(1, '1', false, false); if (start > 2) html += '<span style="padding:0 4px;color:var(--text-muted)">…</span>'; }
+  for (let p = start; p <= end; p++) addBtn(p, p, false, p===currentPage);
+  if (end < totalPages) { if (end < totalPages-1) html += '<span style="padding:0 4px;color:var(--text-muted)">…</span>'; addBtn(totalPages, totalPages, false, false); }
+  addBtn(currentPage+1, '›', currentPage===totalPages, false);
+
+  container.innerHTML = html;
+}
+
+function goPage(page, containerId) {
+  currentPage = page;
+  renderCurrentView();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ========== DETAIL MODAL ==========
+function esc(str) { return (str || '').replace(/'/g, "\\'").replace(/"/g, '&quot;'); }
+
+function openDetail(schoolName, majorName) {
+  const key = schoolName + '|' + majorName;
+  const record = allData.find(d => d.school_name === schoolName && d.major_name === majorName);
+  
+  document.getElementById('modalTitle').textContent = majorName;
+  document.getElementById('modalSubtitle').textContent = schoolName;
+  document.getElementById('modalIcon').textContent = getSchoolIcon(schoolName);
+  
+  if (record) {
+    document.getElementById('modalScoreRow').innerHTML = `
+      <div class="score-chip">📊 分数线：<strong>${record.score_line}</strong></div>
+      <div class="score-chip">📈 全省位次：<strong>#${record.rank.toLocaleString()}</strong></div>
+      <div class="score-chip">👥 计划招生：<strong>${record.plan_count}人</strong></div>
+      <div class="score-chip">🏫 学校代号：<strong>${record.school_code}</strong></div>
+    `;
+  }
+
+  const detail = detailsData[key];
+  const body = document.getElementById('modalBody');
+  
+  if (detail) {
+    body.innerHTML = renderDetailContent(detail);
+  } else {
+    body.innerHTML = `<div class="no-data"><div class="icon">📋</div>
+      <p>该专业的深度分析数据正在收集中...</p>
+      <p style="margin-top:8px;font-size:12px;color:var(--text-light)">数据覆盖：分流政策、保研比例、师资力量、就业方向</p>
+    </div>`;
+  }
+
+  document.getElementById('detailModal').classList.add('open');
+}
+
+function renderDetailContent(detail) {
+  let html = '';
+
+  // 专业概况
+  if (detail.overview) {
+    html += `<div class="detail-section">
+      <div class="section-title">📌 专业概况</div>
+      <div class="info-grid">
+        ${detail.overview.duration ? `<div class="info-item"><div class="label">学制</div><div class="value">${detail.overview.duration}</div></div>` : ''}
+        ${detail.overview.degree ? `<div class="info-item"><div class="label">学位</div><div class="value">${detail.overview.degree}</div></div>` : ''}
+        ${detail.overview.ranking ? `<div class="info-item"><div class="label">学科评级</div><div class="value">${detail.overview.ranking}</div></div>` : ''}
+        ${detail.overview.lab ? `<div class="info-item"><div class="label">重点实验室</div><div class="value">${detail.overview.lab}</div></div>` : ''}
+      </div>
+      ${detail.overview.description ? `<p style="margin-top:12px;font-size:13px;color:var(--text);line-height:1.7">${detail.overview.description}</p>` : ''}
+    </div>`;
+  }
+
+  // 分流政策
+  if (detail.streaming) {
+    html += `<div class="detail-section">
+      <div class="section-title">🔀 学生分流政策</div>
+      <div class="info-grid">
+        ${detail.streaming.time ? `<div class="info-item"><div class="label">分流时间</div><div class="value">${detail.streaming.time}</div></div>` : ''}
+        ${detail.streaming.method ? `<div class="info-item"><div class="label">分流方式</div><div class="value">${detail.streaming.method}</div></div>` : ''}
+      </div>
+      ${detail.streaming.majors && detail.streaming.majors.length ? `
+        <div style="margin-top:12px">
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">可分流专业：</div>
+          <div class="career-grid">${detail.streaming.majors.map(m => `<span class="career-tag">📚 ${m}</span>`).join('')}</div>
+        </div>` : ''}
+      ${detail.streaming.notes ? `<ul class="info-list" style="margin-top:12px">${detail.streaming.notes.map(n => `<li>${n}</li>`).join('')}</ul>` : ''}
+    </div>`;
+  }
+
+  // 保研信息
+  if (detail.postgrad) {
+    html += `<div class="detail-section">
+      <div class="section-title">🎓 保研信息</div>
+      <div class="info-grid">
+        ${detail.postgrad.rate !== undefined ? `<div class="info-item"><div class="label">总保研率</div><div class="value" style="color:var(--primary);font-size:18px">${detail.postgrad.rate}</div></div>` : ''}
+        ${detail.postgrad.internal_rate ? `<div class="info-item"><div class="label">本校保研比例</div><div class="value">${detail.postgrad.internal_rate}</div></div>` : ''}
+        ${detail.postgrad.external_rate ? `<div class="info-item"><div class="label">外校保研比例</div><div class="value">${detail.postgrad.external_rate}</div></div>` : ''}
+        ${detail.postgrad.class_size ? `<div class="info-item"><div class="label">班级规模</div><div class="value">${detail.postgrad.class_size}</div></div>` : ''}
+      </div>
+      ${detail.postgrad.top_schools && detail.postgrad.top_schools.length ? `
+        <div style="margin-top:12px">
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">保研去向高校（含外校）：</div>
+          <div class="career-grid">${detail.postgrad.top_schools.map(s => `<span class="career-tag">🏫 ${s}</span>`).join('')}</div>
+        </div>` : ''}
+      ${detail.postgrad.notes ? `<ul class="info-list" style="margin-top:12px">${detail.postgrad.notes.map(n => `<li>${n}</li>`).join('')}</ul>` : ''}
+    </div>`;
+  }
+
+  // 师资力量
+  if (detail.faculty && detail.faculty.length) {
+    const tierMap = { academician: ['tag-academician', '院士'], changjiang: ['tag-changjiang', '长江学者'], qingnian: ['tag-qingnian', '青年计划'], jiechu: ['tag-jiechu', '杰青/优青'] };
+    html += `<div class="detail-section">
+      <div class="section-title">👨‍🏫 代表性师资</div>
+      <div class="faculty-grid">
+        ${detail.faculty.map(f => `<div class="faculty-card">
+          <div class="faculty-avatar">👤</div>
+          <div class="faculty-info">
+            <div class="name">${f.name}</div>
+            <div class="title">${f.title || ''}</div>
+            <div class="faculty-tags">
+              ${(f.honors || []).map(h => { const [cls, label] = tierMap[h] || ['tag-other', h]; return `<span class="faculty-tag ${cls}">${label}</span>`; }).join('')}
+              ${f.research ? `<span class="faculty-tag" style="background:var(--surface);color:var(--text-muted);border:1px solid var(--border)">${f.research}</span>` : ''}
+            </div>
+          </div>
+        </div>`).join('')}
+      </div>
+      ${detail.faculty_summary ? `<div style="margin-top:12px;font-size:12px;color:var(--text-muted)">${detail.faculty_summary}</div>` : ''}
+    </div>`;
+  }
+
+  // 就业方向
+  if (detail.career) {
+    html += `<div class="detail-section">
+      <div class="section-title">💼 毕业就业方向</div>
+      ${detail.career.directions && detail.career.directions.length ? `
+        <div class="career-grid">${detail.career.directions.map(d => `<span class="career-tag">💼 ${d}</span>`).join('')}</div>` : ''}
+      ${detail.career.companies && detail.career.companies.length ? `
+        <div style="margin-top:14px">
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">知名就业单位：</div>
+          <div class="career-grid">${detail.career.companies.map(c => `<span class="career-tag" style="background:#f0fdf4;color:#166534">${c}</span>`).join('')}</div>
+        </div>` : ''}
+      ${detail.career.notes ? `<ul class="info-list" style="margin-top:12px">${detail.career.notes.map(n => `<li>${n}</li>`).join('')}</ul>` : ''}
+    </div>`;
+  }
+
+  return html || `<div class="no-data"><div class="icon">📋</div><p>详情数据收录中</p></div>`;
+}
+
+function getSchoolIcon(name) {
+  const icons = {
+    '北京大学': '🏛', '清华大学': '🔬', '复旦大学': '📚', '上海交通大学': '⚙️',
+    '浙江大学': '🌊', '中国科学院大学': '🔭', '北京航空航天大学': '✈️',
+    '哈尔滨工业大学': '🚀', '南京大学': '🌟', '同济大学': '🏗', '华中科技大学': '💡',
+    '西安交通大学': '⚡', '电子科技大学': '📡', '中国科学技术大学': '⚛️',
+  };
+  return icons[name] || '🎓';
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('detailModal')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('detailModal').classList.remove('open');
+}
+
+// Keyboard shortcut
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+// Input debounce for keyword search
+let searchTimer;
+document.getElementById('filterMajor').addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(applyFilter, 300);
+});
+
+// Init
+loadData();
+</script>
+</body>
+</html>
