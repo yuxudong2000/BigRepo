@@ -1,22 +1,12 @@
-# 知识库时间线日志
+# Knowledge Log
 
-> append-only 日志，记录每次归档操作
+> Append-only 时间线日志。记录每次知识库更新，最新在最上方。
 
 ---
 
-## [2026-04-29] archive | Self-Learning Skill 并行化优化
+## [2025-07-26] init | 知识库初始化
 
-**新增/更新**：
-- sessions/2026-04-29_14-00_self-learning-skill-optimization.md（新建）
-- insights/skill-optimization-path-selection.md（新建）
-- tools/write-to-file.md（新建）
-- patterns/verification-deadlock-debugging.md（新建）
-- skills/parallel-skill-optimization-pattern.md（新建）
-- memories/2026-04-29_memories.md（新建，2 条候选）
-- index.md（更新）
+新增：knowledge/ 目录结构初始化  
+来源：self-learning skill 首次运行
 
-**归档统计**：
-- 对话轮次：约 20 轮
-- 知识文件：5 个
-- 记忆候选：2 条
-- 完成度：✅ 全部目标达成
+目录：sessions/ · solutions/ · tools/ · patterns/ · insights/ · memories/ · rules/ · skills/

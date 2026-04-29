@@ -1,0 +1,49 @@
+todos:
+  - id: phase1-1
+    content: 创建 root-cause-analyzer 子 Agent
+    status: completed
+    chatId: 9o7n21ujwrg7wsa3b5p9
+    createdAt: 1777445604340
+    updatedAt: 1777445700671
+  - id: phase1-2
+    content: 创建根因分析提示词模板
+    status: completed
+    chatId: 9o7n21ujwrg7wsa3b5p9
+    createdAt: 1777445604340
+    updatedAt: 1777445785042
+  - id: phase2-1
+    content: 升级 knowledge-extractor 增加深度分析
+    status: completed
+    chatId: 9o7n21ujwrg7wsa3b5p9
+    createdAt: 1777445604340
+    updatedAt: 1777445845501
+  - id: phase3-1
+    content: 修改 SKILL.md 增加 Step 3.5 根因分析阶段
+    status: completed
+    chatId: 9o7n21ujwrg7wsa3b5p9
+    createdAt: 1777445604340
+    updatedAt: 1777445994648
+  - id: phase3-2
+    content: 更新 SKILL.md frontmatter 版本号
+    status: completed
+    chatId: 9o7n21ujwrg7wsa3b5p9
+    createdAt: 1777445604340
+    updatedAt: 1777446019794
+  - id: phase4-1
+    content: 创建原则库模板文件
+    status: completed
+    chatId: 9o7n21ujwrg7wsa3b5p9
+    createdAt: 1777445604340
+    updatedAt: 1777446088372
+  - id: phase4-2
+    content: 创建第一个原则库示例
+    status: completed
+    chatId: 9o7n21ujwrg7wsa3b5p9
+    createdAt: 1777445604340
+    updatedAt: 1777446211635
+  - id: phase5-1
+    content: 回溯测试刚才归档的文件
+    status: completed
+    chatId: 9o7n21ujwrg7wsa3b5p9
+    createdAt: 1777445604340
+    updatedAt: 1777446259369
