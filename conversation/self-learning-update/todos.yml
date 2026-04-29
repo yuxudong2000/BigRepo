@@ -1,0 +1,25 @@
+todos:
+  - id: '1'
+    content: 创建并行提取提示词模板 (parallel-extraction-prompt.md)
+    status: completed
+    chatId: iv0s6wnyxb5azjug8sh8
+    createdAt: 1777441904863
+    updatedAt: 1777441977747
+  - id: '2'
+    content: 升级 SKILL.md 实现并行知识提炼逻辑
+    status: completed
+    chatId: iv0s6wnyxb5azjug8sh8
+    createdAt: 1777441904863
+    updatedAt: 1777442210589
+  - id: '3'
+    content: 创建 scripts 目录和辅助脚本（可选）
+    status: completed
+    chatId: iv0s6wnyxb5azjug8sh8
+    createdAt: 1777441904863
+    updatedAt: 1777442210589
+  - id: '4'
+    content: 测试并行提取是否工作正常
+    status: completed
+    chatId: iv0s6wnyxb5azjug8sh8
+    createdAt: 1777441904863
+    updatedAt: 1777442305490
