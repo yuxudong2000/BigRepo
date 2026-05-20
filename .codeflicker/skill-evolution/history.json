@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "git-embedded-repo-handler": {
+      "skillName": "git-embedded-repo-handler",
+      "skillType": "personal",
+      "currentVersion": "v1",
+      "totalEvents": 1,
+      "history": [
+        {
+          "id": "evt_1777522679009_cdybyw",
+          "timestamp": "2026-04-30T04:17:59.009Z",
+          "operation": "create",
+          "trigger": "review_session",
+          "sessionId": "skill-review-1777522322709-athihr",
+          "reason": "沉淀 git submodule 处理流程。用户尝试将包含 .git 的外部仓库添加到主仓库时遇到警告，通过试错学会了使用 git submodule 的正确方法。这是一个高频场景，值得沉淀为可复用 skill。",
+          "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "version": "v1"
+        }
+      ]
+    }
+  }
+}
